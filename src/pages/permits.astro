@@ -1,0 +1,111 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import PageNav from "../components/PageNav.astro";
+import StructuredData from "../components/StructuredData.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+import AuthorBio from "../components/AuthorBio.astro";
+
+const faqs = [
+  { q: "Do I need a visa to enter Tibet?", a: "You need a valid Chinese visa to enter China, plus a Tibet Travel Permit (TTP) to enter the Tibet Autonomous Region. These are two separate documents. You must have both before boarding any flight or train to Lhasa." },
+  { q: "How do I get a Tibet Travel Permit?", a: "Apply through a registered Tibetan travel agency. They will submit scanned copies of your passport and Chinese visa to the Tibet Tourism Bureau. Processing takes 7-10 business days. The permit is NOT something you can apply for directly -- it must go through an agency." },
+  { q: "Can I travel independently in Tibet?", a: "No. As of 2026, foreign travelers must be part of an organized tour with a licensed Tibetan guide. Independent travel within the Tibet Autonomous Region is not permitted for foreign passport holders. This rule is strictly enforced." },
+  { q: "What documents do I need?", a: "1) Valid passport (at least 6 months remaining), 2) Chinese visa (L Tourist visa), 3) Tibet Travel Permit (arranged by your agency), 4) Additional permits for areas outside Lhasa (Aliens' Travel Permit). Keep printed copies of all documents -- you will be asked for them repeatedly." },
+  { q: "How much does it cost?", a: "The TTP itself is usually included in your tour package cost. Tour packages to Tibet typically range from USD 400-1,200 per person depending on duration, group size, and season. The Chinese visa costs vary by country (typically USD 30-140)." },
+  { q: "What happens if my permit application is rejected?", a: "Rejections are very rare for tourists with a valid passport and Chinese visa. The most common reason for rejection is submitting incomplete documents or insufficient processing time. If rejected, your travel agency can resubmit with corrected information." },
+];
+---
+
+<BaseLayout canonical="https://tibet-lhasa-potala.com/permits" title="Tibet Travel Permits 2026 | Complete Guide for Foreigners" description="Complete guide to Tibet entry permits: TTP application steps, Chinese visa requirements, timeline, costs, common mistakes, and checkpoint procedures for 2026." ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp"
+  authorName="Sarah Chen" authorUrl="/about/#sarah-chen" datePublished="2026-01-25" dateModified="2026-08-06">
+>
+  <StructuredData type="Article" data={{ title: "Tibet Travel Permits for Foreigners", description: "Complete guide to Tibet travel permits: application process, documents, timeline, and rules.", url: "/permits/", datePublished: "2026-01-01", dateModified: "2026-08-06" }} />
+  <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "Travel Permits", url: "/permits/" }] }} />
+  <StructuredData type="FAQPage" data={{ faqs }} />
+  <StructuredData type="Person" data={{ name: "Sarah Chen", description: "Senior Travel Writer & Tibet Specialist", url: "/about/#sarah-chen" }} />
+
+  <PageHero title="Tibet Travel Permits for Foreigners" subtitle="Everything about entry permits, visa requirements, application process, costs, and the rules you need to know for visiting Tibet in 2026." breadcrumb="Travel Permits" updated="August 2026" />
+
+  <article class="max-w-3xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div class="prose">
+      <h2>The Permit System: A Layered Process</h2>
+      <p>Traveling to Tibet as a foreigner involves navigating a layered permit system. Understanding it before you book flights is essential -- getting it wrong can derail your entire trip. Here is the complete breakdown for 2026.</p>
+
+      <h2>Step 1: Chinese Tourist Visa (L Visa)</h2>
+      <p>Your first and most important step. Apply at your nearest Chinese embassy or consulate. Processing time is typically 4-7 business days, but can take up to 2 weeks during peak travel seasons.</p>
+      <p><strong>What you need:</strong></p>
+      <ul>
+        <li>Valid passport with at least 6 months remaining and 2 blank pages</li>
+        <li>Completed visa application form</li>
+        <li>Passport-sized photo (48mm x 33mm, white background)</li>
+        <li>Round-trip flight itinerary and hotel bookings</li>
+        <li>Visa fee (varies by country: USD 30-140)</li>
+      </ul>
+      <p><strong>Important tip:</strong> When filling out your visa application, list general Chinese destinations like Beijing, Xi'an, and Chengdu. Do not list Tibet as a destination on your visa application unless specifically instructed by your travel agency. The Tibet Travel Permit serves as your authorization to enter Tibet, not the visa itself.</p>
+
+      <h2>Step 2: Tibet Travel Permit (TTP)</h2>
+      <p>The TTP is the essential document for entering the Tibet Autonomous Region. This is where most travelers have questions, so let us walk through it in detail.</p>
+
+      <h3>How It Works</h3>
+      <ol>
+        <li><strong>Book a tour with a registered Tibetan travel agency.</strong> You cannot apply for the TTP yourself. Your agency must be licensed by the Tibet Tourism Bureau.</li>
+        <li><strong>Submit your documents to the agency:</strong> Scanned color copies of your passport (photo page) and your Chinese visa.</li>
+        <li><strong>Agency submits to the Tibet Tourism Bureau.</strong> This is done in Lhasa, typically 7-10 business days before your planned arrival.</li>
+        <li><strong>Permit is issued.</strong> Your agency receives the TTP and either sends you a digital copy or hands you the physical document on arrival in China.</li>
+      </ol>
+
+      <h3>Processing Time</h3>
+      <ul>
+        <li>Standard processing: 7-10 business days</li>
+        <li>Peak season (May-October): Allow 2-3 weeks</li>
+        <li>Expedited processing: Sometimes available for an additional fee (check with your agency)</li>
+      </ul>
+
+      <h3>Cost</h3>
+      <p>The TTP fee is typically included in your organized tour package. Tour packages including the TTP generally range from USD 400 for a basic 4-day Lhasa trip to USD 1,200+ for extended Tibet tours. The permit itself costs the agency approximately CNY 200-300, but you cannot pay this directly.</p>
+
+      <h2>Step 3: Additional Permits for Areas Outside Lhasa</h2>
+      <p>If your Tibet itinerary includes destinations beyond Lhasa, you may need an <strong>Aliens' Travel Permit (ATP)</strong>. This applies to popular destinations including Mount Everest Base Camp, Mount Kailash, Lake Manasarovar, and the road to Nepal via Gyirong. Your travel agency will arrange this alongside your TTP.</p>
+
+      <h2>What Happens at Checkpoints</h2>
+      <p>Your TTP will be checked multiple times:</p>
+      <ul>
+        <li><strong>At the airport or train station:</strong> When boarding your flight or train to Lhasa, staff will verify your TTP. Without it, you will not be allowed to board.</li>
+        <li><strong>On arrival in Lhasa:</strong> Additional checks at Lhasa Gonggar Airport or Lhasa Railway Station.</li>
+        <li><strong>On the road:</strong> Checkpoints throughout Tibet will ask to see your TTP and passport. Keep printed copies accessible at all times.</li>
+        <li><strong>At attractions:</strong> Some sites, including Potala Palace, may ask to see your TTP alongside your ticket reservation.</li>
+      </ul>
+
+      <h2>Common Mistakes and How to Avoid Them</h2>
+      <ul>
+        <li><strong>Booking flights before getting the permit:</strong> Do not book non-refundable flights to Lhasa until your TTP is confirmed and in hand.</li>
+        <li><strong>Wrong visa type:</strong> The standard L (tourist) visa is what you need. Other visa types (business, student) may complicate the TTP process.</li>
+        <li><strong>Not enough time:</strong> The single biggest mistake is not allowing enough processing time. Start the process at least 4-6 weeks before your planned travel date.</li>
+        <li><strong>Expired passport:</strong> Your passport must have at least 6 months validity from your planned entry date to China.</li>
+        <li><strong>Thinking you can DIY:</strong> There is no self-service route for the TTP. You must go through a licensed agency. Any website claiming to sell TTPs directly to consumers is likely a scam.</li>
+      </ul>
+
+      <h2>Special Cases</h2>
+  <p>If your plans include Mount Kailash (far western Tibet) or areas near the Nepal and India borders, you will need additional military permits beyond the standard TTP and ATP. These areas have stricter controls due to their strategic locations. Only a handful of specialized agencies can process these permits. Start the application process at least 10-12 weeks before travel if your itinerary includes restricted border zones. Military permits can be denied without explanation, and there is no appeal process — have a backup plan for your itinerary.</p>
+      <ul>
+        <li><strong>Journalists and media professionals:</strong> Subject to additional restrictions. Contact the Chinese embassy in your country well in advance.</li>
+        <li><strong>Diplomats and government officials:</strong> Different procedures apply. Work through official channels.</li>
+        <li><strong>Hong Kong, Macau, and Taiwan residents:</strong> Different rules apply. Residents of Hong Kong and Macau can use their Home Return Permit. Taiwan residents need additional documentation.</li>
+      </ul>
+    </div>
+  </article>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-12">
+    <h2 class="text-2xl font-bold mb-6">Permit Questions Answered</h2>
+    <FaqAccordion faqs={faqs} />
+  </section>
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-4">
+    <AuthorBio slug="sarah-chen" datePublished="2026-01-25" dateModified="2026-08-06" />
+  </section>
+
+
+
+  <PageNav prev={{ href: "/visit", label: "Visit Guide" }} next={{ href: "/history", label: "History" }} />
+</BaseLayout>
+
+  <p>For the most current official requirements, see the <a href="https://en.wikipedia.org/wiki/Tibet_Travel_Permit" target="_blank" rel="noopener">Tibet Travel Permit overview</a>. Permit rules change periodically — always confirm the latest regulations with your travel agency before booking.</p>

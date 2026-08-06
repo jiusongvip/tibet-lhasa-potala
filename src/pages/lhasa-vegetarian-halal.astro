@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import PageNav from "../components/PageNav.astro";
+import StructuredData from "../components/StructuredData.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+import AuthorBio from "../components/AuthorBio.astro";
+
+const faqs = [
+  { q: "Is it easy to find vegetarian food in Lhasa?", a: "It is easier than most travelers expect, especially near Barkhor Street. Many Tibetan Buddhist monasteries serve vegetarian meals, and Lhasa has a growing number of dedicated vegetarian restaurants. The challenge is clarifying what vegetarian means in context: some restaurants use yak broth in vegetable dishes without considering it meat." },
+  { q: "Where can I find halal food in Lhasa?", a: "Lhasa has a significant Muslim Hui community concentrated near the Lhasa Great Mosque east of Barkhor Street. Several halal restaurants serve Hui-style Chinese food: hand-pulled noodles, lamb skewers, flatbreads, and stir-fried dishes. Look for green signage with Arabic script or the halal certification logo." },
+  { q: "Is there a mosque in Lhasa?", a: "Yes. The Lhasa Great Mosque (Lasa Qingzhen Dasi) is located east of Barkhor Street. It was built in 1716 and serves the Hui Muslim community. The area around the mosque is the best place to find halal food. Non-Muslims are generally welcome to visit the mosque compound but not the prayer hall during prayer times." },
+  { q: "Can I find vegan food in Lhasa?", a: "Vegan options are more limited than vegetarian. Tibetan monasteries typically serve lacto-vegetarian meals that include dairy (yak butter, yogurt). Some dedicated vegetarian restaurants can prepare vegan dishes on request. Specify no dairy, no butter, no eggs clearly. The phrase I don't eat any animal products in Chinese: wǒ bù chī rènhé dòngwù chǎnpǐn." },
+  { q: "What vegetarian Tibetan dishes can I order?", a: "Shogo momo (potato-cheese dumplings), tsampa with sugar and yak butter, sweet tea, yak yogurt, Tibetan bread, sha phaley (substitute vegetable filling), thenthuk (request vegetable broth), and simple rice with stir-fried seasonal vegetables. Always confirm no meat broth in soups and stews." },
+];
+const pageTitle = "Lhasa Vegetarian & Halal Food Guide 2026";
+const pageDesc = "Guide to vegetarian, vegan, and halal dining in Lhasa: best restaurants, how to order, and navigating dietary restrictions near Potala Palace.";
+---
+
+<BaseLayout canonical="https://tibet-lhasa-potala.com/lhasa-vegetarian-halal" title={pageTitle} description={pageDesc} ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp"
+  authorName="Tenzin Dorje" authorUrl="/about/#tenzin-dorje" datePublished="2026-04-01" dateModified="2026-08-06">
+>
+  <StructuredData type="Article" data={{ title: "Lhasa Vegetarian & Halal Food Guide", description: pageDesc, url: "/lhasa-vegetarian-halal/", datePublished: "2026-01-01", dateModified: "2026-08-06" }} />
+  <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "Vegetarian & Halal", url: "/lhasa-vegetarian-halal/" }] }} />
+  <StructuredData type="FAQPage" data={{ faqs }} />
+  <StructuredData type="Person" data={{ name: "Tenzin Dorje", description: "Lhasa-based Researcher & Cultural Guide", url: "/about/#tenzin-dorje" }} />
+
+  <PageHero title="Vegetarian & Halal in Lhasa" subtitle="Traveling to Tibet with dietary restrictions is entirely possible with the right knowledge. Where to eat, how to order, and what to avoid for vegetarians, vegans, and halal travelers." breadcrumb="Vegetarian & Halal" updated="August 2026" />
+
+  <article class="max-w-3xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div class="prose">
+      <h2>You Can Eat Well in Lhasa</h2>
+      <p>The stereotype of Tibet as an all-meat-all-the-time yak feast is outdated. While traditional Tibetan cuisine is meat-heavy, Lhasa in 2026 has a surprising number of options for vegetarians, vegans, and halal travelers. You just need to know where to look and how to ask. This guide covers both.</p>
+
+      <h2 id="vegetarian">Vegetarian and Vegan Dining</h2>
+      <h3>Why Vegetarian Food Exists in Tibet</h3>
+      <p>Mahayana Buddhism, the form practiced in Tibet, emphasizes compassion for all sentient beings. Many devout Buddhists observe vegetarian days throughout the lunar calendar (the 8th, 15th, and 30th of each month). Monasteries have centuries of experience cooking meat-free meals. This tradition is the foundation of Lhasa's vegetarian scene.</p>
+
+      <h3>The Monastery Connection</h3>
+      <p>Sera Monastery and Drepung Monastery both operate vegetarian restaurants open to the public. The food is simple (rice, vegetables, tofu, noodle soups) but reliably meat-free and deeply authentic. These are not tourist restaurants. They exist to serve pilgrims and monks. Expect basic tables, no English menus, and prices under CNY 30 per person. The experience is worth the language barrier.</p>
+
+      <h3>Dedicated Vegetarian Restaurants</h3>
+      <p>Lhasa has 8 to 12 dedicated vegetarian restaurants as of 2026, concentrated near Barkhor Street and the Tibet University area. The most reliable include: <strong>Tian Chu Vegetarian</strong> near Barkhor Street (Chinese Buddhist vegetarian, mock meats, English picture menu), <strong>Lhasa Vegan House</strong> near Tibet University (fully plant-based, younger crowd, some English spoken), and <strong>Pure Land Kitchen</strong> near Jokhang Temple (Tibetan-Indian fusion, vegetarian thali, clearly labeled menu).</p>
+
+      <h3>How to Order Vegetarian in Regular Restaurants</h3>
+      <p>In a standard Tibetan restaurant, you can request: stir-fried seasonal greens, tomato and egg, mapo tofu (confirm no minced meat), fried rice with vegetables, vegetable noodle soup, and potato dishes. The most important phrase: <strong>I do not eat meat</strong> in Chinese is <em>wǒ bù chī ròu</em> (我不吃肉). Add <strong>and no meat broth</strong>: <em>yě bù yào ròu tāng</em> (也不要肉汤). Show this to the server. Write it down. The concept of vegetarianism is understood in Lhasa, especially by younger restaurant staff.</p>
+
+      <h2 id="halal">Halal Dining in Lhasa</h2>
+      <h3>The Hui Muslim Community</h3>
+      <p>Lhasa's Hui Muslims have lived here for over 300 years, originally arriving as traders on the Silk Road. Today the community numbers several thousand, centered around the Lhasa Great Mosque east of Barkhor Street. The restaurants in this neighborhood serve Hui Chinese cuisine: a fusion of Chinese cooking techniques with halal ingredients, heavily influenced by Central Asian and Middle Eastern flavors.</p>
+
+      <h3>What Hui Halal Food Tastes Like</h3>
+      <p>Hand-pulled noodles in clear lamb broth (Lanzhou lamian). Cumin-dusted lamb skewers grilled over charcoal. Crispy pan-fried flatbreads stuffed with spiced meat (rou jia mo). Stir-fried vegetables with garlic and chili. Tomato and egg with rice. The food is hearty, affordable (CNY 15-40 per meal), and reliably halal. Many restaurants display the halal certification prominently.</p>
+
+      <h3>Where to Find Halal Food</h3>
+      <p>Walk east from the Barkhor Street main entrance along Jiangsu Road. You will find a concentration of restaurants with green signage bearing Arabic script. The area around the Lhasa Great Mosque at Dongzi Road has 12 to 15 halal restaurants within a 10-minute walk. Noodles Plus near the mosque is a traveler favorite. Lanzhou Beef Noodle King has multiple locations across Lhasa. Muslim Family Restaurant on Jiangsu Road serves larger shared meals and has an English menu.</p>
+
+      <h3>Important Context for Halal Travelers</h3>
+      <p>Not all Hui-operated restaurants serve exclusively halal food. Some have expanded their menus to include non-halal items to serve a broader customer base. Look for the halal certification sign (清真). When in doubt, ask. The question: <strong>Is this halal?</strong> in Chinese is <em>zhè shì qīngzhēn de ma?</em> (这是清真的吗？). This is widely understood near the mosque area.</p>
+
+      <h2 id="phrases">Essential Food Phrases</h2>
+      <p>Print this or screenshot it. It will save you several meals.</p>
+      <p><strong>I do not eat meat:</strong> <em>wǒ bù chī ròu</em> (我不吃肉)<br/><strong>I am vegetarian:</strong> <em>wǒ chī sù</em> (我吃素)<br/><strong>No meat broth please:</strong> <em>bù yào ròu tāng</em> (不要肉汤)<br/><strong>Is this halal?:</strong> <em>zhè shì qīngzhēn de ma?</em> (这是清真的吗？)<br/><strong>No alcohol:</strong> <em>bù yào jiǔ</em> (不要酒)<br/><strong>Thank you (Tibetan):</strong> <em>thuk-je-che</em></p>
+
+      <h2 id="warnings">What to Watch Out For</h2>
+      <p>Yak broth is the invisible meat in Tibetan cooking. Vegetable soups are often made with yak bone stock unless you specify otherwise. Butter tea contains yak butter and is not vegan. Some vegetarian restaurants serve honey. Eggs are generally considered vegetarian in Tibetan Buddhist context but confirm if you are vegan. Cross-contamination is a reality in small kitchens. If your dietary restriction is medically necessary or religiously absolute, choose dedicated vegetarian or halal restaurants rather than requesting modifications at general restaurants.</p>
+    </div>
+  </article>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-10">
+    <FaqAccordion faqs={faqs} />
+  </section>
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-4">
+    <AuthorBio slug="tenzin-dorje" datePublished="2026-04-01" dateModified="2026-08-06" />
+  </section>
+
+
+
+  <PageNav prev={{ href: "/lhasa-with-kids", label: "Lhasa with Kids" }} />
+</BaseLayout>

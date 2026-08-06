@@ -1,0 +1,111 @@
+---
+import { getAuthor } from "../data/authors";
+import type { Author } from "../data/authors";
+
+interface Props {
+  slug: string;
+  datePublished?: string;
+  dateModified?: string;
+}
+
+const { slug, datePublished, dateModified } = Astro.props;
+const author = getAuthor(slug);
+---
+
+{author && (
+  <div class="author-bio-card">
+    {author.photoUrl && (
+      <img
+        class="author-photo"
+        src={author.photoUrl}
+        alt={`Photo of ${author.name}`}
+        width="72"
+        height="72"
+        loading="lazy"
+      />
+    )}
+    <div class="author-info">
+      <p class="author-name">{author.name}</p>
+      <p class="author-title">{author.title}</p>
+      {author.credentials.length > 0 && (
+        <ul class="author-creds">
+          {author.credentials.map((cred) => <li>{cred}</li>)}
+        </ul>
+      )}
+      <p class="author-bio">{author.bio}</p>
+      {(datePublished || dateModified) && (
+        <div class="author-dates">
+          {datePublished && <span>Published: {datePublished}</span>}
+          {dateModified && <span class="author-dates-sep">·</span>}
+          {dateModified && <span>Updated: {dateModified}</span>}
+        </div>
+      )}
+    </div>
+  </div>
+)}
+
+<style>
+  .author-bio-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    background: var(--color-surface-alt);
+    border-radius: 6px;
+  }
+  .author-photo {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid var(--color-border);
+  }
+  .author-info {
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+  .author-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    margin: 0 0 0.125rem;
+  }
+  .author-title {
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0 0 0.4rem;
+  }
+  .author-creds {
+    margin: 0 0 0.4rem;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.6rem;
+  }
+  .author-creds li {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    background: var(--color-surface);
+    padding: 0.15rem 0.45rem;
+    border-radius: 3px;
+    border: 1px solid var(--color-border);
+  }
+  .author-bio {
+    margin: 0.35rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+  }
+  .author-dates {
+    margin-top: 0.5rem;
+    font-size: 0.72rem;
+    color: var(--color-text-subtle);
+  }
+  .author-dates-sep {
+    margin: 0 0.4rem;
+  }
+</style>

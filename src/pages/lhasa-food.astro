@@ -1,0 +1,115 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import PageNav from "../components/PageNav.astro";
+import StructuredData from "../components/StructuredData.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+import AuthorBio from "../components/AuthorBio.astro";
+
+const faqs = [
+  { q: "What does Tibetan food taste like?", a: "Tibetan cuisine is hearty, warming, and surprisingly mild. Think yak meat, barley, dairy, and root vegetables. The flavors are earthy and savory rather than spicy. Influences come from Sichuan (numbing pepper), Nepal/India (curries and momos), and Central Asia (breads and grilled meats). Most travelers find it more approachable than they expected." },
+  { q: "Is it safe to eat street food in Lhasa?", a: "Generally yes, with common sense. Stick to stalls with high turnover and cooked-to-order food. Avoid raw vegetables washed in tap water. The sweet tea houses are perfectly safe and a quintessential Lhasa experience. Bottled or boiled water for drinking is essential." },
+  { q: "Are there vegetarian options in Lhasa?", a: "Yes, but you need to know where to look. Many Tibetan Buddhist monasteries serve vegetarian meals. Lhasa has a growing number of dedicated vegetarian restaurants, especially around the Barkhor area. 'Vegetarian' in Tibet sometimes includes yak broth — clarify explicitly." },
+  { q: "Can I find halal food in Lhasa?", a: "Yes. Lhasa has a significant Muslim Hui community with several halal restaurants concentrated near the Lhasa Great Mosque (east of Barkhor Street). Look for green signage with Arabic script. Hui cuisine blends Chinese and Central Asian flavors: hand-pulled noodles, lamb skewers, and flatbreads are staples." },
+  { q: "What should I eat to help with altitude sickness?", a: "Focus on complex carbohydrates (tsampa, bread, noodles) for sustained energy, and avoid heavy fatty meals that your body struggles to digest at altitude. Drink sweet tea or ginger tea — both help with nausea. Garlic is traditionally used for altitude adaptation. Stay away from alcohol for at least the first 48 hours." },
+];
+---
+
+<BaseLayout canonical="https://tibet-lhasa-potala.com/lhasa-food" title="Lhasa Food Guide 2026 | Tibetan Restaurants & Dishes" description="Lhasa food guide: must-try Tibetan dishes, best restaurants near Potala Palace, vegetarian and halal options, and altitude food tips." ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp"
+  authorName="Tenzin Dorje" authorUrl="/about/#tenzin-dorje" datePublished="2026-03-05" dateModified="2026-08-06">
+>
+  <StructuredData type="Article" data={{ title: "Lhasa Food Guide", description: "Complete guide to Tibetan food in Lhasa: must-try dishes, best restaurants near Potala Palace, dietary options, and food safety tips.", url: "/lhasa-food/", datePublished: "2026-01-01", dateModified: "2026-08-06" }} />
+  <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "Food Guide", url: "/lhasa-food/" }] }} />
+  <StructuredData type="FAQPage" data={{ faqs }} />
+  <StructuredData type="Person" data={{ name: "Tenzin Dorje", description: "Lhasa-based Researcher & Cultural Guide", url: "/about/#tenzin-dorje" }} />
+
+  <PageHero title="Lhasa Food Guide" subtitle="What to eat, where to eat, and how to eat well near Potala Palace. Tibetan classics, hidden tea houses, vegetarian and halal picks, and food safety at altitude." breadcrumb="Food Guide" updated="August 2026" />
+
+  <article class="max-w-3xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div class="prose">
+      <h2 id="must-try">Must-Try Tibetan Dishes</h2>
+      <p>Tibetan food is built for survival at altitude: calorie-dense, warming, and made from what the plateau provides. Here is what you should not leave Lhasa without tasting.</p>
+
+      <h3>Tsampa (粌粑) — The Staple of Tibetan Life</h3>
+      <p>Roasted barley flour mixed with yak butter tea and kneaded into a dough by hand. It is Tibet's daily bread — eaten by everyone, everywhere, for centuries. The taste is nutty and earthy. Tourists often find it bland at first, but it grows on you. Eaten with butter and sugar, it is genuinely enjoyable. With salt and tea, it is a survival food.</p>
+
+      <h3>Yak Meat (牦牛肉) — Every Form Imaginable</h3>
+      <p>Dried yak jerky (the road-trip snack of the plateau), yak steak, yak momos, yak noodle soup, yak hotpot. Yak meat is leaner and slightly sweeter than beef, with a distinct gaminess that is more subtle than you would expect. The dried strips sold everywhere are addictively chewy — get the spiced version.</p>
+
+      <h3>Momos (藏包子) — Tibetan Dumplings</h3>
+      <p>The most foreigner-friendly dish in Tibet. Steamed or fried dumplings filled with yak meat, vegetables, or potato-cheese. Served with a fiery Sichuan-style chili dipping sauce. A plate of 10 momos costs CNY 15–25 and makes a complete meal. The potato-cheese version (shogo momo) is vegetarian and unexpectedly delicious.</p>
+
+      <h3>Thenthuk (藏面片) — Hand-Pulled Noodle Soup</h3>
+      <p>Irregular hand-pulled wheat noodles in a yak-bone broth with vegetables and shredded yak meat. It is Tibet's chicken soup — the thing you eat when you are cold, tired, or altitude-sick. Warm, filling, and gentle on the stomach. Every Tibetan restaurant does a version.</p>
+
+      <h3>Sweet Tea (甜茶) — Lhasa's Social Glue</h3>
+      <p>Made from black tea, milk, and sugar, brewed in large aluminum kettles. Served by the thermos in tea houses where locals spend hours chatting and playing cards. It is closer to Hong Kong milk tea than anything else — sweet, creamy, and completely addictive. A small thermos costs CNY 5–8. Find a tea house, order a thermos, and watch Lhasa go by.</p>
+
+      <h3>Yak Butter Tea (酥油茶) — The Taste of Tibet</h3>
+      <p>Salty, oily, and intensely Tibetan. Made by churning yak butter, brick tea, and salt together. It is an acquired taste that most foreigners politely sip and quietly set aside. But it is calorifically dense and actually helps with altitude acclimatization and chapped lips. Try it once. You may not love it, but you will remember it.</p>
+
+      <h3>Yak Yogurt (酸奶) — The Plateau's Best Dessert</h3>
+      <p>Thick, tangy, and naturally set. Tibetan yak yogurt is closer to Greek yogurt than the sweetened supermarket kind. Served with sugar on the side (drizzle it on slowly) or mixed with rice and raisins. Street vendors sell it in small clay pots near Barkhor Street. This is the food item most travelers end up missing after they leave.</p>
+
+      <h3>Tibetan Bread (藏饼) and Sha Phaley</h3>
+      <p>Sha phaley is a deep-fried bread pocket stuffed with seasoned yak meat and cabbage — essentially a Tibetan empanada. Crispy outside, savory inside. Look for them at street stalls and casual eateries. Plain Tibetan flatbread (balep) is a solid breakfast base with yak butter or honey. Both are CNY 3–8 each.</p>
+
+      <h2 id="near-potala">Restaurants Near Potala Palace</h2>
+      <p>After three hours of climbing Potala's stairs at 3,700 meters, you will be hungry. Here is where to go, organized by walking time from the palace exit.</p>
+
+      <h3>5-Minute Walk</h3>
+      <ul>
+        <li><strong>Lhasa Kitchen</strong> — Reliable Tibetan standards (momos, thenthuk, yak steak) in a clean sit-down setting. English menu available. Ideal for a first Tibetan meal without the intimidation factor. CNY 40–70 per person.</li>
+        <li><strong>Potala Palace tea houses</strong> — Small, unmarked tea houses cluster on Beijing East Road just east of the palace. No English, no menu — point at what others are eating. Sweet tea and momos. CNY 15–30. The most authentic lunch you will have in Lhasa.</li>
+      </ul>
+
+      <h3>10–15 Minute Walk (toward Barkhor)</h3>
+      <ul>
+        <li><strong>Dunya Restaurant</strong> — A Lhasa institution. Tibetan, Nepali, and Western food. Yak sizzler, momos, and surprisingly decent pizza. Rooftop seating with distant Potala views. Popular with backpackers and expats. English menu. CNY 50–90 per person.</li>
+        <li><strong>House of Shambhala Rooftop</strong> — Potala views from the rooftop terrace. More expensive but the setting justifies it. Book ahead for sunset. CNY 80–120 per person.</li>
+        <li><strong>Makye Ame</strong> — The most famous restaurant in Lhasa, on the corner of Barkhor Street. Named after a legendary Tibetan love story. The food is good-not-great, the prices are tourist-level, but the atmosphere is unforgettable — wooden interiors, low ceilings, and windows overlooking the Barkhor circumambulation. CNY 70–120 per person.</li>
+      </ul>
+
+      <h2 id="vegetarian">Vegetarian and Vegan Options</h2>
+      <p>Buddhist vegetarianism has deep roots in Tibet, and Lhasa's vegetarian scene has expanded significantly. Key recommendations:</p>
+      <ul>
+        <li><strong>Pure Land Vegetarian</strong> — Near Barkhor Street. All-vegetarian buffet (CNY 28) with a rotating selection of Tibetan and Chinese vegetable dishes. Spartan setting, excellent value, and genuinely tasty food.</li>
+        <li><strong>Tianchu Miaoxiang</strong> — Upscale Buddhist vegetarian near Jokhang Temple. Creative mock-meat dishes, beautiful presentation, temple-adjacent atmosphere. CNY 60–100.</li>
+        <li><strong>Monastery vegetarian halls</strong> — Some monasteries serve simple vegetarian meals to visitors. Ask at Jokhang and Sera Monastery. These are the most culturally authentic vegetarian experiences available.</li>
+        <li><strong>Pro tip:</strong> Learn the phrase <em>nga tse zhimbu</em> (I am vegetarian) in Tibetan, or write <code>我吃素</code> (wǒ chī sù) in Chinese on your phone to show servers. Explicitly ask if dishes contain yak broth — it sneaks into many "vegetable" soups.</li>
+      </ul>
+
+      <h2 id="halal">Halal Food in Lhasa</h2>
+      <p>Lhasa's Muslim Hui community has been here for centuries, and their food is an underrated highlight. Concentrated around the Lhasa Great Mosque (east of Barkhor Street):</p>
+      <ul>
+        <li>Hand-pulled noodles (lamian) — Watch the chef stretch dough into noodles right in front of you. Lamb or beef broth, fresh vegetables, chili oil. CNY 15–25.</li>
+        <li>Lamb skewers (yangrou chuan) — Grilled over charcoal, seasoned with cumin and chili. CNY 3–5 per skewer.</li>
+        <li>Nang bread — Central Asian-style flatbread baked in tandoor ovens. Perfect for soaking up soups.</li>
+        <li>Look for green signage, Arabic lettering, and the halal certification logo (清真). Most halal restaurants are clustered on Jiangsu Road and the streets around the mosque.</li>
+      </ul>
+
+      <h2 id="tips">Food Safety and Practical Tips</h2>
+      <ul>
+        <li><strong>Water:</strong> Never drink tap water. Bottled water is cheap (CNY 2–3) and available everywhere. Most hotels provide a kettle — boil water for 3+ minutes at this altitude.</li>
+        <li><strong>Raw vegetables:</strong> Avoid raw salads and unpeeled fruit at street stalls. The water used to wash them may not be safe.</li>
+        <li><strong>Altitude and digestion:</strong> Digestion slows at altitude. Eat smaller meals more frequently. Avoid massive heavy dinners — they will disrupt your already-altitude-affected sleep.</li>
+        <li><strong>Spice caution:</strong> Sichuan pepper (ma la) is common in Lhasa. If you are not used to it, start mild. The numbing sensation can be alarming if unexpected.</li>
+        <li><strong>Payment:</strong> Most restaurants accept WeChat Pay and Alipay. Cash (RMB) is accepted everywhere. Foreign credit cards are not commonly accepted outside international hotels. Set up Alipay TourPass before your trip.</li>
+        <li><strong>Tipping:</strong> Not expected or customary in Tibet. Round up the bill if you want, but no one will notice if you do not.</li>
+        <li><strong>Altitude appetite:</strong> Many people lose appetite at altitude. This is normal and temporary. Sweet tea and thenthuk (noodle soup) are the go-to foods when nothing else appeals.</li>
+      </ul>
+    </div>
+  </article>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-12">
+    <h2 class="text-2xl font-bold mb-6">Food Questions Answered</h2>
+    <FaqAccordion faqs={faqs} />
+  </section>
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-4">
+    <AuthorBio slug="tenzin-dorje" datePublished="2026-03-05" dateModified="2026-08-06" />
+  </section>
+
+
+
+  <PageNav prev={{ href: "/lhasa-attractions", label: "Attractions" }} next={{ href: "/hotels-potala-view", label: "Hotels" }} />
+</BaseLayout>

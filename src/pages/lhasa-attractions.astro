@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import PageNav from "../components/PageNav.astro";
+import StructuredData from "../components/StructuredData.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+import AuthorBio from "../components/AuthorBio.astro";
+
+const faqs = [
+  { q: "How far is Jokhang Temple from Potala Palace?", a: "About 2 kilometers. A pleasant 25-minute walk through central Lhasa, or a 10-minute taxi ride (approximately CNY 15). Most visitors combine both in one day: Potala in the morning, Jokhang and Barkhor in the afternoon." },
+  { q: "Can I visit Potala, Jokhang, and Norbulingka in one day?", a: "Technically yes, but it would be a rushed and exhausting day. A more comfortable plan: Potala + Jokhang/Barkhor on day 1, Norbulingka + Sera Monastery on day 2." },
+  { q: "How many days do I need in Lhasa?", a: "Three full days is ideal: Day 1 for Potala Palace, Day 2 for Jokhang Temple and Barkhor Street, Day 3 for Sera Monastery (afternoon debates) and Norbulingka Palace. Add a fourth day if you want to visit Ganden Monastery or Drepung Monastery." },
+  { q: "What other places near Lhasa are worth visiting?", a: "Ganden Monastery (45 km east, stunning mountain location), Drepung Monastery (8 km west, once the world's largest monastery with 10,000 monks), and Yamdrok Lake (100 km southwest, one of Tibet's three sacred lakes with turquoise water at 4,441m)." },
+];
+---
+
+<BaseLayout canonical="https://tibet-lhasa-potala.com/lhasa-attractions" title="Lhasa Attractions Beyond Potala | 2026 Guide" description="Guide to Lhasa attractions beyond Potala Palace: Jokhang Temple, Barkhor Street, Sera Monastery, Norbulingka, and Yamdrok Lake." ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp"
+  authorName="Tenzin Dorje" authorUrl="/about/#tenzin-dorje" datePublished="2026-02-15" dateModified="2026-08-06">
+>
+  <StructuredData type="Article" data={{ title: "Lhasa Beyond Potala", description: "Complete guide to Lhasa's top attractions: Jokhang Temple, Barkhor Street, Sera Monastery, Norbulingka Palace, and nearby monasteries.", url: "/lhasa-attractions/", datePublished: "2026-01-01", dateModified: "2026-08-06" }} />
+  <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "Attractions", url: "/lhasa-attractions/" }] }} />
+  <StructuredData type="FAQPage" data={{ faqs }} />
+  <StructuredData type="Person" data={{ name: "Tenzin Dorje", description: "Lhasa-based Researcher & Cultural Guide", url: "/about/#tenzin-dorje" }} />
+
+  <PageHero title="Lhasa Beyond Potala" subtitle="Jokhang Temple, Barkhor Street, Sera Monastery, Norbulingka Palace, and more. How to spend 2-3 days exploring the best of Lhasa." breadcrumb="Attractions" updated="August 2026" />
+
+  <article class="max-w-3xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div class="prose">
+      <h2>Jokhang Temple</h2>
+      <p>The spiritual heart of Tibet -- and for many visitors, an even more powerful experience than Potala Palace. Built in the 7th century by King Songtsen Gampo, Jokhang houses the most sacred object in Tibetan Buddhism: a life-size gilded statue of the 12-year-old Buddha Shakyamuni, said to have been blessed by the Buddha himself. Thousands of pilgrims prostrate their way across Tibet to reach this statue.</p>
+      <p>The atmosphere is unlike anything else: yak butter lamps flickering in the dim light, the low murmur of mantras echoing off ancient stone walls, monks in crimson robes moving through corridors worn smooth by centuries of devotion. The rooftop offers a panoramic view of the Potala Palace on the horizon and the Barkhor circuit below -- a perfect photo spot.</p>
+      <p><strong>Tickets:</strong> CNY 85 | <strong>Hours:</strong> 7:00 AM - 5:30 PM | <strong>Time needed:</strong> 1-2 hours</p>
+
+      <h2>Barkhor Street</h2>
+      <p>The circumambulation circuit around Jokhang Temple, Barkhor Street is where Lhasa comes alive. Pilgrims walk clockwise, spinning handheld prayer wheels and murmuring mantras. Vendors sell prayer flags, turquoise jewelry, thangka paintings, Tibetan incense, and yak wool scarves from tiny stalls that have been in the same families for generations.</p>
+      <p>Best visited in the late afternoon (4:00-6:00 PM) when the light turns golden, the crowds are at their peak energy, and the rooftop tea houses overlooking the circuit fill up with locals and travelers alike. Do not rush through Barkhor. Sit on the steps, watch the pilgrims, drink sweet tea. This is the real Lhasa.</p>
+      <p><strong>Time needed:</strong> 1-3 hours (allow time for shopping and people-watching)</p>
+
+      <h2>Sera Monastery</h2>
+      <p>Sera is famous for one thing: the daily monk debates. Every afternoon (Monday-Saturday, 3:00-5:00 PM), monks gather in the tree-shaded debating courtyard for a ritual that has remained unchanged for centuries. The debates are philosophical -- monks question each other on Buddhist doctrine with dramatic gestures: the questioner claps his hands loudly, stamps his foot, and thrusts his arm forward to emphasize each point.</p>
+      <p>Even without understanding Tibetan, the theater of it is mesmerizing. The sound of clapping hands echoing through the courtyard, the intensity of the exchanges, the younger monks nervously facing their seniors. Beyond the debates, Sera's main assembly hall contains beautiful murals and a serene atmosphere away from the tourist bustle of central Lhasa.</p>
+      <p><strong>Tickets:</strong> CNY 50 | <strong>Time needed:</strong> 2 hours (arrive by 2:45 PM for the debates)</p>
+
+      <h2>Norbulingka Palace</h2>
+      <p>The summer palace of the Dalai Lamas, Norbulingka is a peaceful contrast to the formality of the Potala. Spread across 36 hectares of gardens, pavilions, and small palaces, it was built as a retreat -- a place for the Dalai Lamas to escape the summer heat. The main palace (Takten Migyur Potrang) was built by the 14th Dalai Lama in the 1950s and is the most recent addition.</p>
+      <p>The gardens are lovely in May and June when the flowers are in bloom. Even in other months, the quiet pathways and shaded pavilions offer a welcome respite from Lhasa's intensity. The palace interiors are well-preserved and less crowded than Potala, giving you space to absorb the details.</p>
+      <p><strong>Tickets:</strong> CNY 60 | <strong>Hours:</strong> 9:30 AM - 5:30 PM | <strong>Time needed:</strong> 1-2 hours</p>
+
+      <h2>Beyond the City: Day Trips from Lhasa</h2>
+      <h3>Drepung Monastery</h3>
+      <p>Once the world's largest monastery, housing up to 10,000 monks at its peak. Located 8 km west of Lhasa at the foot of Mount Gephel. The main assembly hall is vast and atmospheric. Visit in the morning when monks perform their chanting rituals. <strong>Time needed:</strong> 2-3 hours, half-day trip.</p>
+
+      <h3>Ganden Monastery</h3>
+      <p>Perched on a mountain ridge 45 km east of Lhasa at 4,300 meters, Ganden offers some of the most dramatic monastery views in Tibet. The original monastery was largely destroyed but has been partially rebuilt. The kora (circumambulation path) around the monastery ridge takes about 1.5 hours and offers panoramic views of the Kyi-chu Valley. <strong>Time needed:</strong> Full day trip.</p>
+
+      <h3>Yamdrok Lake</h3>
+
+      <h2>Suggested 3-Day Lhasa Itinerary</h2>
+      <p>Here is the most efficient route through Lhasa's top attractions, organized by geography and energy level. Each day builds on the last — start with lighter walking, end with the most demanding climbs.</p>
+
+      <h3>Day 1: Acclimatization + Barkhor</h3>
+      <p>Do not attempt anything physically demanding on your first day at altitude. Spend the morning resting at your hotel. In the late afternoon (after 3:00 PM), walk slowly to Jokhang Temple and spend an hour inside absorbing the atmosphere. Then join the pilgrims on the Barkhor circuit — walk clockwise, stop for sweet tea at a rooftop teahouse, and watch the city come alive. Dinner: try a Tibetan restaurant near Barkhor. This is a gentle, flat walk of about 2 km total. <strong>Total walking: 2-3 km, mostly flat. Altitude gain: minimal.</strong></p>
+
+      <h3>Day 2: Potala Palace + Jokhang</h3>
+      <p>Book the earliest Potala time slot (9:30 AM). The climb is steep — take it slowly and pause often. Allow 2-3 hours inside the palace. Exit through the west gate and walk to a nearby restaurant for lunch. In the afternoon, if energy permits, revisit Jokhang Temple or explore Barkhor's side streets and shops. You will have seen the two most important sites in Tibet in one day. <strong>Total walking: 4-5 km, with ~50m of steep stairs at Potala.</strong></p>
+
+      <h3>Day 3: Sera Monastery + Norbulingka</h3>
+      <p>Morning: Visit Norbulingka Palace (opens 9:30 AM). The flat, peaceful gardens are a welcome contrast to Potala's stairs. Spend 1-2 hours exploring the pavilions. Lunch near the palace. At 2:30 PM, take a taxi to Sera Monastery to secure a good spot for the 3:00 PM monk debates in the courtyard. After the debates, explore Sera's assembly halls. Evening: celebratory dinner at one of Lhasa's best Tibetan restaurants. <strong>Total walking: 3-4 km, mostly flat.</strong></p>
+
+      <h3>If You Have a Fourth Day</h3>
+      <p>Choose between Drepung Monastery (closer, half-day, morning chanting) or Ganden Monastery (farther, full-day, dramatic mountain setting). Both are worth the time. Drepung is easier logistically — a 20-minute taxi from central Lhasa. Ganden requires a 1-hour drive each way but rewards with extraordinary mountain monastery views.</p>
+
+      <h2>Beyond the City: Day Trips from Lhasa</h2>
+      <p>For day trips outside Lhasa, you will need a registered tour vehicle and guide. Independent travel outside the city is not permitted for foreign visitors. Your travel agency can arrange day trips as part of your tour package. Book at least one week in advance during peak season.</p>
+      <p>One of Tibet's three sacred lakes, located 100 km southwest of Lhasa. The water is an extraordinary turquoise color that changes with the light. The best viewpoint is from the Kamba-la Pass (4,794m) on the road from Lhasa. <strong>Time needed:</strong> Full day trip. Note: this requires an Aliens' Travel Permit in addition to your TTP.</p>
+    </div>
+  </article>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-12">
+    <h2 class="text-2xl font-bold mb-6">Attraction Questions Answered</h2>
+    <FaqAccordion faqs={faqs} />
+  </section>
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-4">
+    <AuthorBio slug="tenzin-dorje" datePublished="2026-02-15" dateModified="2026-08-06" />
+  </section>
+
+
+
+  <PageNav prev={{ href: "/best-time", label: "Best Time" }} />
+</BaseLayout>
+

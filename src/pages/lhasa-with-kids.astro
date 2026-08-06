@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import PageNav from "../components/PageNav.astro";
+import StructuredData from "../components/StructuredData.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+import AuthorBio from "../components/AuthorBio.astro";
+
+const faqs = [
+  { q: "Is it safe to bring children to Lhasa?", a: "Yes, with proper preparation. Thousands of families visit Lhasa every year. The main concern is altitude, not safety. Lhasa is a peaceful city with very low crime rates. The key is thorough pre-trip planning around altitude acclimatization." },
+  { q: "What is the minimum age for children to visit Potala Palace?", a: "There is no official minimum age. However, the climb is steep with many stairs, and children under 5 may find it exhausting at 3,700m. Consider a baby carrier for toddlers. Strollers are not practical inside the palace due to staircases." },
+  { q: "Do children need a Tibet Travel Permit?", a: "Yes. Every foreign traveler regardless of age needs a Tibet Travel Permit. Children's permits are processed through the same travel agency as the parents. You will need the child's passport and Chinese visa." },
+  { q: "How do I manage altitude sickness with kids?", a: "Children acclimatize similarly to adults but may not be able to articulate symptoms. Watch for unusual tiredness, loss of appetite, or irritability. Keep them hydrated. Plan for 2-3 acclimatization days in Lhasa before any strenuous activity. Consult a pediatrician experienced in high-altitude travel before your trip." },
+  { q: "What should I pack for a child in Lhasa?", a: "Layers are essential. Mornings and evenings are cold even in summer. Sunscreen (SPF 50+), lip balm, wide-brimmed hat, and UV-protective sunglasses are critical. The UV at 3,700m is intense. Bring familiar snacks from home, and any medications your child might need including children's ibuprofen." },
+];
+const pageTitle = "Lhasa with Kids 2026 | Family Travel Guide to Potala Palace";
+const pageDesc = "Guide to visiting Lhasa and Potala Palace with children: altitude safety, packing list, kid-friendly activities, and family hotels.";
+---
+
+<BaseLayout canonical="https://tibet-lhasa-potala.com/lhasa-with-kids" title={pageTitle} description={pageDesc} ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp"
+  authorName="Sarah Chen" authorUrl="/about/#sarah-chen" datePublished="2026-03-20" dateModified="2026-08-06">
+>
+  <StructuredData type="Article" data={{ title: "Lhasa with Kids", description: pageDesc, url: "/lhasa-with-kids/", datePublished: "2026-01-01", dateModified: "2026-08-06" }} />
+  <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "Lhasa with Kids", url: "/lhasa-with-kids/" }] }} />
+  <StructuredData type="FAQPage" data={{ faqs }} />
+  <StructuredData type="Person" data={{ name: "Sarah Chen", description: "Senior Travel Writer & Tibet Specialist", url: "/about/#sarah-chen" }} />
+
+  <PageHero title="Lhasa with Kids" subtitle="Is Lhasa safe for children? How do kids handle the altitude? A practical family guide to Potala Palace and Tibet with babies, toddlers, and teenagers." breadcrumb="Lhasa with Kids" updated="August 2026" />
+
+  <article class="max-w-3xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div class="prose">
+      <h2>The Big Question: Is It Worth It?</h2>
+      <p>Bringing children to Tibet is not a casual decision. The altitude is real, the logistics are demanding, and the travel is long. But for families who plan carefully, Lhasa can be an extraordinary experience. Children notice things adults miss: the texture of prayer flags, the sound of chanting monks, the way light falls across a thousand-year-old mural. They will remember it differently than you will. That is the point.</p>
+
+      <h2 id="altitude">Altitude and Children: The Honest Truth</h2>
+      <p>Lhasa sits at 3,650 meters. Potala Palace adds 50 meters of steep stairs. This is not a trivial elevation for anyone, especially small bodies. The good news: children generally acclimatize at the same rate as adults and are not at higher risk for Acute Mountain Sickness based on age alone. The bad news: young children cannot describe their symptoms clearly, so you need to be the detective.</p>
+      <p><strong>Red flags to watch for in children:</strong> unusual drowsiness or difficulty waking, loss of appetite, persistent headache (older children may complain, younger ones may just be irritable), vomiting, or difficulty breathing at rest. If any of these appear, descend immediately to a lower elevation and seek medical attention.</p>
+      <p><strong>Pre-trip preparation:</strong> consult a pediatrician familiar with high-altitude medicine at least 6 weeks before travel. Ask about acetazolamide (Diamox) for children. Some doctors prescribe it preventatively. Others prefer to keep it as a rescue medication. Either way, have the conversation. Do not self-medicate children for altitude without professional guidance.</p>
+
+      <h2 id="ages">Age-by-Age Guide</h2>
+      <h3>Babies and Toddlers (0-3 years)</h3>
+      <p>Honest assessment: this is the hardest age group for Lhasa. Strollers are useless on the cobblestone streets and inside Potala Palace. You will be carrying your child for hours at 3,700m while your own body is struggling with the altitude. A high-quality baby carrier is essential. Consider waiting until your child is older unless you have a compelling reason to go now. If you do go, plan an ultra-gentle itinerary with frequent rest days.</p>
+
+      <h3>Young Children (4-8 years)</h3>
+      <p>This is the sweet spot. Children in this age range are old enough to walk independently and young enough to be genuinely awed by the experience. They can handle the Potala Palace stairs with encouragement and frequent water breaks. Make it a game: count the steps, spot the golden roofs, find the prayer wheels. Keep museum visits to 60 minutes maximum. Follow every cultural activity with something physical and free-range: running in the square, feeding pigeons outside Jokhang Temple, chasing shadows on Barkhor Street.</p>
+
+      <h3>Older Children and Teens (9-16 years)</h3>
+      <p>Teenagers can do everything adults can do in Lhasa, often with more energy. The challenge shifts from physical to engagement. Give them a camera and a mission. Challenge them to find the oldest mural in Potala Palace or photograph the best reflection in Dragon King Pond. Let them choose a restaurant from the food guide. The more agency they have, the more they will invest in the experience. This age group can also handle the Tibetan history and politics if they are curious, but let them lead that conversation.</p>
+
+      <h2 id="itinerary">Kid-Friendly Lhasa Itinerary</h2>
+      <p><strong>Day 1:</strong> Arrive in Lhasa. Do nothing except drink water and take a short walk around your hotel. Let the kids run around the hotel courtyard. Early dinner, early bed.</p>
+      <p><strong>Day 2:</strong> Morning walk along Barkhor Street. Let children spin the prayer wheels (clockwise). Feed the pigeons outside Jokhang Temple. Afternoon rest at the hotel. This is still an acclimatization day.</p>
+      <p><strong>Day 3:</strong> Potala Palace in the morning. Book the earliest time slot when children are freshest. Plan for 2 hours maximum inside. Afternoon: rest or light activity. Do not attempt two major sights in one day.</p>
+      <p><strong>Day 4:</strong> Sera Monastery to watch the monks debating (afternoon sessions are liveliest). Children love the theatrical hand-clapping. Follow with ice cream or sweet tea at a tea house.</p>
+      <p><strong>Day 5:</strong> Lhasa city park, the Tibet Museum (free, air-conditioned, surprisingly good for kids), or a short day trip to a nearby nunnery or monastery if everyone is feeling strong.</p>
+
+      <h2 id="packing">What to Pack for Kids</h2>
+      <p><strong>UV protection is non-negotiable.</strong> At 3,700m with thin atmosphere, sunburn happens in minutes. SPF 50+ sunscreen reapplied every 2 hours. Wide-brimmed hats with chin straps. UV-protective sunglasses. Long-sleeved lightweight shirts even on warm days.</p>
+      <p><strong>Layers.</strong> Mornings can be 5 degrees Celsius even in July. Afternoons can be 25 degrees. Pack for all four seasons: thermal base layer, fleece mid-layer, windproof outer layer. <strong>Comfortable walking shoes</strong> with good grip for uneven stone stairs. <strong>Familiar snacks.</strong> Tibetan food may not appeal to picky eaters. Bring granola bars, crackers, and comfort foods from home. <strong>Entertainment for downtime.</strong> Download movies, audiobooks, and games before arriving. Wi-Fi in Lhasa hotels is functional but slow.</p>
+
+      <h2 id="hotels">Family-Friendly Hotels</h2>
+      <p>The St. Regis Lhasa Resort and the Shangri-La Lhasa both offer family rooms, oxygen enrichment systems in rooms, Western breakfast buffets, and English-speaking staff. The Shangri-La has a children's play area. Mid-range options: the Lhasa Manasarovar Hotel and the Kyichu Hotel both accommodate families and are located near the Barkhor area. Book hotels with oxygen systems. It makes a real difference for children's first nights.</p>
+    </div>
+  </article>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-10">
+    <FaqAccordion faqs={faqs} />
+  </section>
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-4">
+    <AuthorBio slug="sarah-chen" datePublished="2026-03-20" dateModified="2026-08-06" />
+  </section>
+
+
+
+  <PageNav prev={{ href: "/tibet-etiquette", label: "Tibet Etiquette" }} next={{ href: "/lhasa-vegetarian-halal", label: "Vegetarian & Halal Guide" }} />
+</BaseLayout>

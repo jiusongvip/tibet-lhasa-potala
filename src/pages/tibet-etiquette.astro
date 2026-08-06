@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import PageNav from "../components/PageNav.astro";
+import StructuredData from "../components/StructuredData.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+import AuthorBio from "../components/AuthorBio.astro";
+
+const faqs = [
+  { q: "Do I need to cover my head inside temples?", a: "Yes. Remove hats and caps when entering any temple or monastery in Tibet. This applies to both men and women. It is a sign of respect toward the Buddha, the Dharma, and the Sangha." },
+  { q: "What should I wear when visiting monasteries?", a: "Long pants or skirts covering the knees, and shirts covering the shoulders. Avoid shorts, tank tops, and revealing clothing. This is not just cultural etiquette. Many monasteries will deny entry to improperly dressed visitors." },
+  { q: "Which direction do I walk around religious sites?", a: "Always clockwise with your left shoulder toward the shrine. This is called kora. You will see Tibetans circumambulating temples, stupas, and prayer wheels in this direction. Walking counter-clockwise is associated with the Bon religion and can cause offense in Buddhist spaces." },
+  { q: "Can I take photos of monks and pilgrims?", a: "Ask first. A simple gesture toward your camera and a smile is universal. Many monks are happy to be photographed if asked respectfully. Never photograph people in prayer without permission. Inside temple halls, photography is almost always prohibited." },
+  { q: "Is it OK to touch someone's head?", a: "No. The head is considered the most sacred part of the body in Tibetan culture. Never pat a child on the head, even affectionately. Similarly, do not point the soles of your feet toward people or religious objects." },
+];
+
+const pageTitle = "Tibet Travel Etiquette 2026 | Do's & Don'ts";
+const pageDesc = "Guide to Tibetan customs and etiquette: temple rules, photography dos and don'ts, greeting customs, and avoiding cultural mistakes at Potala Palace.";
+---
+
+<BaseLayout canonical="https://tibet-lhasa-potala.com/tibet-etiquette" title={pageTitle} description={pageDesc} ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp"
+  authorName="Tenzin Dorje" authorUrl="/about/#tenzin-dorje" datePublished="2026-03-15" dateModified="2026-08-06">
+>
+  <StructuredData type="Article" data={{ title: "Tibet Travel Etiquette", description: pageDesc, url: "/tibet-etiquette/", datePublished: "2026-01-01", dateModified: "2026-08-06" }} />
+  <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "Etiquette", url: "/tibet-etiquette/" }] }} />
+  <StructuredData type="FAQPage" data={{ faqs }} />
+  <StructuredData type="Person" data={{ name: "Tenzin Dorje", description: "Lhasa-based Researcher & Cultural Guide", url: "/about/#tenzin-dorje" }} />
+
+  <PageHero title="Tibet Travel Etiquette" subtitle="The unwritten rules of visiting temples, monasteries, and sacred sites in Tibet. What to wear, how to behave, and the cultural mistakes that are easy to make and hard to undo." breadcrumb="Etiquette" updated="August 2026" />
+
+  <article class="max-w-3xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div class="prose">
+      <h2>Why Tibetan Etiquette Matters</h2>
+      <p>Tibet is not just a travel destination. It is one of the most deeply religious regions on earth. Every stupa, prayer wheel, and monastery is a living site of worship, not a museum exhibit. Understanding a few basic customs transforms your experience from that of an outside observer to a respectful guest.</p>
+      <p>Most Tibetans are remarkably forgiving of well-meaning tourists. But the gestures that show you have made an effort to be respectful are noticed and appreciated in ways that money cannot buy.</p>
+
+      <h2 id="temples">Temple and Monastery Etiquette</h2>
+      <h3>Dress Code</h3>
+      <p>Long trousers or skirts covering below the knee. Shirts or tops covering the shoulders. No shorts, no tank tops, no bare midriffs. Footwear: anything comfortable for stone floors and stairs. Remove your hat the moment you step through the entrance.</p>
+
+      <h3>Walking Direction (Kora)</h3>
+      <p>Always walk clockwise around Buddhist sites. This is the single most important rule. Temples, stupas, mani stone walls, prayer wheels. Circle them with your left shoulder toward the sacred object. You will see Tibetans doing this everywhere: Barkhor Street around Jokhang Temple, the kora path around Potala Palace, inside monastery courtyards. Follow their lead.</p>
+
+      <h3>Inside Temple Halls</h3>
+      <p><strong>Silence your phone.</strong> Not vibrate. Silent. <strong>Speak in whispers</strong> if you must speak at all. <strong>Do not point</strong> at statues or paintings with your index finger. Use an open palm or gesture with your chin. <strong>Never step over</strong> prayer mats, cushions, or offerings on the floor. Walk around them. <strong>Do not sit</strong> on platforms, altars, or any raised surface inside a temple. <strong>Do not lean against</strong> pillars with sacred paintings or touch murals and thangkas.</p>
+
+      <h2 id="photography">Photography Rules</h2>
+      <p>Photography is prohibited inside nearly all Tibetan temple halls. This is not about protecting secrets, it is about protecting the sacred atmosphere and the fragile artworks. Flash photography damages ancient pigments. Signs will indicate where photography is allowed. If you are unsure, do not take the photo.</p>
+      <p>When photographing people, ask permission. A gesture toward your camera and a questioning look is usually enough. Many pilgrims and monks will say yes. Elderly pilgrims often say no. Respect it immediately. Never photograph someone in deep prayer or prostration without explicit consent. These are intimate spiritual acts, not photo opportunities.</p>
+      <p>Drones are illegal in Lhasa without special permits from both the civil aviation authority and the military. Do not fly a drone near Potala Palace, Jokhang Temple, or any government building. Confiscation is the best-case outcome.</p>
+
+      <h2 id="interactions">Interacting with Tibetans</h2>
+      <p>If an elderly Tibetan sticks out their tongue at you, do not be alarmed. It is a traditional greeting meaning I come in peace, originating from the belief that a black tongue indicates evil intentions. A slight bow with palms pressed together at chest level is the appropriate response.</p>
+      <p>Use both hands when giving or receiving anything: money, a cup of tea, a gift, a business card. If one hand is occupied, touch your receiving arm with your free hand as a symbolic gesture.</p>
+      <p>Never touch someone's head. The head is considered the seat of the soul. Do not point the soles of your feet toward people or religious images. When sitting on the floor in a temple, sit cross-legged or with your feet tucked behind you. Avoid public displays of affection. Holding hands is fine and common among same-sex friends as a sign of platonic affection, but kissing in public is inappropriate.</p>
+
+      <h2 id="offerings">Offerings and Donations</h2>
+      <p>You will see Tibetans placing money on altars, in front of statues, and into donation boxes. There is no minimum amount. A one-yuan note is perfectly acceptable. If you want to make an offering, place it gently, do not toss it. If you have larger notes and want to make a smaller offering, it is completely normal to take change from your own offering. Place a 10-yuan note and take back 9 yuan in smaller notes. This is not stealing. It is a widely practiced custom.</p>
+
+      <h2 id="daily">Daily Life Courtesies</h2>
+      <p>Do not step over someone's legs or belongings. Walk around. Do not throw trash into fires used for religious offerings (sang offering smoke). Do not wash or swim in lakes considered sacred (Yamdrok Lake, Namtso Lake, Manasarovar). Do not climb on mani stone piles or stupas. These are religious objects, not scenic viewpoints. Respect prayer flags. Do not step on fallen prayer flags. If you must move them, pick them up and place them somewhere clean and elevated.</p>
+    </div>
+  </article>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-10">
+    <FaqAccordion faqs={faqs} />
+  </section>
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-4">
+    <AuthorBio slug="tenzin-dorje" datePublished="2026-03-15" dateModified="2026-08-06" />
+  </section>
+
+
+
+  <PageNav prev={{ href: "/lhasa-3-day-itinerary", label: "3-Day Lhasa Itinerary" }} next={{ href: "/lhasa-with-kids", label: "Lhasa with Kids" }} />
+</BaseLayout>

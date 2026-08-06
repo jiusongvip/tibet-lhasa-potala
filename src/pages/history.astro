@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import PageNav from "../components/PageNav.astro";
+import StructuredData from "../components/StructuredData.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+import AuthorBio from "../components/AuthorBio.astro";
+
+const faqs = [
+  { q: "How old is Potala Palace?", a: "The original structure was built in the 7th century (around 641 AD) by King Songtsen Gampo. The current palace was largely rebuilt in the 17th century by the 5th Dalai Lama, making the main structure about 370 years old. The site itself has over 1,300 years of continuous history." },
+  { q: "Why is it called Potala Palace?", a: "The name comes from Mount Potalaka, the mythical abode of the bodhisattva Avalokiteshvara (Chenrezig in Tibetan). The Dalai Lamas are considered manifestations of Chenrezig, so their residence was named accordingly." },
+  { q: "Red Palace vs White Palace?", a: "The White Palace (eastern section) was the living and administrative quarters of the Dalai Lamas. The Red Palace (western section) is the religious center, housing the stupa tombs of past Dalai Lamas, Buddhist chapels, and assembly halls." },
+  { q: "Is Potala Palace still used today?", a: "It no longer serves as a political or residential building, but it remains an active religious site. Monks maintain the chapels, butter lamps are kept burning, and pilgrims visit daily. It also functions as a museum, with most of its rooms open to the public." },
+];
+---
+
+<BaseLayout canonical="https://tibet-lhasa-potala.com/history" title="Potala Palace History | 1,300 Years of Tibetan Heritage" description="1,300 years on the Red Hill: from Songtsen Gampo's 7th-century palace to the Dalai Lamas' winter residence. Architecture, murals, artifacts & UNESCO heritage." ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp" authorName="Tenzin Dorje" authorUrl="/about/#tenzin-dorje" datePublished="2026-01-10" dateModified="2026-08-06">`n<StructuredData type="Article" data={{ title: "History of Potala Palace", description: "1,300 years of history, architecture, cultural treasures, and UNESCO World Heritage significance.", url: "/history/" }} />
+  <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "History", url: "/history/" }] }} />
+  <StructuredData type="FAQPage" data={{ faqs }} />
+  <StructuredData type="Person" data={{ name: "Tenzin Dorje", description: "Lhasa-based Researcher & Cultural Guide, 20+ years guiding at Potala Palace.", url: "/about/#tenzin-dorje" }} />
+
+  <PageHero title="History of Potala Palace" subtitle="1,300 years on the Red Hill: from a 7th-century wedding gift to the spiritual heart of Tibet." breadcrumb="History" updated="August 2026" />
+
+  <article class="max-w-3xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div class="prose">
+      <h2>Origins: A King's Wedding Gift (641 AD)</h2>
+      <p>In 641 AD, Tibetan King Songtsen Gampo built a 9-story palace on Marpo Ri (Red Hill) as a wedding gift for his bride, Princess Wencheng of the Tang Dynasty. According to historical records, the original structure had 999 rooms -- one short of the mythological 1,000-room palace of Indra. The remaining room was said to be in heaven. Over the following centuries, lightning strikes, civil wars, and the passage of time destroyed most of the original structure.</p>
+
+      <h2>The Great Rebuilding (1645-1694)</h2>
+      <p>In 1645, the 5th Dalai Lama, Lobsang Gyatso, began reconstructing the palace on the original 7th-century foundations. The White Palace was completed in 1648, and the Dalai Lama moved his winter residence there from Drepung Monastery. After his death in 1682, construction of the Red Palace began under the regent Desi Sangye Gyatso. The Red Palace was completed in 1694, and the 5th Dalai Lama's remains were enshrined in the magnificent gilded stupa that remains the centerpiece of the palace today.</p>
+
+      <h2>Architecture: A Masterpiece of Adaptation</h2>
+      <p>At 13 stories tall with over 1,000 rooms, 10,000 shrines, and approximately 200,000 statues, Potala Palace is the world's highest ancient palace. Its design is a deliberate fusion of Tibetan, Han Chinese, and Indian architectural traditions:</p>
+      <ul>
+        <li><strong>White Palace (Potrang Karpo):</strong> The secular and administrative wing. Its whitewashed walls symbolize peace and purity. Inside: the Great East Hall, living quarters, offices, the seminary, and the Dalai Lama's private chambers with their commanding views of Lhasa.</li>
+        <li><strong>Red Palace (Potrang Marpo):</strong> The religious wing. Its deep red walls — made from willow branches packed with straw and earth, then painted — symbolize dignity and power. Inside: eight gilded stupa tombs, multiple chapels, and assembly halls whose walls are completely covered in narrative murals.</li>
+        <li><strong>The Walls:</strong> The outer walls taper inward from a base up to three meters thick, built from stone, wood, and earth. This tapering design, combined with the red-willow upper sections, creates the palace's distinctive fortress-like silhouette while providing seismic stability in an earthquake-prone region.</li>
+        <li><strong>Golden Roofs:</strong> The seven gilded roofs crowning the Red Palace are constructed of bronze tiles coated in gold leaf. Sunlight reflecting off these roofs can be seen from kilometers away, and they have become the defining visual signature of the Lhasa skyline.</li>
+      </ul>
+
+      <h2>Treasures Within: Murals, Thangkas, and Artifacts</h2>
+      <p>The Potala Palace is not just an architectural achievement -- it is one of the world's great repositories of Buddhist art. The interior is a museum of staggering scale and quality:</p>
+
+      <h3>Murals and Frescoes</h3>
+      <p>The palace walls are covered in an estimated 2,500 square meters of murals, making it one of the largest collections of Tibetan Buddhist painting in existence. Key themes include the life of the 5th Dalai Lama, the construction of the palace itself, scenes from the Jataka tales (stories of the Buddha's previous lives), and depictions of Tibetan history. The pigments were made from crushed minerals -- lapis lazuli for blue, malachite for green, cinnabar for red -- and have retained their vibrancy for over three centuries. The mural depicting the 5th Dalai Lama's visit to Beijing in 1652 is particularly famous, showing the meeting between the Dalai Lama and the Qing Emperor Shunzhi in extraordinary detail.</p>
+
+      <h3>Thangka Collection</h3>
+      <p>Thangkas are Tibetan Buddhist scroll paintings on cotton or silk, and the Potala's collection is unparalleled. The palace holds thangkas dating from the 7th through 20th centuries, including massive applique thangkas -- some over 30 meters long -- that are displayed on the palace exterior during religious festivals. These giant thangkas, visible from across the city, depict Buddha Shakyamuni, Avalokiteshvara, and other deities. Their public display is one of the most dramatic events in the Tibetan religious calendar.</p>
+
+      <h3>Sculptures and Statues</h3>
+      <p>The palace holds approximately 200,000 Buddhist statues in gold, silver, bronze, sandalwood, clay, and precious stone. Highlights include a life-size sandalwood statue of Avalokiteshvara said to have emerged naturally from a tree trunk, gold statues of the successive Dalai Lamas, and a silver statue of the 8th-century Indian master Padmasambhava. The statue of the 5th Dalai Lama in the Red Palace is particularly significant -- it was made from his actual remains mixed with clay and then gilded.</p>
+
+      <h3>Scriptures and Texts</h3>
+      <p>The palace library contains over 200 volumes of Buddhist sutras, many handwritten in gold or silver ink on indigo-dyed paper. The most precious texts include the Kangyur (the translated words of the Buddha) and Tengyur (commentaries), Tibetan translations that preserve Buddhist texts whose original Sanskrit versions were lost when Buddhism declined in India.</p>
+
+      <h2>UNESCO World Heritage</h2>
+  <p>In 1994, UNESCO inscribed the Historic Ensemble of the Potala Palace as a <a href="https://whc.unesco.org/en/list/707" target="_blank" rel="noopener">World Heritage Site (UNESCO listing)</a>, recognizing it as "a masterpiece of human creative genius" and "an outstanding example of architecture that illustrates significant stages in human history." The designation was extended in 2000 and 2001 to include the Jokhang Temple and Norbulingka Palace, forming a protected ensemble that represents the apex of Tibetan architectural and artistic achievement. See also the <a href="https://en.wikipedia.org/wiki/Potala_Palace" target="_blank" rel="noopener">Wikipedia article on Potala Palace</a> for additional historical context.</p>
+
+      <h2>The Palace Today</h2>
+  <p>The Potala Palace was the winter residence of the Dalai Lamas from 1649 until 1959. Today, it functions primarily as a museum and active religious site. A major renovation completed in 2023 reinforced the structure's seismic stability and restored many of the murals. Controlled visitor access (2,300 people per day) helps preserve the fragile interior environment. The palace remains a living pilgrimage destination -- Tibetan Buddhists from across the plateau travel here to circumambulate the palace, offer prayers, and pay respects at the stupas of the Dalai Lamas.</p>
+  <p>Preservation is an ongoing challenge. The palace sits at an altitude where ultraviolet radiation is intense and temperature swings exceed 20C daily — both accelerate the degradation of ancient pigments, wood, and textiles. Humidity control, visitor management, and structural monitoring systems were installed during the 2023 renovation. The murals are particularly vulnerable: the 2,500 square meters of paintings require constant climate monitoring, and some of the most fragile sections are periodically closed for conservation work. The Chinese government and UNESCO jointly fund preservation efforts, with the next major restoration phase planned for 2030.</p>
+    </div>
+  </article>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-12">
+    <h2 class="text-2xl font-bold mb-6">History Questions Answered</h2>
+    <FaqAccordion faqs={faqs} />
+  </section>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-4">
+    <AuthorBio slug="tenzin-dorje" datePublished="2026-01-10" dateModified="2026-08-06" />
+  </section>
+
+  <PageNav prev={{ href: "/permits", label: "Travel Permits" }} next={{ href: "/photography", label: "Photography" }} />
+</BaseLayout>
+

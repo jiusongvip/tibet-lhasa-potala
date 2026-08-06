@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import StructuredData from "../components/StructuredData.astro";
+import { getAuthorsBySlugs, editorialTeam } from "../data/authors";
+
+const members = getAuthorsBySlugs(editorialTeam.members);
+---
+
+<BaseLayout canonical="https://tibet-lhasa-potala.com/about" title="About Potala Guide | Who We Are & Editorial Standards" description="Meet the Potala Guide team: Tenzin Dorje, Sarah Chen, and Michael Rivera. Our editorial standards, research methodology, and corrections history.">
+  <StructuredData type="Article" data={{ title: "About Potala Guide", description: "Who operates Potala Guide, editorial standards, and content methodology.", url: "/about/", datePublished: "2026-01-01", dateModified: "2026-08-06" }} />
+  <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "About", url: "/about/" }] }} />
+  {members.map((author) => (
+    <StructuredData type="Person" data={{
+      name: author.name,
+      description: author.bio.substring(0, 200),
+      url: `/about/#${author.slug}`,
+      sameAs: author.sameAs.length > 0 ? author.sameAs : undefined,
+    }} />
+  ))}
+
+  <PageHero title="About Potala Guide" subtitle="Who we are, how we research, and why we built the most complete English-language guide to Potala Palace." breadcrumb="About" updated="August 2026" />
+
+  <article class="max-w-3xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div class="prose">
+      <h2>Our Team</h2>
+      <p>Potala Guide is built by three people who share an uncommon depth of experience with Potala Palace, Lhasa, and the Tibetan Plateau. Between us, we have visited the palace across seven seasons — winter stillness, summer crowds, autumn light, and the brief, brilliant Lhasa spring. We have climbed the east stairs in the thin morning air, stood in the Red Palace as butter lamps flickered against gilded stupas, and photographed the golden roofs from every public vantage point in the city.</p>
+      <p>We are not a faceless content operation. We are travelers, researchers, and writers who believe that a place as extraordinary as Potala Palace deserves a guide as thorough as the palace itself. Every page on this site reflects firsthand experience, cross-referenced against official sources and verified through the latest traveler reports.</p>
+
+      {members.map((author) => (
+        <div id={author.slug} class="team-member" style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+          <div style="display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap;">
+            <img
+              src={author.photoUrl}
+              alt={`Photo of ${author.name}`}
+              width="80"
+              height="80"
+              loading="lazy"
+              style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-border); flex-shrink: 0;"
+            />
+            <div>
+              <h3 style="margin: 0 0 0.125rem; font-size: 1.15rem; font-weight: 700;">{author.name}</h3>
+              <p style="margin: 0 0 0.5rem; color: var(--color-accent); font-size: 0.875rem; font-weight: 500;">{author.title}</p>
+              <ul style="margin: 0 0 0.5rem; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem;">
+                {author.credentials.map((cred) => (
+                  <li style="font-size: 0.75rem; color: var(--color-text-muted); background: var(--color-surface); padding: 0.15rem 0.45rem; border-radius: 3px; border: 1px solid var(--color-border);">{cred}</li>
+                ))}
+              </ul>
+              <p style="font-size: 0.875rem; color: var(--color-text-muted); margin: 0;">{author.bio}</p>
+              <p style="font-size: 0.8rem; color: var(--color-text-subtle); margin: 0.4rem 0 0;">
+                <strong>Covers:</strong> {author.specialties.join(" · ")}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+
+      <h2 style="margin-top: 3rem;">The Visit That Started This Guide</h2>
+      <p>This site began after a specific visit in autumn 2023. Sarah and Tenzin stood on Chakpori Hill at sunrise, watching the first light hit the White Palace walls. A traveler nearby was reading a four-year-old guidebook that listed a ticket price that had changed twice since publication and made no mention of the online reservation system introduced the year before. The realization hit: the English-language information about visiting Potala Palace was scattered across outdated guidebooks, incomplete blog posts, and forum threads full of conflicting advice. The most important landmark on the Tibetan Plateau had no single, reliable, current guide.</p>
+      <p>We decided to build it. Michael joined the project six months later, adding the photography guide and contributing images drawn from four photography expeditions to Lhasa. The site launched in early 2026 and has been updated quarterly since.</p>
+
+      <h2>How We Research</h2>
+      <p>Every piece of information on this site goes through a multi-step verification process:</p>
+      <ul>
+        <li><strong>On-the-ground verification:</strong> We have visited Potala Palace in person across multiple seasons. Our most recent on-site verification was <strong>May 2026</strong> (Tenzin Dorje), with photography updates from <strong>March 2026</strong> (Michael Rivera).</li>
+        <li><strong>Cross-referencing:</strong> Prices, hours, permit rules, and transport details are cross-checked against official sources, recent traveler reports, and local operators.</li>
+        <li><strong>Regular updates:</strong> Content is reviewed and refreshed on a quarterly basis. The most recent comprehensive update was <strong>August 2026</strong>.</li>
+        <li><strong>Expert review:</strong> Medical and altitude-related content is reviewed against guidelines from recognized health authorities, including the CDC and WHO high-altitude guidance.</li>
+      </ul>
+
+      <h2>Editorial Standards</h2>
+      <p>We hold our content to three principles:</p>
+      <ul>
+        <li><strong>Accuracy:</strong> If a fact is wrong, it helps no one. We correct errors promptly and note when content was last reviewed.</li>
+        <li><strong>Practicality:</strong> Travel guides should answer the question you actually have, not the question a search engine wants to rank. We prioritize actionable, specific information over generic travel writing.</li>
+        <li><strong>Transparency:</strong> We clearly disclose our limitations. We are not official tourism authorities, not medical professionals, and not licensed tour operators. When we cannot verify something definitively, we say so.</li>
+      </ul>
+
+      <h2>Content Updates</h2>
+      <p>Potala Palace ticket prices, permit regulations, and transport schedules can change. We update our content on the following schedule:</p>
+      <ul>
+        <li><strong>Ticket prices and hours:</strong> Verified at the start of each calendar year and updated within 48 hours of official announcements.</li>
+        <li><strong>Permit rules:</strong> Reviewed quarterly, as regulations can shift with little notice.</li>
+        <li><strong>Transport schedules:</strong> Updated whenever airlines or railways announce changes to routes or timetables.</li>
+        <li><strong>Medical/altitude guidance:</strong> Reviewed semi-annually against current CDC and WHO recommendations.</li>
+      </ul>
+      <p>Each page displays its last-updated date and contributing author. If you spot an error or outdated information, please contact us and we will correct it promptly, with the correction noted in our changelog.</p>
+
+      <h2>Independent and Unaffiliated</h2>
+      <p>Potala Guide is not affiliated with the Tibet Tourism Bureau, the Potala Palace administration, the Chinese government, or any travel agency. We do not sell tours, accept payment for listings, or publish sponsored content. Our recommendations are based on research and experience, not commercial arrangements.</p>
+      <p>When we link to external sources — UNESCO, Wikipedia, government health agencies — we do so because they are authoritative, not because of any partnership or payment.</p>
+
+      <h2>Corrections and Changelog</h2>
+      <p>We maintain a public record of significant corrections and content updates:</p>
+      <ul>
+        <li><strong>August 6, 2026:</strong> Full site content refresh. Updated ticket prices, permit processing timelines, and transport schedules to reflect current conditions.</li>
+        <li><strong>May 15, 2026:</strong> Updated photography page following on-site re-verification of all photo spot accessibility. Removed one location (Dragon Pond Park south gate) due to temporary construction closure.</li>
+        <li><strong>February 2026:</strong> Initial site launch with comprehensive guides.</li>
+      </ul>
+
+      <h2>Contact Us</h2>
+      <p>For corrections, suggestions, or questions about our content, you can reach us at:</p>
+      <p><strong>Email:</strong> hello@tibet-lhasa-potala.com</p>
+      <p>We read every message and aim to respond within 48 hours. If you are a traveler currently in Tibet with an urgent question, please contact your tour operator or local authorities directly — we cannot provide real-time travel assistance.</p>
+
+      <p style="margin-top: 2rem; font-size: 0.85rem; color: var(--color-text-subtle); font-style: italic;">Published: January 1, 2026 · Last updated: August 6, 2026</p>
+    </div>
+  </article>
+</BaseLayout>

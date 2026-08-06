@@ -1,0 +1,116 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import PageNav from "../components/PageNav.astro";
+import StructuredData from "../components/StructuredData.astro";
+import AuthorBio from "../components/AuthorBio.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+
+const visitSteps = [
+  { name: "Book Your Tickets", text: "Reserve online through the official platform or via a registered travel agency at least 3-5 days ahead. During peak season (May-October), tickets sell out 5-7 days in advance. The daily visitor cap is 2,300 people." },
+  { name: "Get Your Permits", text: "Foreign visitors need a Tibet Travel Permit (TTP) arranged through a travel agency before arriving in Tibet. Processing takes 7-10 business days. Your agency will also handle the Potala ticket reservation as part of your tour package." },
+  { name: "Arrive in Lhasa and Acclimatize", text: "Fly into Lhasa Gonggar Airport or take the Qinghai-Tibet railway. Spend at least 1-2 days in Lhasa before attempting Potala Palace. The altitude (3,650m) affects most visitors, and the climb to the palace entrance is demanding." },
+  { name: "Arrive at the Palace Early", text: "On the day of your visit, arrive at the east entrance gate 30 minutes before your reserved time slot. Have your passport and ticket confirmation ready. The climb from the entrance gate to the palace doors takes 20-30 minutes uphill." },
+  { name: "Explore the White Palace", text: "The eastern section contains the former living quarters and ceremonial halls of the Dalai Lamas. Key rooms: the Great East Hall (ceremonies and enthronements), the Dalai Lama's living chambers, and the seminary. Photography is allowed in outdoor courtyards only." },
+  { name: "Visit the Red Palace", text: "The western section is the religious heart of the complex. Key sights: the gilded stupa tombs of the 5th through 13th Dalai Lamas (the 5th Dalai Lama's stupa stands 14.8 meters tall and is covered in nearly 4 tonnes of gold), the Dharma Cave (the oldest surviving structure from the 7th century), and the main assembly hall with its extraordinary murals." },
+  { name: "See the Golden Roofs", text: "Crowning the Red Palace, the gilded bronze roofs are visible from across Lhasa. Access is included in your ticket. The view from here — gold against blue sky with prayer flags in the foreground — is one of the most photographed scenes in Tibet." },
+  { name: "Exit Through the West Gate", text: "The visit follows a one-way route ending at the western exit. From here, you can walk downhill to the Potala Palace Square for exterior photos, or continue to nearby attractions like the Tibet Museum or Norbulingka Palace." },
+];
+
+const faqs = [
+  { q: "How do I book Potala Palace tickets?", a: "Tickets must be reserved online in advance through the official platform or via a travel agency. During peak season (May-October), tickets sell out days ahead. Book at least 3-5 days in advance." },
+  { q: "Can I buy tickets at the entrance?", a: "On-site ticket sales are extremely limited and not guaranteed. Always book in advance. The palace has a daily visitor cap of approximately 2,300 people." },
+  { q: "What are the opening hours?", a: "9:30 AM to 3:30 PM (last entry). Arrive at least 30 minutes before your reserved time slot. The palace closes earlier than most attractions." },
+  { q: "How difficult is the climb?", a: "At 3,700m altitude, climbing the steep stone steps can be challenging even for fit visitors. Take it slow and allow 30-45 minutes just to reach the entrance. Wait 1-2 days after arriving in Lhasa to acclimatize." },
+  { q: "Is there a dress code?", a: "Yes. Shoulders and knees should be covered. Remove hats inside chapels. Avoid shorts and revealing clothing. Comfortable walking shoes are essential -- the stone steps are uneven." },
+];
+---
+
+<BaseLayout canonical="https://tibet-lhasa-potala.com/visit" title="How to Visit Potala Palace | Complete 2026 Guide" description="Complete 2026 guide: tickets, hours, routes, interior room guide, facilities, and insider tips for visiting Potala Palace in Lhasa, Tibet." ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp" authorName="Sarah Chen" authorUrl="/about/#sarah-chen" datePublished="2026-01-15" dateModified="2026-08-06">`n<StructuredData type="Article" data={{ title: "How to Visit Potala Palace", description: "Complete 2026 guide to Potala Palace visits: tickets, hours, routes, interior guide, and practical tips.", url: "/visit/" }} />
+  <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "Visit Guide", url: "/visit/" }] }} />
+  <StructuredData type="HowTo" data={{ name: "How to Visit Potala Palace", description: "Step-by-step guide to visiting Potala Palace in Lhasa, Tibet. Booking, permits, arrival, and palace tour.", steps: visitSteps }} />
+  <StructuredData type="FAQPage" data={{ faqs }} />
+  <StructuredData type="Person" data={{ name: "Sarah Chen", description: "Senior Travel Writer & Tibet Specialist, 6+ visits to Tibet across four seasons.", url: "/about/#sarah-chen" }} />
+  
+  <PageHero title="How to Visit Potala Palace" subtitle="The complete 2026 guide: tickets, routes, interior room guide, facilities, and everything you need to know before you go." breadcrumb="Visit Guide" updated="August 2026" />
+
+  <article class="max-w-3xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div class="prose">
+      <h2>Ticket Information (2026)</h2>
+      <p>Potala Palace uses a timed entry system with a daily visitor cap of 2,300 people. Here is what you need to know:</p>
+      <ul>
+        <li><strong>Peak season (May-October):</strong> CNY 200 per person</li>
+        <li><strong>Off-peak (November-April):</strong> CNY 100 per person</li>
+        <li><strong>Online reservation fee:</strong> CNY 5</li>
+        <li><strong>Student/senior discounts:</strong> 50% off with valid ID</li>
+        <li><strong>Children under 1.2m:</strong> Free (must be accompanied by an adult)</li>
+      </ul>
+
+      <h2>How to Book</h2>
+      <ol>
+        <li><strong>Through a travel agency:</strong> The most reliable method for foreign visitors. Your agency handles everything including the Tibet Travel Permit and ticket reservation.</li>
+        <li><strong>Online platform:</strong> The official reservation platform opens slots 7 days in advance. You will need your passport and Tibet Travel Permit.</li>
+      </ol>
+
+      <h2>Recommended Routes</h2>
+      <h3>1-Hour Express Route</h3>
+      <p>Enter through the main east gate, climb to the White Palace for the main ceremonial halls, visit the Red Palace for the stupa chapels, then exit through the west side. This covers the highlights if you are short on time or struggling with the altitude.</p>
+      
+      <h3>3-Hour Full Experience</h3>
+      <p>Start with exterior photos from Chakpori Hill, enter the main gate, explore the White Palace (Great East Hall, living quarters, seminary), continue to the Red Palace (gilded stupas, Dharma Cave, assembly hall murals), visit the Golden Roofs, and exit through the western path. Allow extra time for the altitude -- everything takes longer at 3,700m.</p>
+
+      <h2>Inside the Palace: A Room-by-Room Guide</h2>
+
+      <h3>The White Palace (Potrang Karpo)</h3>
+      <p>The eastern section was the winter residence and administrative center of the Dalai Lamas. Completed in 1648, it houses the living quarters, government offices, and ceremonial spaces. Key highlights:</p>
+      <ul>
+        <li><strong>Great East Hall (Tsomchen Dugang):</strong> The largest hall in the White Palace, used for the Dalai Lama's enthronement and important religious ceremonies. Look up at the massive silk thangkas hanging from the ceiling.</li>
+        <li><strong>Dalai Lama's Living Chambers:</strong> Located on the top floor, these rooms have been preserved with original furnishings, personal items, and a private chapel. The windows offer stunning views over the Lhasa valley.</li>
+        <li><strong>The Seminary:</strong> Where monks studied Buddhist philosophy. The walls are lined with ancient texts and scriptures.</li>
+      </ul>
+
+      <h3>The Red Palace (Potrang Marpo)</h3>
+      <p>The western section is the spiritual heart of the Potala. Built after the 5th Dalai Lama's death in 1682, it houses the most sacred spaces in the complex:</p>
+      <ul>
+        <li><strong>Stupa Tombs of the Dalai Lamas:</strong> Eight gilded stupas containing the remains of past Dalai Lamas. The 5th Dalai Lama's stupa is the largest, standing 14.8 meters tall and covered in an estimated 3,721 kilograms of gold, studded with turquoise, coral, pearls, and amber. Each stupa is a masterpiece of Tibetan metalwork and gem-setting.</li>
+        <li><strong>Dharma Cave (Chogyel Drupuk):</strong> The oldest surviving structure in the palace, dating back to the 7th century. King Songtsen Gampo is said to have meditated here. The cave contains ancient statues of Songtsen Gampo, Princess Wencheng, and Princess Bhrikuti.</li>
+        <li><strong>Great West Hall (Sishia Phodrang):</strong> The main assembly room of the Red Palace, with towering pillars and walls covered in murals depicting the life of the 5th Dalai Lama and the construction of the palace.</li>
+        <li><strong>Saints' Chapel (Phakpa Lhakhang):</strong> Home to an ancient sandalwood statue of Avalokiteshvara, the bodhisattva of compassion. According to legend, this statue emerged naturally from a sandalwood tree.</li>
+      </ul>
+
+      <h3>The Golden Roofs</h3>
+      <p>Atop the Red Palace, seven gilded bronze roofs crown the stupa chapels. The tiles are made of bronze covered in gold leaf, and they gleam so brightly at midday that they are visible from the far side of Lhasa. The roofs are surrounded by gilded railings, bells, and decorative finials. This is one of the best photo spots inside the complex.</p>
+
+      <h2>Facilities and Nearby Services</h2>
+      <ul>
+        <li><strong>Parking:</strong> Limited parking is available at the base of the east entrance. During peak season, parking fills up by mid-morning. Taxis and tour buses can drop off directly at the east gate.</li>
+        <li><strong>Restrooms:</strong> Available near the entrance gate and at a few points inside the palace. Facilities inside are basic -- use them before starting the long climb.</li>
+        <li><strong>Food and drink:</strong> No food or beverages are allowed inside the palace, and there are no cafes or restaurants within the complex. Eat a good breakfast before you go and bring snacks for after your visit. Restaurants and tea houses are plentiful in the surrounding neighborhood.</li>
+        <li><strong>Souvenirs:</strong> Small stalls near the exit sell prayer flags, postcards, and Tibetan handicrafts. For a wider selection and better prices, visit Barkhor Street (2 km away) after your palace visit.</li>
+        <li><strong>Audio guides:</strong> Available for rent at the entrance in 8 languages including English, Japanese, and French (new for 2026). Cost: CNY 30.</li>
+        <li><strong>Baggage check:</strong> Large backpacks, tripods, and water bottles must be checked at the entrance. Bring only a small day bag with your essentials (passport, phone, cash, medication).</li>
+      </ul>
+
+      <h2>What to Know Before You Go</h2>
+      <ul>
+        <li><strong>Arrive early:</strong> 30 minutes before your reserved time slot. The climb from the entrance gate takes 20-30 minutes.</li>
+        <li><strong>No water inside:</strong> Water bottles and liquids are not allowed inside the palace.</li>
+        <li><strong>Photography rules:</strong> Allowed in outdoor areas and courtyards. Strictly prohibited inside chapels and halls. Tripods require special permission.</li>
+        <li><strong>Altitude reality check:</strong> If you flew into Lhasa within 48 hours, wait another day. Potala steps are unforgiving at 3,700m.</li>
+        <li><strong>One-way route:</strong> The visit follows a set path from east to west. You cannot backtrack. Make sure you have seen everything before moving to the next section.</li>
+      </ul>
+    </div>
+  </article>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-12">
+    <h2 class="text-2xl font-bold mb-6">Visit Questions Answered</h2>
+    <FaqAccordion faqs={faqs} />
+  </section>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-4">
+    <AuthorBio slug="sarah-chen" datePublished="2026-01-15" dateModified="2026-08-06" />
+  </section>
+
+  <PageNav prev={{ href: "/", label: "Home" }} next={{ href: "/permits", label: "Travel Permits" }} />
+</BaseLayout>
+

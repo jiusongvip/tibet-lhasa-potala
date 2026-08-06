@@ -1,0 +1,136 @@
+---
+import "../styles/global.css";
+
+export interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  canonical?: string;
+  heroImage?: string;
+  ogType?: string;
+  authorName?: string;
+  authorUrl?: string;
+  datePublished?: string;
+  dateModified?: string;
+  noindex?: boolean;
+}
+const { title, description, ogImage, canonical, heroImage, ogType, authorName, authorUrl, datePublished, dateModified, noindex } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
+    {!noindex && canonical && <link rel="canonical" href={canonical} />}
+    {!noindex && canonical && <link rel="alternate" hreflang="en" href={canonical} />}
+    {!noindex && canonical && <link rel="alternate" hreflang="x-default" href={canonical} />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {ogType ? <meta property="og:type" content={ogType} /> : authorName && datePublished ? <meta property="og:type" content="article" /> : <meta property="og:type" content="website" />}
+    {canonical && <meta property="og:url" content={canonical} />}
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    {authorName && <meta name="author" content={authorName} />}
+    {authorName && <meta property="article:author" content={authorName} />}
+    {datePublished && <meta property="article:published_time" content={datePublished} />}
+    {dateModified && <meta property="article:modified_time" content={dateModified} />}
+    {authorName && authorUrl && <link rel="author" href={authorUrl} />}
+    {heroImage && <link rel="preload" as="image" href={heroImage} fetchpriority="high" crossorigin="anonymous" />}
+    <title>{title}</title>
+  </head>
+  <body class="min-h-[100dvh] flex flex-col bg-[var(--color-surface)]">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-lg border-b border-[var(--color-border)]">
+      <nav class="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between" aria-label="Main navigation">
+        <a href="/" class="font-semibold text-lg tracking-tight text-[var(--color-text)] no-underline shrink-0">
+          Potala Guide
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="/visit" class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline">Visit</a>
+          <a href="/permits" class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline">Permits</a>
+          <a href="/history" class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline">History</a>
+          <a href="/photography" class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline">Photos</a>
+          <a href="/lhasa-food" class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline">Food</a>
+          <a href="/hotels-potala-view" class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline">Hotels</a>
+          <a href="/lhasa-transport" class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline">Transport</a>
+          <a href="/travel-tips" class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline">Tips</a>
+        </div>
+        <button id="menu-toggle" class="md:hidden p-2 -mr-2 text-[var(--color-text)]" aria-label="Toggle menu" aria-expanded="false">
+          <svg aria-hidden="true" class="menu-icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg aria-hidden="true" class="menu-icon-close hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </nav>
+      <div id="mobile-menu" class="hidden md:hidden border-t border-[var(--color-border)] bg-white">
+        <div class="px-4 py-4 flex flex-col gap-3">
+          <a href="/visit" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline border-b border-[var(--color-border)] last:border-0">Visit Guide</a>
+          <a href="/permits" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline border-b border-[var(--color-border)] last:border-0">Travel Permits</a>
+          <a href="/history" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline border-b border-[var(--color-border)] last:border-0">History</a>
+          <a href="/photography" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline border-b border-[var(--color-border)] last:border-0">Photography</a>
+          <a href="/travel-tips" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline border-b border-[var(--color-border)] last:border-0">Travel Tips</a><a href="/lhasa-3-day-itinerary" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline border-b border-[var(--color-border)] last:border-0">3-Day Itinerary</a><a href="/tibet-etiquette" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline border-b border-[var(--color-border)] last:border-0">Etiquette</a><a href="/lhasa-with-kids" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline border-b border-[var(--color-border)] last:border-0">With Kids</a><a href="/lhasa-vegetarian-halal" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline border-b border-[var(--color-border)] last:border-0">Vegetarian & Halal</a>
+          <a href="/best-time" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline border-b border-[var(--color-border)] last:border-0">Best Time</a>
+          <a href="/lhasa-attractions" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline border-b border-[var(--color-border)] last:border-0">Attractions</a>
+          <a href="/lhasa-food" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline border-b border-[var(--color-border)] last:border-0">Food Guide</a>
+          <a href="/hotels-potala-view" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline border-b border-[var(--color-border)] last:border-0">Potala View Hotels</a>
+          <a href="/lhasa-transport" class="text-[var(--color-text)] text-sm font-medium py-2 no-underline">Transport</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-[var(--color-border)] bg-[var(--color-surface-alt)] py-12 px-4 md:px-6">
+      <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div class="col-span-2 md:col-span-1">
+          <p class="font-semibold text-[var(--color-text)] mb-2">Potala Guide</p>
+          <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">Your complete guide to Potala Palace, Lhasa, Tibet. Updated for 2026. <a href="/about" class="text-[var(--color-accent)] hover:underline">About us</a>.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-xs text-[var(--color-text-subtle)] uppercase tracking-wider mb-3">Essential</p>
+          <a href="/visit" class="block text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline py-1">Visit Guide</a>
+          <a href="/permits" class="block text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline py-1">Travel Permits</a>
+          <a href="/best-time" class="block text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline py-1">Best Time</a>
+        </div>
+        <div>
+          <p class="font-semibold text-xs text-[var(--color-text-subtle)] uppercase tracking-wider mb-3">Explore</p>
+          <a href="/history" class="block text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline py-1">History</a>
+          <a href="/photography" class="block text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline py-1">Photography</a>
+          <a href="/lhasa-attractions" class="block text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline py-1">Attractions</a>
+        </div>
+        <div>
+          <p class="font-semibold text-xs text-[var(--color-text-subtle)] uppercase tracking-wider mb-3">Plan</p>
+          <a href="/lhasa-food" class="block text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline py-1">Food Guide</a>
+          <a href="/hotels-potala-view" class="block text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline py-1">Hotels</a>
+          <a href="/lhasa-transport" class="block text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline py-1">Transport</a>
+        </div>
+        <div>
+          <p class="font-semibold text-xs text-[var(--color-text-subtle)] uppercase tracking-wider mb-3">Prepare</p>
+          <a href="/travel-tips" class="block text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline py-1">Travel Tips</a>
+          <a href="/travel-tips#altitude" class="block text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors no-underline py-1">Altitude Advice</a>
+        </div>
+      </div>
+      <p class="text-center text-xs text-[var(--color-text-subtle)] mt-10">
+        Copyright 2026 Potala Guide &middot; Not affiliated with official tourism authorities. <a href="/privacy" class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors">Privacy</a> &middot; <a href="/terms" class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors">Terms</a> &middot; <a href="/about" class="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors">About</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        const openIcon = this.querySelector('.menu-icon-open');
+        const closeIcon = this.querySelector('.menu-icon-close');
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        menu.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

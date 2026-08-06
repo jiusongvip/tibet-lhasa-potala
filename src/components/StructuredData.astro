@@ -1,0 +1,106 @@
+---
+export interface Props {
+  type: "TouristAttraction" | "Article" | "FAQPage" | "HowTo" | "BreadcrumbList" | "Organization" | "Review" | "Person";
+ data: Record<string, any>;
+}
+const { type, data } = Astro.props;
+const base = "https://tibet-lhasa-potala.com";
+---
+
+{type === "TouristAttraction" && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    name: "Potala Palace",
+    description: data.description || "The world's highest ancient palace, a UNESCO World Heritage site in Lhasa, Tibet.",
+    url: base + (data.url || "/"),
+    address: { "@type": "PostalAddress", addressLocality: "Lhasa", addressCountry: "CN" },
+    geo: { "@type": "GeoCoordinates", latitude: 29.6578, longitude: 91.1171 },
+    openingHours: "Mo-Su 09:30-15:30",
+    touristType: ["Cultural Tourism", "Religious Tourism"],
+    image: {
+      "@type": "ImageObject",
+      url: "https://tibet-lhasa-potala.com/images/og-potala-palace.webp",
+      width: 1200,
+      height: 630,
+      caption: "Potala Palace — the world's highest ancient palace, a UNESCO World Heritage site in Lhasa, Tibet",
+    },
+  })} />
+)}
+
+{type === "Article" && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: data.title,
+    description: data.description,
+    url: base + (data.url || "/"),
+    datePublished: data.datePublished || "2026-01-01",
+    dateModified: data.dateModified || "2026-08-06",
+  })} />
+)}
+
+{type === "FAQPage" && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: (data.faqs || []).map((f: any) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a.replace(/<[^>]*>/g, '') } })),
+  })} />
+)}
+
+{type === "HowTo" && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: data.name,
+    description: data.description,
+    step: (data.steps || []).map((s: any, i: number) => ({ "@type": "HowToStep", position: i + 1, name: s.name, text: s.text })),
+  })} />
+)}
+
+{type === "BreadcrumbList" && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: (data.items || []).map((item: any, i: number) => ({ "@type": "ListItem", position: i + 1, name: item.name, item: base + item.url })),
+  })} />
+)}
+
+{type === "Organization" && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: data.name || "Potala Guide",
+    url: base + (data.url || "/"),
+    description: data.description || "",
+sameAs: data.sameAs || [],
+  })} />
+)}
+
+{type === "Review" && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    name: data.itemReviewed || "Potala Palace",
+    review: (data.reviews || []).map((r: any) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.author },
+      datePublished: r.datePublished,
+      reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: "5", worstRating: "1" },
+      reviewBody: r.body,
+    })),
+  })} />
+)}
+
+{type === "Person" && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: data.name || "",
+    description: data.description || "",
+sameAs: data.sameAs || [],
+    url: base + (data.url || "/"),
+  })} />
+)}
+
+

@@ -1,0 +1,116 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import PageNav from "../components/PageNav.astro";
+import StructuredData from "../components/StructuredData.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+import AuthorBio from "../components/AuthorBio.astro";
+
+const faqs = [
+  { q: "Where is the single best photo spot?", a: "Chakpori Hill (Medicine King Hill) gives the classic postcard shot. Enter from the south side (CNY 2), climb 10 minutes. The east-facing facade catches sunrise gold from 7:00-7:45 AM in summer." },
+  { q: "What time of day has the best light?", a: "Sunrise: warm gold on the facade (7:00-7:45 AM summer, 8:00-8:30 AM winter). Late afternoon to sunset: dramatic shadows and rich color (5:30-7:30 PM). Blue hour (30 min after sunset): illuminated palace against deep blue sky." },
+  { q: "Can I use a drone?", a: "Strictly prohibited in Lhasa city, especially around Potala Palace and government buildings. Confiscation and fines are likely. Do not attempt it." },
+  { q: "What lens should I bring?", a: "A 24-70mm covers most shots. Bring a 70-200mm for architectural details and distant perspectives. A wide 16-35mm is great for interior courtyards and the palace against the sky." },
+  { q: "Is a tripod allowed?", a: "Tripods are generally allowed outside the palace and in the square. Inside the palace, they are prohibited. For night shots outside, a tripod is essential." },
+  { q: "What about phone photography?", a: "Modern phones handle daylight shots well. The biggest challenges are dynamic range (bright sky vs dark palace shadows) and low light inside. Use HDR mode outdoors. For interior shots where allowed, brace against a wall or railing to steady the phone in low light." },
+];
+---
+
+<BaseLayout canonical="https://tibet-lhasa-potala.com/photography" title="Potala Palace Photography Guide | 12 Best Spots" description="Photography guide: 12 best locations ranked, sunrise/sunset timing, lens selection, phone tips, and seasonal conditions at Potala Palace." ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp"
+  authorName="Michael Rivera" authorUrl="/about/#michael-rivera" datePublished="2026-02-01" dateModified="2026-08-06">
+>
+  <StructuredData type="Article" data={{ title: "Potala Palace Photography Guide", description: "12 best photo spots, camera settings, seasonal conditions, and composition tips for photographing Potala Palace.", url: "/photography/", datePublished: "2026-01-01", dateModified: "2026-08-06" }} />
+  <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "Photography", url: "/photography/" }] }} />
+  <StructuredData type="FAQPage" data={{ faqs }} />
+  <StructuredData type="Person" data={{ name: "Michael Rivera", description: "Travel photographer published in National Geographic Traveler and Conde Nast Traveler.", url: "/about/#michael-rivera" }} />
+
+  <PageHero title="Photographing Potala Palace" subtitle="The definitive guide: 12 best locations, camera settings, seasonal conditions, lens choices, and everything you need to capture stunning images at 3,700 meters." breadcrumb="Photography" updated="August 2026" />
+
+  <article class="max-w-3xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div class="prose">
+      <h2>The 12 Best Photography Locations (Ranked)</h2>
+      
+      <h3>1. Chakpori Hill Summit</h3>
+      <p>The classic postcard shot. Clean, unobstructed view of the entire palace with the Lhasa valley behind. Best time: sunrise. The first rays hitting the red and white walls create a warm, golden glow that no filter can replicate. <strong>Access:</strong> South entrance, CNY 2, 10-minute climb.</p>
+
+      <h3>2. Dragon King Pond (Longwangtan)</h3>
+      <p>Behind the palace on the north side. The best reflection shots in Lhasa. On a calm morning, the palace mirrors perfectly in the still water. <strong>Best time:</strong> Early morning (7:00-8:30 AM) for still water and soft light. This is the only angle where you can capture the full width of the palace in a single frame.</p>
+
+      <h3>3. Potala Palace Square</h3>
+      <p>The main plaza directly in front. Best for wide-angle panoramas and people-in-frame scale shots. <strong>Best time:</strong> Morning for front lighting, evening blue hour when the palace is illuminated. The square gets busy by 10 AM.</p>
+
+      <h3>4. Yaowang Mountain Platform</h3>
+      <p>An elevated viewing platform on the southwest side, offering a distinct angled perspective that shows the palace's depth against the mountains. Less crowded than Chakpori Hill. <strong>Best time:</strong> Late afternoon for warm side lighting.</p>
+
+      <h3>5. Norbulingka Road</h3>
+      <p>For an urban-context shot, this road runs southwest of the palace. Frame the palace through trees and street elements for a more documentary feel. <strong>Best time:</strong> Golden hour before sunset.</p>
+
+      <h3>6. Lhasa River Bridge</h3>
+      <p>A distant perspective with the river in the foreground. The palace appears as a distant silhouette against the hills. <strong>Best time:</strong> Sunset for dramatic silhouettes and colored sky.</p>
+
+      <h3>7. Intercontinental Hotel Rooftop</h3>
+      <p>An elevated city-plus-palace perspective. Requires hotel access or rooftop bar access. <strong>Best time:</strong> Blue hour for illuminated palace against twilight sky.</p>
+
+      <h3>8. Barkhor Street Corners</h3>
+      <p>The palace peeking between traditional Tibetan buildings creates a powerful sense of place. <strong>Best time:</strong> Late afternoon when the alleyways fill with golden light.</p>
+
+      <h3>9. Jokhang Temple Rooftop</h3>
+      <p>A distant, framed view across the old city. The golden Jokhang roofs in the foreground with Potala on the horizon. <strong>Best time:</strong> Late afternoon.</p>
+
+      <h3>10. West Entrance Path</h3>
+      <p>The exit walk from the palace offers a unique perspective looking back up at the western face. <strong>Best time:</strong> Mid to late afternoon.</p>
+
+      <h3>11. Ramoche Temple Area</h3>
+      <p>Local neighborhood context with the palace in the background. Less touristic, more authentic. <strong>Best time:</strong> Morning for local street life.</p>
+
+      <h3>12. Pargo Kaling (West Gate Stupa)</h3>
+      <p>Use the white stupa as foreground framing for the palace. Creates a classic Tibetan composition with strong depth. <strong>Best time:</strong> Afternoon or blue hour.</p>
+
+      <h2>Camera Settings for High Altitude</h2>
+      <p>At 3,700 meters, the air is thinner and UV radiation is significantly stronger. Your camera will perceive more contrast than your eyes do, and exposures that look correct on your LCD may be underexposed.</p>
+      <ul>
+        <li><strong>Base settings:</strong> ISO 100-200, aperture f/8-f/11 for architectural detail, shutter 1/125 or faster if handholding</li>
+        <li><strong>Polarizing filter:</strong> Essential at this altitude. It cuts atmospheric haze, deepens the blue sky, and reduces glare on the golden roofs</li>
+        <li><strong>Exposure compensation:</strong> Start at +0.3 to +0.7 EV in bright conditions. The bright sky at altitude can fool your meter into underexposing</li>
+        <li><strong>White balance:</strong> Daylight (5500K) works well. For sunrise/sunset, try Cloudy (6000K) or manually dial to 6500-7000K for warmer tones</li>
+        <li><strong>Bracketing:</strong> For high-contrast scenes (bright sky + dark palace shadows), bracket 3 shots at -1, 0, +1 EV and merge later</li>
+      </ul>
+
+      <h2>Lens Recommendations</h2>
+      <ul>
+        <li><strong>Wide (16-35mm):</strong> For the palace against the dramatic Tibetan sky, interior courtyards, and the Potala Square panorama</li>
+        <li><strong>Standard zoom (24-70mm):</strong> Your workhorse. Covers most exterior compositions and detail shots</li>
+        <li><strong>Telephoto (70-200mm):</strong> For isolating architectural details, compressing the palace against the mountains, and candid shots of pilgrims</li>
+        <li><strong>Ultra-wide or fisheye:</strong> Fun for creative angles but easy to overuse. The palace's symmetry works well with ultra-wide perspectives from the square</li>
+      </ul>
+
+      <h2>Night Photography</h2>
+      <p>The palace is illuminated from sunset until approximately 11:00 PM. The floodlights create dramatic contrast against the dark sky. Setup: tripod (essential), ISO 100-200, f/8-f/11, exposures between 2-15 seconds. For star trails above the palace (winter nights are clearest), stack multiple 30-second exposures at f/4, ISO 1600.</p>
+
+      <h2>Seasonal Conditions</h2>
+      <ul>
+        <li><strong>Spring (April-May):</strong> Clear skies, moderate haze. Good all-around conditions. The landscape is green after spring rains.</li>
+        <li><strong>Summer (June-August):</strong> Monsoon afternoons bring dramatic clouds and occasional rainbows. Mornings are often clear. The most dramatic skies of the year.</li>
+        <li><strong>Autumn (September-October):</strong> The golden window. Crystal-clear skies, golden foliage, and the best light of the year. Low haze. Ideal for every type of shot.</li>
+        <li><strong>Winter (November-March):</strong> Snow-dusted palace views that are genuinely rare and beautiful. Clear, cold air means minimal haze. The low sun angle creates long shadows all day.</li>
+      </ul>
+
+      <h2>Phone Photography Tips</h2>
+  <p>If you are shooting with a smartphone rather than a dedicated camera, you can still capture excellent images with the right approach. Modern phones (iPhone 14 or later, Samsung Galaxy S23 or later, Google Pixel 7 or later) have sensors capable of producing publication-quality images in good light.</p>
+  <p>Key phone photography tips for Potala: (1) Shoot in RAW or ProRAW mode if your phone supports it — the extra dynamic range is crucial for scenes with bright white palace walls against deep blue sky. (2) Use the telephoto lens (2x-3x optical zoom) for architectural details like golden roof finials and window carvings. (3) For the classic panorama from Chakpori Hill, use the wide-angle lens but watch for lens distortion at the edges — keep the palace centered. (4) At night, use a small tripod or rest your phone on a stable surface and use Night mode (2-3 second exposure). (5) Shoot in the golden hour (the hour before sunset) when the warm light on the white walls creates natural color contrast that phone sensors handle well.</p>
+      <p>If you are shooting with a phone, here is how to get the best results: use HDR mode outdoors to handle the bright sky; tap to focus on the palace and slide down to slightly underexpose, which preserves highlight detail on the white walls; for low-light interior shots (where allowed), brace against a wall or railing; shoot in RAW if your phone supports it for more editing flexibility later.</p>
+    </div>
+  </article>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-12">
+    <h2 class="text-2xl font-bold mb-6">Photography Questions Answered</h2>
+    <FaqAccordion faqs={faqs} />
+  </section>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-4">
+    <AuthorBio slug="michael-rivera" datePublished="2026-02-01" dateModified="2026-08-06" />
+  </section>
+
+  <PageNav prev={{ href: "/history", label: "History" }} next={{ href: "/travel-tips", label: "Travel Tips" }} />
+</BaseLayout>
+

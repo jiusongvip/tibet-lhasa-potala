@@ -1,0 +1,124 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import PageNav from "../components/PageNav.astro";
+import StructuredData from "../components/StructuredData.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+import AuthorBio from "../components/AuthorBio.astro";
+
+const faqs = [
+  { q: "What is the absolute best month?", a: "September. Summer crowds have thinned, the monsoon has ended, the sky is deep blue, and daytime temperatures are ideal (15-20C). October is a close second but gets colder at night." },
+  { q: "Can I visit in winter?", a: "Yes -- with advantages: fewer tourists, lower ticket prices (CNY 100), and snow-dusted palace views that are genuinely breathtaking. The challenge: temperatures drop well below freezing at night, and some facilities may have reduced hours." },
+  { q: "When should I avoid going?", a: "July and August for the combination of monsoon rains and peak crowds. February (Tibetan New Year) can mean closures. December and January are extremely cold, though the palace remains open." },
+  { q: "What about photography conditions by season?", a: "Autumn (Sep-Oct) is the best: crystal-clear skies, golden foliage, minimal haze. Winter offers snow scenes and dramatic low-angle light. Spring is good with green landscapes. Summer brings dramatic monsoon clouds -- great for moody shots but challenging for predictable weather." },
+];
+---
+
+<BaseLayout canonical="https://tibet-lhasa-potala.com/best-time" title="Best Time to Visit Potala Palace | 2026 Guide" description="Month-by-month weather, photography conditions, festival calendar, and crowd levels for planning your Potala Palace visit." ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp"
+  authorName="Sarah Chen" authorUrl="/about/#sarah-chen" datePublished="2026-02-10" dateModified="2026-08-06">
+>
+  <StructuredData type="Article" data={{ title: "Best Time to Visit Potala Palace", description: "Month-by-month weather guide, seasonal conditions, festival calendar, and crowd levels.", url: "/best-time/", datePublished: "2026-01-01", dateModified: "2026-08-06" }} />
+  <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "Best Time", url: "/best-time/" }] }} />
+  <StructuredData type="FAQPage" data={{ faqs }} />
+  <StructuredData type="Person" data={{ name: "Sarah Chen", description: "Senior Travel Writer & Tibet Specialist", url: "/about/#sarah-chen" }} />
+
+  <PageHero title="Best Time to Visit Potala Palace" subtitle="Month-by-month weather, seasonal conditions for photography, Tibetan festival calendar, and crowd levels for planning the perfect visit." breadcrumb="Best Time" updated="August 2026" />
+
+  <article class="max-w-3xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div class="prose">
+      <h2>At a Glance</h2>
+      <p><strong>Best months overall:</strong> May, September, October<br/>
+      <strong>Good months:</strong> April, June, early November<br/>
+      <strong>Challenging months:</strong> July-August (rain + crowds), December-February (extreme cold)</p>
+
+      <h2>Month-by-Month Breakdown</h2>
+
+      <h3>January</h3>
+      <p>Deep winter. Average daytime high: 6C, overnight low: -10C. Very few tourists. The palace against bright snow and deep blue sky is stunning. Ticket price: CNY 100. Photography: crisp, clear air with dramatic low-angle winter light all day.</p>
+
+      <h3>February</h3>
+      <p>Still cold. Daytime 8C, nighttime -8C. Tibetan New Year (Losar) usually falls in February -- a fascinating time culturally, but some facilities may close and permits can be harder to get. Check dates before booking.</p>
+
+      <h3>March</h3>
+      <p>Warming trend begins. Daytime 12C, nighttime -2C. Still cold, especially at night and early morning. Fewer tourists than peak season. A good month if you are OK with cold mornings and want solitude.</p>
+
+      <h3>April</h3>
+      <p>The shoulder season sweet spot. Daytime 15C, nighttime 2C. Crowds begin to arrive but are manageable. The landscape starts greening after winter. Trees blossom in Norbulingka Park. Photography: good clarity, moderate haze.</p>
+
+      <h3>May</h3>
+      <p>One of the best months. Daytime 19C, nighttime 5C. The landscape is fully green, skies are clear, and tourist numbers have not yet peaked. The perfect balance of good weather and manageable crowds. Ticket price: CNY 200 (peak season starts).</p>
+
+      <h3>June</h3>
+      <p>Early summer. Daytime 22C, nighttime 10C. Good weather but the monsoon begins to build toward the end of the month. Crowds increase noticeably. Still a good month overall.</p>
+
+      <h3>July</h3>
+      <p>Peak monsoon and peak crowds. Daytime 22C, nighttime 12C. Afternoon rain showers are frequent (bring a rain jacket). The largest tourist numbers of the year. Tickets sell out days in advance. If summer is your only option, book everything early and plan morning visits before the afternoon rain.</p>
+
+      <h3>August</h3>
+      <p>Similar to July: monsoon rains, peak crowds, high humidity by Tibetan standards. The Shoton Festival (Yogurt Festival) usually falls in August -- a spectacular cultural event featuring the unveiling of the giant Thangka at Drepung Monastery. Worth planning around if you are in Tibet during this time.</p>
+
+      <h3>September</h3>
+      <p><strong>The golden month.</strong> Daytime 19C, nighttime 8C. The monsoon ends, leaving behind crystal-clear skies and vibrant green landscapes. Summer crowds thin significantly after the first week. The light is spectacular -- deep blue skies, golden afternoon light, and minimal atmospheric haze. This is the photographer's dream month.</p>
+
+      <h3>October</h3>
+      <p>Nearly as good as September. Daytime 16C, nighttime 2C. Even clearer skies, but temperatures drop noticeably at night. The foliage turns golden. The National Day holiday (first week of October) brings a spike in domestic tourists -- avoid that specific week if possible. Photography conditions are near-perfect.</p>
+
+      <h3>November</h3>
+      <p>Early November is still pleasant during the day (12C), but nights drop to -5C. By late November, winter arrives in earnest. Ticket prices return to CNY 100 (off-peak). Fewer tourists. A good budget option if you can handle the cold.</p>
+
+      <h3>December</h3>
+      <p>Winter. Daytime 7C, nighttime -10C. The lowest tourist numbers of the year. The palace is quiet, almost empty at times. Snow is possible, creating magical photo opportunities. Only for travelers who are comfortable with serious cold.</p>
+
+     <h2>Festival Calendar</h2>
+
+      <h2>What to Wear by Season</h2>
+      <p>Lhasa's temperature swings can be extreme — a 20-degree shift between daytime and nighttime is common year-round. Here is what works for each season:</p>
+      <ul>
+        <li><strong>Summer (Jun-Aug):</strong> Light layers for daytime (t-shirt + light fleece), rain jacket for afternoon showers. Evenings still need a warm layer — temperatures drop quickly after sunset. Comfortable walking shoes with good grip for wet stone steps. Sun protection is non-negotiable: SPF 50+, wide-brimmed hat, UV 400 sunglasses.</li>
+        <li><strong>Autumn (Sep-Oct):</strong> The sweet spot for comfort. Mid-weight fleece or light down jacket for mornings and evenings, t-shirt for warm afternoons. October nights require a warmer jacket. This is the season where you will be most comfortable — and take the best photos.</li>
+        <li><strong>Winter (Nov-Feb):</strong> Serious cold-weather gear. Heavy down jacket rated to -20C, thermal base layers (merino wool), insulated boots, warm hat, gloves, and thick socks. The palace steps can be icy — shoes with good tread are essential. The reward for braving the cold: near-empty halls and snow-dusted golden roofs.</li>
+        <li><strong>Spring (Mar-May):</strong> Transitional and unpredictable. Pack for both cold mornings (near freezing in March) and warm afternoons (approaching 20C by late May). A packable down jacket that compresses into its own pocket is ideal — wear it in the morning, stash it by midday.</li>
+      </ul>
+
+      <h2>Photography Conditions by Season</h2>
+      <p>If photography is a priority for your trip, timing matters as much as your camera settings:</p>
+      <ul>
+        <li><strong>Winter (Dec-Feb):</strong> Crystal-clear air and low-angle sunlight all day. Snow on the palace roofs and surrounding mountains creates dramatic contrast. Fewer tourists means unobstructed shots. Best for: dramatic, high-contrast architectural photography with deep blue skies.</li>
+        <li><strong>Spring (Mar-May):</strong> Warming temperatures bring a slight haze but also green landscapes and blossoming trees around Norbulingka. The light is softer than winter. Good clarity in the mornings. Best for: landscape shots that include spring foliage.</li>
+        <li><strong>Summer (Jun-Aug):</strong> Monsoon clouds create dramatic skies — towering cumulus formations behind the palace make for powerful compositions. Downside: afternoon rain can cancel shoots and haze reduces long-distance clarity. Best for: dramatic sky compositions, moody atmospherics.</li>
+        <li><strong>Autumn (Sep-Oct):</strong> The photographer's choice. Post-monsoon clarity combined with golden foliage and comfortable shooting temperatures. The light at 5:00-6:30 PM turns the white palace walls warm gold. Sunrise at Chakpori Hill in October is the single best photo opportunity of the year. Best for: golden-hour architecture, clear panoramas, festival photography.</li>
+      </ul>
+      
+      <h2>Festival Calendar</h2>
+      <p>Tibetan festivals follow the lunar calendar, so dates shift each year. Key festivals to know:</p>
+      <ul>
+        <li><strong>Losar (Tibetan New Year):</strong> Usually February. The most important Tibetan holiday. Lhasa fills with pilgrims. Some tourist facilities may close for 3-7 days. Visitor tip: permits can be harder to obtain during the Losar period as government offices reduce staffing. Book at least 8 weeks ahead if visiting during Losar.</li>
+        <li><strong>Saga Dawa:</strong> Usually May or June. The holiest month in Tibetan Buddhism, commemorating the Buddha's birth, enlightenment, and death. Pilgrims flock to Lhasa. A powerful time to visit but expect crowds. Visitor tip: the full moon day of Saga Dawa (the 15th day of the lunar month) is the peak — Barkhor is shoulder-to-shoulder with pilgrims. An extraordinary experience if you are comfortable with dense crowds.</li>
+        <li><strong>Shoton Festival:</strong> Usually August. Features the unveiling of a giant Thangka at Drepung Monastery, Tibetan opera performances, and yogurt-eating. One of Tibet's most photogenic events. Visitor tip: arrive at Drepung by 4:30 AM to secure a position for the Thangka unveiling ceremony at dawn. The monastery is 8 km from central Lhasa — arrange a taxi the night before.</li>
+        <li><strong>Nagchu Horse Racing Festival:</strong> Usually August. Spectacular displays of Tibetan horsemanship north of Lhasa. Requires traveling outside the city. Visitor tip: Nagchu is at 4,500m — do not attempt this if you are still acclimatizing to Lhasa's 3,650m. Budget 2-3 days for this trip.</li>
+        <li><strong>Ganden Thangka Festival:</strong> Usually July or August (15th day of the 6th Tibetan month). A massive Thangka is displayed on the hillside at Ganden Monastery. Smaller crowds than Shoton but equally photogenic. Requires a full-day trip from Lhasa (45 km east).</li>
+      </ul>
+
+      <h2>Crowd Calendar</h2>
+      <ul>
+        <li><strong>Very busy (book 2+ weeks ahead):</strong> July, August, first week of October, major festivals</li>
+        <li><strong>Moderate (book 1 week ahead):</strong> May, June, September (after first week), April</li>
+        <li><strong>Quiet (book a few days ahead):</strong> March, October (after first week), November</li>
+        <li><strong>Very quiet (flexible booking):</strong> December, January, February</li>
+      </ul>
+    </div>
+  </article>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-12">
+    <h2 class="text-2xl font-bold mb-6">Timing Questions Answered</h2>
+    <FaqAccordion faqs={faqs} />
+  </section>
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-4">
+    <AuthorBio slug="sarah-chen" datePublished="2026-02-10" dateModified="2026-08-06" />
+  </section>
+
+
+
+  <PageNav prev={{ href: "/travel-tips", label: "Travel Tips" }} next={{ href: "/lhasa-attractions", label: "Attractions" }} />
+</BaseLayout>
+

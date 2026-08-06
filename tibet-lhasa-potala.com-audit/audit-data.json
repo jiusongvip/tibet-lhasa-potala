@@ -1,0 +1,317 @@
+{
+  "summary": {
+    "health_score": 74,
+    "business_type": "Travel & Tourism - Niche destination guide (Potala Palace & Lhasa, Tibet)",
+    "top_findings": [
+      "No responsive images - mobile users download full desktop-size images",
+      "No author bylines or About page - E-E-A-T gap for YMYL-adjacent content",
+      "Hero image is 219KB - LCP bottleneck",
+      "No Organization schema - publisher entity not established",
+      "Gallery images lack width/height - causing CLS"
+    ],
+    "quick_wins": [
+      "Add llms.txt file (5 min)",
+      "Fix hero image alt text (1 min)",
+      "Add lastmod to all sitemap entries (5 min)",
+      "Add fetchpriority=high to hero image (1 min)",
+      "Add FAQPage schema to 3 missing pages (10 min)"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 82,
+      "what_works": [
+        "robots.txt properly configured with sitemap reference",
+        "XML sitemap with 11 URLs and proper priorities",
+        "Canonical URLs on all pages",
+        "Clean semantic URL structure",
+        "Skip-to-content accessibility link"
+      ],
+      "findings": [
+        {
+          "title": "Inconsistent lastmod coverage in sitemap",
+          "severity": "Medium",
+          "description": "Only 3 of 11 sitemap entries include lastmod dates. Search engines rely on this field for crawl prioritization.",
+          "recommendation": "Add lastmod to all 11 sitemap entries, using the build date for static content."
+        },
+        {
+          "title": "No hreflang tags",
+          "severity": "Low",
+          "description": "English-only site targeting international visitors lacks hreflang tags to signal intentional single-language targeting.",
+          "recommendation": "Add hreflang='en' and hreflang='x-default' tags."
+        },
+        {
+          "title": "Security headers not verified",
+          "severity": "Info",
+          "description": "Headers like HSTS, X-Content-Type-Options cannot be verified in static build. Must configure at hosting/CDN level.",
+          "recommendation": "Verify security headers after deployment."
+        }
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 78,
+      "what_works": [
+        "Substantive long-form content on every page (1500-3000+ words)",
+        "Strong factual basis with specific numbers, dates, and statistics",
+        "Excellent internal linking between related pages",
+        "Well-crafted FAQ sections with practical answers",
+        "Testimonials with specific visitor names and dates"
+      ],
+      "findings": [
+        {
+          "title": "No author bylines or credentials",
+          "severity": "Critical",
+          "description": "Zero indication of who wrote or reviewed the content. For YMYL-adjacent travel content (high-altitude restricted area), Google E-E-A-T guidelines strongly favor demonstrated expertise.",
+          "recommendation": "Add author names and credentials to each article. Create author bio pages."
+        },
+        {
+          "title": "No About page",
+          "severity": "High",
+          "description": "No page explaining who operates the guide, their qualifications, or editorial standards.",
+          "recommendation": "Create an About page with site ownership, travel credentials, and editorial policy."
+        },
+        {
+          "title": "Testimonials lack external verification",
+          "severity": "Medium",
+          "description": "Visitor testimonials include names and dates but no links to original review sources or Review schema markup.",
+          "recommendation": "Link testimonials to original sources and add Review structured data."
+        },
+        {
+          "title": "No last-reviewed dates on health content",
+          "severity": "Medium",
+          "description": "Altitude advice and medical recommendations (Diamox, acclimatization) lack review dates.",
+          "recommendation": "Add 'Last reviewed: [date]' to sections with medical/health content."
+        }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 85,
+      "what_works": [
+        "Well-crafted title tags within optimal length (50-65 chars)",
+        "Unique meta descriptions on every page",
+        "Complete OG and Twitter card tags on all pages",
+        "Clean heading hierarchy (H1 > H2 > H3)",
+        "Visual breadcrumb navigation on sub-pages"
+      ],
+      "findings": [
+        {
+          "title": "Hero image alt text contains HTML break tag",
+          "severity": "Medium",
+          "description": "Hero image has alt text containing a br tag rendered as literal text. Screen readers will read the markup.",
+          "recommendation": "Replace with plain text: 'Potala Palace overlooking Lhasa — Tibet''s Crown Jewel'"
+        },
+        {
+          "title": "Hotels page title missing year freshness signal",
+          "severity": "Medium",
+          "description": "The hotels page title lacks '2026' while most other pages include the year.",
+          "recommendation": "Update to 'Hotels with Potala Palace View | Best Places to Stay 2026'"
+        },
+        {
+          "title": "Repeated H2 patterns across pages",
+          "severity": "Low",
+          "description": "Multiple pages use identical H2 headings like 'Frequently Asked Questions'.",
+          "recommendation": "Vary H2 headings with page-specific keywords for better topical signals."
+        }
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 80,
+      "what_works": [
+        "TouristAttraction schema on homepage with geo coordinates",
+        "BreadcrumbList schema on all 11 pages",
+        "FAQPage schema on 8 of 11 pages",
+        "Article schema on all 10 content pages with datePublished/dateModified",
+        "HowTo schema on Visit page with 8 steps",
+        "Reusable StructuredData.astro component for consistency"
+      ],
+      "findings": [
+        {
+          "title": "No Organization schema",
+          "severity": "High",
+          "description": "A site claiming to be the most complete English-language guide should establish a publisher entity via Organization schema.",
+          "recommendation": "Add Organization schema with name, url, logo, and description."
+        },
+        {
+          "title": "No Review schema on testimonials",
+          "severity": "Medium",
+          "description": "Three visitor testimonials are perfect Review schema candidates. This could generate star ratings in SERPs.",
+          "recommendation": "Add Review schema markup to homepage testimonials with reviewRating and author."
+        },
+        {
+          "title": "Article schema missing author and publisher",
+          "severity": "Low",
+          "description": "All Article blocks lack author (Person) and publisher (Organization) references recommended by Google.",
+          "recommendation": "Add author and publisher properties to Article schema once bylines and Organization are established."
+        },
+        {
+          "title": "3 pages missing FAQPage schema",
+          "severity": "Info",
+          "description": "History, best-time, and lhasa-attractions pages have FAQ content but no FAQPage structured data.",
+          "recommendation": "Add FAQPage schema to these 3 pages."
+        }
+      ]
+    },
+    {
+      "name": "Performance (CWV)",
+      "score": 60,
+      "what_works": [
+        "Minimal CSS: 34KB total (well under 50KB critical CSS budget)",
+        "No JavaScript frameworks - only vanilla JS (~2KB)",
+        "WebP image format on all images",
+        "Lazy loading on gallery and content images",
+        "No external font files or third-party scripts"
+      ],
+      "findings": [
+        {
+          "title": "Hero image is 219KB",
+          "severity": "Critical",
+          "description": "The above-the-fold hero image is the LCP bottleneck. At 219KB with no preload, estimated mobile LCP is 4-6 seconds vs the 2.5s target.",
+          "recommendation": "Compress hero image to 100KB. Add preload link and fetchpriority='high'."
+        },
+        {
+          "title": "No responsive images",
+          "severity": "High",
+          "description": "No srcset or picture elements. Mobile users download the same full-size images as desktop. Total page weight estimated at 1.8MB.",
+          "recommendation": "Generate 400w, 800w, 1200w variants and use img srcset with sizes attribute."
+        },
+        {
+          "title": "Gallery images total ~1.25MB",
+          "severity": "High",
+          "description": "Six gallery images at 165-275KB each even with lazy loading create excessive payload.",
+          "recommendation": "Compress gallery images to 100KB each. Combined savings: ~650KB."
+        },
+        {
+          "title": "Gallery images lack width/height",
+          "severity": "Medium",
+          "description": "Missing explicit dimensions cause Cumulative Layout Shift as images load.",
+          "recommendation": "Add width and height attributes to all gallery img elements."
+        }
+      ]
+    },
+    {
+      "name": "AI Search Readiness",
+      "score": 72,
+      "what_works": [
+        "Extensive FAQ content with FAQPage schema on 8 pages",
+        "Clear factual statements with specific numbers",
+        "Well-structured heading hierarchy for LLM parsing",
+        "BreadcrumbList schema for site architecture understanding",
+        "Article schema with freshness dates"
+      ],
+      "findings": [
+        {
+          "title": "No llms.txt file",
+          "severity": "High",
+          "description": "Missing llms.txt file at site root. This file gives LLM crawlers a structured index of key pages, increasingly important as AI search grows.",
+          "recommendation": "Create /llms.txt with site description and links to all 11 pages with summaries."
+        },
+        {
+          "title": "No explicit AI crawler rules",
+          "severity": "Medium",
+          "description": "robots.txt has no specific rules for GPTBot, Claude-Web, Google-Extended, or PerplexityBot.",
+          "recommendation": "Add explicit Allow directives for major AI crawlers."
+        },
+        {
+          "title": "No Key Facts summary blocks",
+          "severity": "Medium",
+          "description": "Long articles lack concise summary boxes that are prime candidates for featured snippets and AI Overview extraction.",
+          "recommendation": "Add 'Key Facts' or 'At a Glance' boxes with 4-6 bullet points at the top of long articles."
+        }
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 62,
+      "what_works": [
+        "All images in WebP format",
+        "Descriptive, keyword-relevant alt text on every image",
+        "Gallery images include visible captions",
+        "Dedicated OG image for social sharing",
+        "Images are relevant and well-chosen"
+      ],
+      "findings": [
+        {
+          "title": "No responsive image variants",
+          "severity": "High",
+          "description": "Zero srcset or picture usage. All devices receive the same full-size image.",
+          "recommendation": "Generate responsive variants and implement srcset with sizes attribute."
+        },
+        {
+          "title": "Image file sizes too large",
+          "severity": "Medium",
+          "description": "Images range from 166-275KB. Target for travel site: 80-120KB.",
+          "recommendation": "Recompress all images at WebP quality 75."
+        },
+        {
+          "title": "Gallery images missing dimensions",
+          "severity": "Medium",
+          "description": "Gallery images lack explicit width/height attributes, causing CLS.",
+          "recommendation": "Add width and height to all gallery img elements."
+        },
+        {
+          "title": "No image sitemap",
+          "severity": "Low",
+          "description": "No dedicated image XML sitemap for Google Images discovery.",
+          "recommendation": "Generate image sitemap using Astro build hooks."
+        }
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Critical Fixes",
+        "timeframe": "Week 1",
+        "items": [
+          "Add responsive images with srcset (3-4 hours)",
+          "Compress all images to target sizes (30 min)",
+          "Add width/height to gallery images (15 min)",
+          "Create About page with author credentials (2-3 hours)"
+        ]
+      },
+      {
+        "name": "Phase 2: High-Impact Improvements",
+        "timeframe": "Weeks 2-3",
+        "items": [
+          "Add Organization schema (15 min)",
+          "Add Review schema to testimonials (30 min)",
+          "Create llms.txt file (10 min)",
+          "Add preload and fetchpriority to hero image (5 min)",
+          "Add author bylines to articles (30 min)",
+          "Add FAQPage schema to 3 missing pages (20 min)"
+        ]
+      },
+      {
+        "name": "Phase 3: Content & Authority",
+        "timeframe": "Month 2",
+        "items": [
+          "Add Key Facts summary boxes to long articles",
+          "Add source citations for factual claims",
+          "Add last-reviewed dates to health/altitude content",
+          "Link testimonials to original sources",
+          "Add AI crawler directives to robots.txt",
+          "Vary H2 headings across pages"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring & Iteration",
+        "timeframe": "Ongoing",
+        "items": [
+          "Deploy and run Lighthouse for real CWV measurements",
+          "Set up Google Search Console",
+          "Add image sitemap",
+          "Monitor AI Overview appearances",
+          "Consider hreflang tags for future multilingual expansion"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}

@@ -1,0 +1,71 @@
+---
+const { photos } = Astro.props;
+---
+
+<section class="section">
+  <div class="max-w-7xl mx-auto">
+    <div class="section-header">
+      <span class="section-tag">Gallery</span>
+      <h2 class="section-title">See Potala Palace</h2>
+      <p class="text-[var(--color-text-muted)] text-sm mt-1">{photos.length} photos &middot; scroll to browse</p>
+    </div>
+    <div class="gallery-scroll" id="gallery-track">
+      {photos.map((p, i) => (
+        <div class="gallery-item">
+          {p.src ? (
+            <img src={p.src} alt={p.alt} loading="lazy" width="800" height="533" decoding="async" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" />
+          ) : (
+            <div class="w-full bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center text-[var(--color-text-subtle)] text-sm" style="aspect-ratio:3/2">
+              {p.alt || "Photo placeholder"}
+            </div>
+          )}
+          {p.caption && <p class="gallery-caption">{p.caption}</p>}
+        </div>
+      ))}
+    </div>
+    <div class="gallery-dots" id="gallery-dots">
+      {photos.map((_, i) => (
+        <button class="gallery-dot" aria-label={`View photo ${i + 1}`} id={`gallery-dot-${i}`}></button>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .gallery-caption { font-size: 0.8125rem; color: var(--color-text-muted); padding: 0.5rem 0.25rem; }
+  .gallery-dots { display: flex; justify-content: center; gap: 6px; margin-top: 12px; }
+  .gallery-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-border); border: none; cursor: pointer; padding: 0; transition: background 0.2s; }
+  .gallery-dot:hover { background: var(--color-accent-light); }
+  .gallery-dot.active { background: var(--color-accent); }
+</style>
+
+<script>
+  function initGallery() {
+    const track = document.getElementById('gallery-track');
+    if (!track) return;
+    const items = track.querySelectorAll('.gallery-item');
+    const dots = document.querySelectorAll('.gallery-dot');
+    if (!items.length) return;
+
+    function updateDots() {
+      const cx = track.scrollLeft + track.clientWidth / 2;
+      let bestIdx = 0, bestDist = Infinity;
+      items.forEach((el, i) => {
+        const dist = Math.abs(el.offsetLeft + el.offsetWidth / 2 - cx);
+        if (dist < bestDist) { bestDist = dist; bestIdx = i; }
+      });
+      dots.forEach((d, i) => d.classList.toggle('active', i === bestIdx));
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        items[i]?.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+      });
+    });
+
+    track.addEventListener('scroll', updateDots, { passive: true });
+    updateDots();
+    dots[0]?.classList.add('active');
+  }
+  initGallery();
+</script>

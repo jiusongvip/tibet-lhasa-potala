@@ -1,0 +1,80 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import PageNav from "../components/PageNav.astro";
+import StructuredData from "../components/StructuredData.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+import AuthorBio from "../components/AuthorBio.astro";
+
+const faqs = [
+  { q: "Is 3 days enough for Lhasa?", a: "Yes. Three full days is the minimum to see the major sights while allowing for altitude acclimatization. Day 1 is for settling in and light exploration. Day 2 covers Potala Palace. Day 3 covers Jokhang Temple, Barkhor Street, and Sera Monastery. Add a fourth day if you want to include Drepung Monastery or Norbulingka." },
+  { q: "Should I book tours or explore independently?", a: "Foreign visitors must be part of an organized tour to enter Tibet, but within Lhasa city limits, you can explore freely during your free time. Most tour packages include your guide for the major sights (Potala, Jokhang) and leave evenings free." },
+  { q: "What is the best order to visit the main sights?", a: "Potala Palace first (morning, when energy is highest). Jokhang Temple second (morning or late afternoon). Sera Monastery in the afternoon to catch the monk debates. Barkhor Street is best in the early morning or evening when the light is beautiful and the crowds are thinner." },
+  { q: "How much walking is involved?", a: "A lot. Potala Palace alone involves climbing the equivalent of 13 stories of stairs at altitude. Jokhang Temple and Barkhor Street are flat but involve hours on your feet. Budget 15,000 to 20,000 steps per day. Comfortable shoes are not optional." },
+  { q: "Can I do a day trip from Lhasa?", a: "On a 3-day itinerary, do not plan day trips. Use all three days for Lhasa city. If you have 4 or 5 days, consider a day trip to Yamdrok Lake (spectacular turquoise alpine lake, 2 hours each way) or Ganden Monastery (1.5 hours east of Lhasa, less crowded than city monasteries)." },
+];
+const pageTitle = "Lhasa 3-Day Itinerary 2026 | Potala, Jokhang & More";
+const pageDesc = "Perfect 3-day Lhasa itinerary: Potala Palace, Jokhang Temple, Barkhor Street, and Sera Monastery with daily timing and altitude tips.";
+---
+
+<BaseLayout canonical="https://tibet-lhasa-potala.com/lhasa-3-day-itinerary" title={pageTitle} description={pageDesc} ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp"
+  authorName="Sarah Chen" authorUrl="/about/#sarah-chen" datePublished="2026-03-10" dateModified="2026-08-06">
+>
+  <StructuredData type="Article" data={{ title: "Lhasa 3-Day Itinerary", description: pageDesc, url: "/lhasa-3-day-itinerary/", datePublished: "2026-01-01", dateModified: "2026-08-06" }} />
+  <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "3-Day Itinerary", url: "/lhasa-3-day-itinerary/" }] }} />
+  <StructuredData type="FAQPage" data={{ faqs }} />
+  <StructuredData type="Person" data={{ name: "Sarah Chen", description: "Senior Travel Writer & Tibet Specialist", url: "/about/#sarah-chen" }} />
+
+  <PageHero title="3 Days in Lhasa" subtitle="The only itinerary you need for a short but complete Lhasa visit. Potala Palace, Jokhang Temple, Barkhor Street, and Sera Monastery, with timing that accounts for altitude, hunger, and stamina." breadcrumb="3-Day Itinerary" updated="August 2026" />
+
+  <article class="max-w-3xl mx-auto px-4 md:px-6 py-10 md:py-14">
+    <div class="prose">
+      <h2>Why This Itinerary Works</h2>
+      <p>Most Lhasa itineraries list attractions without accounting for the single biggest factor: altitude. At 3,650 meters, everything takes longer and costs more energy than you expect. This plan builds acclimatization into the schedule. It puts the most physically demanding activity (Potala Palace) on Day 2 when your body has had a night to adjust but before fatigue accumulates. It leaves evenings free because your body will demand rest whether you plan it or not.</p>
+
+      <h2 id="day1">Day 1: Arrive and Acclimatize</h2>
+      <h3>Morning: Arrival</h3>
+      <p>Whether you fly into Lhasa Gonggar Airport (60 km from the city) or arrive on the Qinghai-Tibet Railway, your first priority is not sightseeing. It is hydration and rest. Check into your hotel, drink a liter of water, and resist the urge to start exploring immediately. Your body is working hard just breathing. Give it a few hours.</p>
+
+      <h3>Afternoon (2:00 PM onwards): Gentle Walk on Barkhor Street</h3>
+      <p>If you arrived in the morning and feel okay by afternoon, take a slow walk along Barkhor Street. This is the pilgrimage circuit around Jokhang Temple and the commercial heart of old Lhasa. Walk clockwise with the pilgrims. Spin a prayer wheel. Sit on a bench and watch the world go by. Do not enter Jokhang Temple today. Do not climb anything. This is a reconnaissance mission only.</p>
+      <p><strong>Food stop:</strong> Find a sweet tea house on a side street off Barkhor. Order a small thermos of sweet tea (CNY 5-8). Sit by the window. This is the most authentic first experience of Lhasa you can have. The tea houses are where Lhasa lives. <strong>Evening:</strong> Early dinner at your hotel or a nearby restaurant. Aim to be in bed by 9:00 PM. Your body acclimatizes during sleep. Do not drink alcohol tonight. It dehydrates you and worsens altitude symptoms.</p>
+
+      <h2 id="day2">Day 2: Potala Palace</h2>
+      <h3>Morning (8:00 AM - 12:00 PM): Potala Palace</h3>
+      <p>Book the earliest time slot (9:30 AM) and arrive at the east gate by 9:00 AM. The early slot matters for three reasons: cooler temperatures, thinner crowds, and your own energy levels which peak in the morning at altitude. The climb from the entrance to the palace doors takes 20 to 30 minutes uphill. Do not rush it. Stop frequently. Drink water. The Tibetan grandmothers climbing past you have been doing this their whole lives.</p>
+      <p>The visit follows a one-way route through the White Palace (former living quarters and ceremonial halls) into the Red Palace (the religious heart with the Dalai Lamas' gilded stupa tombs). Plan for 2 to 2.5 hours inside. The exit is on the west side, downhill to Potala Palace Square.</p>
+      <p><strong>Pro tip:</strong> After exiting, walk across Beijing Road to the square for the classic frontal photo. Then walk north to Dragon King Pond behind the palace for the reflection shot in the water. Two of the best photo spots are outside the palace, not inside it.</p>
+
+      <h3>Afternoon (1:00 PM - 5:00 PM): Rest and Gentle Exploration</h3>
+      <p>You will be tired. That is normal. Have lunch near the palace. Rest at your hotel if needed. If you have energy, visit the Tibet Museum (free entry, excellent English signage, covers Tibetan history from prehistory to modern era). It is an air-conditioned, low-exertion activity that contextualizes everything you saw in Potala Palace. Or simply walk the kora path around the base of Potala Palace with the pilgrims. <strong>Evening:</strong> Dinner near your hotel. One more early night. Tomorrow is a full day but flatter and easier.</p>
+
+      <h2 id="day3">Day 3: Jokhang Temple, Barkhor, and Sera Monastery</h2>
+      <h3>Morning (9:00 AM - 12:00 PM): Jokhang Temple</h3>
+      <p>Jokhang Temple is the spiritual heart of Tibet. Built in the 7th century, it houses the Jowo Rinpoche statue, the most revered Buddha image in Tibetan Buddhism. Arrive when it opens. The atmosphere in the morning, with pilgrims prostrating outside and butter lamps burning inside, is incomparable. Enter through the main gate on Barkhor Street. Follow the clockwise circuit inside. The rooftop offers views across Barkhor toward Potala Palace and is one of the best photo spots in Lhasa.</p>
+
+      <h3>Lunch (12:00 PM - 1:30 PM): Barkhor Street Area</h3>
+      <p>Stay in the Barkhor neighborhood for lunch. Try momos at a local dumpling shop. Or explore the food stalls in the alleys radiating from Barkhor Street. The area has the highest concentration of restaurants in Lhasa, from street food to sit-down Tibetan meals.</p>
+
+      <h3>Afternoon (2:30 PM - 5:00 PM): Sera Monastery</h3>
+      <p>Take a taxi from Barkhor to Sera Monastery (15 minutes, CNY 20-30). Sera is famous for its afternoon debating sessions where monks engage in ritualized philosophical debate in the courtyard. It starts around 3:00 PM daily except Sundays. The debates are theatrical: standing monks clap their hands sharply to punctuate questions while seated monks respond. You do not need to understand Tibetan to feel the intensity. Photography is allowed in the debating courtyard. After the debates, explore the monastery's chapels and halls. Sera is less crowded than Potala Palace and Jokhang Temple. This is where you can slow down and absorb the atmosphere without the crowds.</p>
+
+      <h3>Evening: Farewell Dinner</h3>
+      <p>Your last evening in Lhasa. If you have been eating Tibetan food for three days and want a change, the Muslim quarter near the Lhasa Great Mosque serves excellent halal Chinese food. Or return to your favorite tea house for one last thermos of sweet tea. Watch the sunset light hit the golden roofs one final time.</p>
+
+      <h2 id="extend">If You Have More Time</h2>
+      <p><strong>Day 4:</strong> Drepung Monastery in the morning (once the world's largest monastery, beautifully situated on a hillside) and Norbulingka Palace in the afternoon (the Dalai Lama's summer palace, set in a peaceful park). <strong>Day 5:</strong> Day trip to Yamdrok Lake, one of Tibet's three sacred lakes. The turquoise color at 4,400 meters is surreal. The drive takes 2 hours each way through mountain passes. Arrange through your tour operator.</p>
+    </div>
+  </article>
+
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-10">
+    <FaqAccordion faqs={faqs} />
+  </section>
+  <section class="max-w-3xl mx-auto px-4 md:px-6 pb-4">
+    <AuthorBio slug="sarah-chen" datePublished="2026-03-10" dateModified="2026-08-06" />
+  </section>
+
+
+
+  <PageNav prev={{ href: "/lhasa-attractions", label: "Lhasa Attractions" }} next={{ href: "/tibet-etiquette", label: "Tibet Etiquette" }} />
+</BaseLayout>
