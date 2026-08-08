@@ -47,13 +47,12 @@ const author = getAuthor(slug);
 <style>
   .author-bio-card {
     display: flex;
-    gap: 1rem;
+    gap: 1.25rem;
     align-items: flex-start;
-    padding: 1.25rem;
-    margin-top: 1.5rem;
-    border-top: 1px solid var(--color-border);
-    background: var(--color-surface-alt);
-    border-radius: 6px;
+    padding: 1.75rem;
+    margin-top: 2rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
   }
   .author-photo {
     width: 72px;
@@ -61,26 +60,29 @@ const author = getAuthor(slug);
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    border: 2px solid var(--color-border);
+    border: 1px solid var(--color-border);
   }
   .author-info {
     font-size: 0.875rem;
-    line-height: 1.55;
+    line-height: 1.6;
   }
   .author-name {
-    font-weight: 700;
-    font-size: 0.95rem;
+    font-weight: 600;
+    font-size: 0.9375rem;
     color: var(--color-text);
     margin: 0 0 0.125rem;
+    font-family: var(--font-display);
   }
   .author-title {
     color: var(--color-accent);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 500;
-    margin: 0 0 0.4rem;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
   }
   .author-creds {
-    margin: 0 0 0.4rem;
+    margin: 0 0 0.5rem;
     padding: 0;
     list-style: none;
     display: flex;
@@ -88,22 +90,22 @@ const author = getAuthor(slug);
     gap: 0.35rem 0.6rem;
   }
   .author-creds li {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     color: var(--color-text-muted);
-    background: var(--color-surface);
-    padding: 0.15rem 0.45rem;
-    border-radius: 3px;
+    background: #F9F8F6;
+    padding: 0.2rem 0.5rem;
     border: 1px solid var(--color-border);
   }
   .author-bio {
-    margin: 0.35rem 0 0;
+    margin: 0.5rem 0 0;
     color: var(--color-text-muted);
     font-size: 0.8rem;
   }
   .author-dates {
-    margin-top: 0.5rem;
-    font-size: 0.72rem;
+    margin-top: 0.625rem;
+    font-size: 0.6875rem;
     color: var(--color-text-subtle);
+    letter-spacing: 0.03em;
   }
   .author-dates-sep {
     margin: 0 0.4rem;

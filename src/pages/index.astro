@@ -1,173 +1,135 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "../components/HeroSection.astro";import QuickInfoBar from "../components/QuickInfoBar.astro";import FaqAccordion from "../components/FaqAccordion.astro";import StructuredData from "../components/StructuredData.astro";import PhotoGallery from "../components/PhotoGallery.astro";const faqs = [  { q: "Do I need a special permit to visit Potala Palace?", a: "Yes. Foreign visitors need a Tibet Travel Permit to enter Tibet, plus a separate ticket reservation for Potala Palace. We cover the full process in our Permits Guide." },  { q: "How much do tickets cost in 2026?", a: "Peak season (May-Oct): CNY 200. Off-peak (Nov-Apr): CNY 100. Students and seniors may qualify for 50% discounts. Online reservation fee is an additional CNY 5." },  { q: "How long should I plan for the visit?", a: "A thorough visit takes 2-3 hours. The palace has 13 stories and over 1,000 rooms. Budget extra time for the climb: altitude makes everything harder than it looks." },  { q: "Can I take photos inside?", a: "Photography is allowed in outdoor areas and courtyards. Inside the chapels and halls, photography is strictly prohibited. Tripods require special permission." },  { q: "What is the best time of day to visit?", a: "Morning (9:30-11:00 AM) for clear mountain views. Afternoon light is beautiful for exterior photography. Avoid midday crowds on weekends." },  { q: "Is Potala Palace wheelchair accessible?", a: "Accessibility is limited due to the historic nature of the building and steep staircases. Some lower levels are accessible; upper floors are not. Contact your tour operator in advance for assistance." },  { q: "How do I deal with the altitude?", a: "Lhasa is at 3,650m and Potala Palace adds 50m of steep stairs. Most visitors need 1-2 days to acclimatize. Do not plan Potala for your first day in Lhasa. Hydrate aggressively, walk slowly, and consider Diamox." },  { q: "How far in advance should I start planning?", a: "Ideally 6-8 weeks before travel. Tibet Travel Permit takes 7-10 business days. Potala tickets sell out 5-7 days ahead in peak season. Flights and train tickets open 15 days before departure. Start the permit process first." },  { q: "What is the closest airport to Potala Palace?", a: "Lhasa Gonggar Airport (LXA), approximately 60 km southwest of the city. Airport shuttle bus (CNY 30, 70 min) or taxi (CNY 200-250, 60 min) to reach the palace area." },  { q: "What language do I need inside the palace?", a: "Most signage is in Chinese and Tibetan. English audio guides are available for rent (CNY 30). We recommend downloading a guided tour app or hiring an English-speaking guide through your travel agency." },];
+import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "../components/HeroSection.astro";import FaqAccordion from "../components/FaqAccordion.astro";import StructuredData from "../components/StructuredData.astro";import PhotoGallery from "../components/PhotoGallery.astro";const faqs = [  { q: "Do I need a special permit to visit Potala Palace?", a: "Yes. Foreign visitors need a Tibet Travel Permit to enter Tibet, plus a separate ticket reservation for Potala Palace. We cover the full process in our Permits Guide." },  { q: "How much do tickets cost in 2026?", a: "Peak season (May-Oct): CNY 200. Off-peak (Nov-Apr): CNY 100. Students and seniors may qualify for 50% discounts. Online reservation fee is an additional CNY 5." },  { q: "How long should I plan for the visit?", a: "A thorough visit takes 2-3 hours. The palace has 13 stories and over 1,000 rooms. Budget extra time for the climb: altitude makes everything harder than it looks." },  { q: "Can I take photos inside?", a: "Photography is allowed in outdoor areas and courtyards. Inside the chapels and halls, photography is strictly prohibited. Tripods require special permission." },  { q: "What is the best time of day to visit?", a: "Morning (9:30-11:00 AM) for clear mountain views. Afternoon light is beautiful for exterior photography. Avoid midday crowds on weekends." },  { q: "Is Potala Palace wheelchair accessible?", a: "Accessibility is limited due to the historic nature of the building and steep staircases. Some lower levels are accessible; upper floors are not. Contact your tour operator in advance for assistance." },  { q: "How do I deal with the altitude?", a: "Lhasa is at 3,650m and Potala Palace adds 50m of steep stairs. Most visitors need 1-2 days to acclimatize. Do not plan Potala for your first day in Lhasa. Hydrate aggressively, walk slowly, and consider Diamox." },  { q: "How far in advance should I start planning?", a: "Start at least 8 weeks before departure. Tibet Travel Permit takes 7-10 business days. Chinese visa takes 1-2 weeks. Peak season tickets sell out 5-7 days ahead. We break down the full timeline below." },];
 ---
+
 <BaseLayout canonical="https://tibet-lhasa-potala.com" heroImage="/images/hero-potala-palace.webp" ogType="website" authorName="Potala Guide Editorial Team" authorUrl="/about" datePublished="2026-01-01" dateModified="2026-08-06"  title="Potala Palace Guide 2026 | Tickets, Permits & Tips"  description="Plan your Potala Palace visit: 2026 tickets, permits, photo spots, and altitude tips from local experts."  ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp">
 <StructuredData    type="TouristAttraction"    data={{      description: "The world's highest ancient palace, a UNESCO World Heritage site in Lhasa, Tibet. Complete 2026 visitor guide with ticket prices, permits, altitude tips, and photography spots.",      url: "/",    }}  />
 <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }] }} />
 <StructuredData type="FAQPage" data={{ faqs }} />
-{/* 1. HERO */}  <section class="hero-wrap">
-<HeroSection    title="Potala Palace, Lhasa<br/>
-Tibet's Crown Jewel"      subtitle="The world's highest ancient palace at 3,700 meters. A UNESCO World Heritage site with 1,300 years of history. Plan your visit with the most complete English-language guide available — updated August 2026."    cta={{ href: "/visit", label: "Plan Your Visit" }}    imageUrl="/images/hero-potala-palace.webp"  />
-<div class="hero-badge">
-<span class="hero-badge-dot">
-</span>
-Updated August 2026      <span class="hero-badge-sep">
-|</span>
-UNESCO World Heritage    </div>
-<div class="scroll-indicator" aria-hidden="true">
-<span class="scroll-text">
-Explore</span>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M12 5v14"/>
-<path d="m19 12-7 7-7-7"/>
-</svg>
-</div>
+
+<!-- HERO -->
+<section class="hero-wrap">
+  <HeroSection
+    title="Potala Palace,<br/>Lhasa"
+    subtitle="The world's highest ancient palace, rising 3,700 metres above the Tibetan Plateau. A UNESCO World Heritage site spanning thirteen centuries. The most complete English-language guide — updated August 2026."
+    cta={{ href: "/visit", label: "Plan Your Visit" }}
+    imageUrl="/images/hero-potala-palace.webp"
+  />
+  <div class="hero-badge">
+    <span class="hero-badge-dot"></span>
+    Updated August 2026
+    <span class="hero-badge-sep">|</span>
+    UNESCO World Heritage
+  </div>
 </section>
-{/* 2. QUICK INFO — 6 items */}  <div class="px-6">
-<QuickInfoBar      items={[        { label: "Admission", value: "from CNY 200" },        { label: "Hours", value: "9:30 AM - 3:30 PM" },        { label: "Last Entry", value: "3:30 PM sharp" },        { label: "Altitude", value: "3,700 m (12,139 ft)" },        { label: "Daily Cap", value: "2,300 visitors" },        { label: "Best Season", value: "May - October" },      ]}    />
+
+<!-- TRUST BAR -->
+<div class="hero-info-panel">
+  <div class="hero-info-trust">
+    <span class="hi-trust"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> UNESCO 1994</span>
+    <span class="hi-trust"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> 1,300+ Years</span>
+    <span class="hi-trust"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Updated Aug 2026</span>
+    <span class="hi-trust"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg> Most Complete Guide</span>
+  </div>
 </div>
-{/* 3. TRUST SIGNALS */}  <div class="trust-bar">
-<div class="trust-bar-inner">
-<div class="trust-item">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-<a href="https://whc.unesco.org/en/list/707" target="_blank" rel="noopener">
-<span>
-UNESCO World Heritage 1994</span>
-</a>
-</div>
-<div class="trust-item">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M12 2L2 7l10 5 10-5-10-5z"/>
-<path d="M2 17l10 5 10-5"/>
-<path d="M2 12l10 5 10-5"/>
-</svg>
-<a href="https://en.wikipedia.org/wiki/Potala_Palace" target="_blank" rel="noopener" class="trust-link">
-<span>
-1,300+ Years of History</span>
-</a>
-</div>
-<div class="trust-item">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="12" cy="12" r="10"/>
-<polyline points="12 6 12 12 16 14"/>
-</svg>
-<span>
-Updated August 2026</span>
-</div>
-<div class="trust-item">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
-</svg>
-<span>
-Most Complete English Guide</span>
-</div>
-</div>
-</div>
-{/* KEY FACTS AT A GLANCE */}  <div class="max-w-4xl mx-auto mt-8 px-6">
-<div class="key-facts-box">
-<span class="section-tag" style="margin-bottom:0.5rem">
-At a Glance</span>
-<ul class="key-facts-list">
-<li>
-<strong>
-Location</strong>
-Red Hill (Marpo Ri), central Lhasa, Tibet — 3,700m (12,139 ft) above sea level</li>
-<li>
-<strong>
-Tickets</strong>
-CNY 200 peak (May-Oct) / CNY 100 off-peak (Nov-Apr); students 50% off</li>
-<li>
-<strong>
-Hours</strong>
-9:30 AM – 3:30 PM daily; last entry at 3:30 PM sharp</li>
-<li>
-<strong>
-Visitor cap</strong>
-2,300 per day — reserve 5-7 days ahead in peak season</li>
-<li>
-<strong>
-Foreign visitors</strong>
-Tibet Travel Permit required — start the process 6-8 weeks before travel</li>
-<li>
-<strong>
-Inside visit</strong>
-2-3 hours; photography prohibited in chapels; dress code applies</li>
-</ul>
-</div>
-</div>
-<div class="max-w-4xl mx-auto mt-10 px-6">
-<div class="urgency-box">
-<div class="urgency-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
-<circle cx="12" cy="12" r="10"/>
-<polyline points="12 6 12 12 16 14"/>
-</svg>
-</div>
-<div class="urgency-body">
-<p class="urgency-title">
-Peak season is open -- book before tickets sell out</p>
-<p class="urgency-desc">
-May through October. Daily cap of just 2,300 visitors. During July-September, tickets routinely sell out 5-7 days in advance. <a href="/visit" class="urgency-link">
-See booking guide &rarr;</a>
-</p>
-</div>
-</div>
-</div>
-    {/* PLANNING TIMELINE */}
-  <div class="max-w-4xl mx-auto mt-8 px-6">
-    <div class="timeline-box">
-      <span class="section-tag">Planning Timeline</span>
-      <h3 class="text-xl font-bold text-[var(--color-text)] mb-6">When to do what — 8 weeks to departure</h3>
-      <div class="timeline-steps">
-        <div class="t-step">
-          <div class="t-step-marker"><span>8</span></div>
-          <div class="t-step-body">
-            <strong class="text-[var(--color-text)]">8 weeks before</strong>
-            <p class="text-[var(--color-text-muted)]">Start Tibet Travel Permit application through a registered agency. Book international flights to China.</p>
-          </div>
+
+<!-- WHY VISIT -->
+<section class="section" id="why-visit">
+  <div class="max-w-6xl mx-auto">
+    <div class="section-header">
+      <span class="section-tag">Why Potala</span>
+      <h2 class="section-title">Not just a palace.<br/>A world unto itself.</h2>
+      <p style="color:var(--color-text-muted); margin-top:1rem; max-width:36rem;">Three reasons this place stays with you long after you descend the Red Hill.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-media">
+          <img src="/images/gallery-potala-chakpori-hill.webp" alt="Panoramic view of Potala Palace from Chakpori Hill" loading="lazy" decoding="async" width="600" height="400" />
         </div>
-        <div class="t-step">
-          <div class="t-step-marker"><span>6</span></div>
-          <div class="t-step-body">
-            <strong class="text-[var(--color-text)]">6 weeks before</strong>
-            <p class="text-[var(--color-text-muted)]">Apply for Chinese tourist visa (L visa). Book Lhasa hotel with oxygen system for first 2 nights.</p>
-          </div>
+        <div class="why-card-body">
+          <h3 class="why-card-title">The View That Rewires You</h3>
+          <p>3,700 meters on the Red Hill, Lhasa valley spreading below, Himalayan foothills on the horizon. Golden roofs catching afternoon sun, prayer flags snapping in thin air. You forget your phone exists.</p>
         </div>
-        <div class="t-step">
-          <div class="t-step-marker"><span>4</span></div>
-          <div class="t-step-body">
-            <strong class="text-[var(--color-text)]">4 weeks before</strong>
-            <p class="text-[var(--color-text-muted)]">Reserve Potala Palace tickets through your tour operator. Book flights or train to Lhasa. Consult doctor about altitude medication.</p>
-          </div>
+      </div>
+      <div class="why-card">
+        <div class="why-card-media">
+          <img src="/images/gallery-potala-golden-roofs.webp" alt="Potala Palace golden roofs glowing at sunset" loading="lazy" decoding="async" width="600" height="400" />
         </div>
-        <div class="t-step">
-          <div class="t-step-marker"><span>2</span></div>
-          <div class="t-step-body">
-            <strong class="text-[var(--color-text)]">2 weeks before</strong>
-            <p class="text-[var(--color-text-muted)]">Confirm all bookings. Pack using our checklist. Download offline maps and translation apps. Print all permits and tickets.</p>
-          </div>
+        <div class="why-card-body">
+          <h3 class="why-card-title">Architecture That Defies Belief</h3>
+          <p>Thirteen stories, 1,000+ rooms, walls 3 meters thick at the base. Built at the elevation where airplanes pressurize their cabins — without cranes, without steel frames. Modern architects still study how it stands.</p>
         </div>
-        <div class="t-step">
-          <div class="t-step-marker"><span>0</span></div>
-          <div class="t-step-body">
-            <strong class="text-[var(--color-text)]">Arrival day</strong>
-            <p class="text-[var(--color-text-muted)]">Rest and hydrate. No strenuous activity. Gentle walk on Barkhor Street. <a href="/visit" class="text-[var(--color-accent)] font-medium hover:underline">Read the full visit guide</a>.</p>
-          </div>
+      </div>
+      <div class="why-card">
+        <div class="why-card-media">
+          <img src="/images/gallery-potala-murals.webp" alt="Ancient Buddhist murals inside Potala Palace" loading="lazy" decoding="async" width="600" height="400" />
+        </div>
+        <div class="why-card-body">
+          <h3 class="why-card-title">A Living Museum of Tibetan Buddhism</h3>
+          <p>200,000 Buddhist statues, priceless thangkas, sutras handwritten in gold ink, gilded stupa tombs of eight Dalai Lamas. Monks still chant here. Butter lamps still burn. Incense hangs in corridors walked for 13 centuries.</p>
         </div>
       </div>
     </div>
   </div>
+</section>
 
+<!-- PHOTO GALLERY -->
+<section class="section">
+  <div class="max-w-6xl mx-auto">
+    <div class="section-header">
+      <span class="section-tag">Visual Journey</span>
+      <h2 class="section-title">Tibet in photographs</h2>
+      <p style="color:var(--color-text-muted); margin-top:1rem; max-width:36rem;">From prayer wheels spinning in Barkhor Street to Himalayan peaks breaking through clouds — a visual tour of the Roof of the World.</p>
+    </div>
+  </div>
+  <div class="gallery-slider-wrap" style="margin-top:2rem;">
+    <PhotoGallery hideHeading={true} photos={[
+      { src: "/images/gallery-potala-golden-roofs.webp", alt: "Potala Palace golden roofs at sunset", caption: "Golden roofs at sunset" },
+      { src: "/images/tibetan-monks.webp", alt: "Tibetan monks in Lhasa", caption: "Monks in Lhasa" },
+      { src: "/images/gallery-potala-water-reflection.webp", alt: "Potala Palace reflected in the water", caption: "Reflection at Dragon King Pond" },
+      { src: "/images/jokhang-temple.webp", alt: "Jokhang Temple pilgrims", caption: "Jokhang Temple" },
+      { src: "/images/gallery-potala-night.webp", alt: "Potala Palace illuminated at night", caption: "Palace lights after dark" },
+      { src: "/images/prayer-wheels.webp", alt: "Prayer wheels in Tibet", caption: "Prayer wheels" },
+      { src: "/images/himalaya-landscape.webp", alt: "Himalayan mountain landscape", caption: "Himalayan peaks" },
+      { src: "/images/gallery-prayer-flags.webp", alt: "Prayer flags blowing in the Lhasa wind", caption: "Prayer flags" },
+      { src: "/images/gallery-potala-murals.webp", alt: "Ancient Buddhist murals inside Potala Palace", caption: "Ancient murals" },
+      { src: "/images/tibet-landscape.webp", alt: "Tibetan plateau landscape", caption: "The Plateau" },
+    ]} />
+  </div>
+</section>
 
-{/* TICKET COST CALCULATOR */}
-  <div class="max-w-4xl mx-auto mt-8 px-6">
+<!-- COST CALCULATOR -->
+<section class="section" style="background:var(--color-surface-alt);">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="calc-stats">
+      <div class="calc-stat">
+        <span class="calc-stat-icon">&#127902;</span>
+        <span class="calc-stat-num">CNY 200</span>
+        <span class="calc-stat-label">Peak Season <em>May – Oct</em></span>
+      </div>
+      <div class="calc-stat">
+        <span class="calc-stat-icon">&#127903;</span>
+        <span class="calc-stat-num">CNY 100</span>
+        <span class="calc-stat-label">Off-Peak <em>Nov – Apr</em></span>
+      </div>
+      <div class="calc-stat">
+        <span class="calc-stat-icon">&#128338;</span>
+        <span class="calc-stat-num">9:30 – 15:30</span>
+        <span class="calc-stat-label">Opening Hours <em>Last entry 15:30</em></span>
+      </div>
+      <div class="calc-stat">
+        <span class="calc-stat-icon">&#128100;</span>
+        <span class="calc-stat-num">2,300 / day</span>
+        <span class="calc-stat-label">Visitor Cap <em>Reserve 5–7d ahead</em></span>
+      </div>
+    </div>
+
     <div class="cost-calc-card">
       <div class="cost-calc-header">
         <span class="section-tag">Interactive Tool</span>
-        <h2 class="text-2xl font-bold tracking-tight text-[var(--color-text)]">Visit Cost Calculator</h2>
-        <p class="text-[var(--color-text-muted)] mt-1">Estimate your total Potala Palace visit cost in 30 seconds.</p>
+        <h2 class="text-2xl font-[var(--font-display)] tracking-[-0.01em]">Visit Cost Calculator</h2>
+        <p style="color:var(--color-text-muted); margin-top:0.5rem;">Estimate your total Potala Palace visit cost in 30 seconds.</p>
       </div>
       <div id="cost-calc">
         <div class="cost-step" id="cost-step-1">
@@ -181,8 +143,8 @@ See booking guide &rarr;</a>
         <div class="cost-step" id="cost-step-2" style="display:none">
           <p class="cost-step-label">Which season?</p>
           <div class="cost-btn-group">
-            <button class="cost-btn" data-value="peak" onclick="selectCostBtn(this,2)"><span class="cost-btn-num">CNY 200</span><span class="cost-btn-text">Peak (May Oct)</span></button>
-            <button class="cost-btn" data-value="off" onclick="selectCostBtn(this,2)"><span class="cost-btn-num">CNY 100</span><span class="cost-btn-text">Off-peak (Nov Apr)</span></button>
+            <button class="cost-btn" data-value="peak" onclick="selectCostBtn(this,2)"><span class="cost-btn-num">CNY 200</span><span class="cost-btn-text">Peak (May–Oct)</span></button>
+            <button class="cost-btn" data-value="off" onclick="selectCostBtn(this,2)"><span class="cost-btn-num">CNY 100</span><span class="cost-btn-text">Off-peak (Nov–Apr)</span></button>
           </div>
         </div>
         <div class="cost-step" id="cost-step-3" style="display:none">
@@ -198,952 +160,1020 @@ See booking guide &rarr;</a>
       </div>
     </div>
   </div>
-
-{/* 5. WHY VISIT — 3 image cards */}  <section class="section">
-<div class="max-w-5xl mx-auto">
-<div class="section-header text-center">
-<span class="section-tag">
-Why Potala</span>
-<h2 class="section-title">
-Not just a palace. A world unto itself.</h2>
-<p class="text-[var(--color-text-muted)] mt-3 max-w-xl mx-auto">
-Three reasons this place stays with you long after you descend the Red Hill.</p>
-</div>
-<div class="why-grid">
-<div class="why-card">
-<div class="why-card-media">
-<img src="/images/gallery-potala-chakpori-hill.webp" alt="Panoramic view of Potala Palace from Chakpori Hill" loading="lazy" decoding="async" width="600" height="400" />
-</div>
-<div class="why-card-body">
-<h3 class="why-card-title">
-The View That Rewires You</h3>
-<p>
-3,700 meters on the Red Hill, Lhasa valley spreading below, Himalayan foothills on the horizon. Golden roofs catching afternoon sun, prayer flags snapping in thin air. You forget your phone exists.</p>
-</div>
-</div>
-<div class="why-card">
-<div class="why-card-media">
-<img src="/images/gallery-potala-golden-roofs.webp" alt="Potala Palace golden roofs glowing at sunset" loading="lazy" decoding="async" width="600" height="400" />
-</div>
-<div class="why-card-body">
-<h3 class="why-card-title">
-Architecture That Defies Belief</h3>
-<p>
-Thirteen stories, 1,000+ rooms, walls 3 meters thick at the base. Built at the elevation where airplanes pressurize their cabins -- without cranes, without steel frames. Modern architects still study how it stands.</p>
-</div>
-</div>
-<div class="why-card">
-<div class="why-card-media">
-<img src="/images/gallery-potala-murals.webp" alt="Ancient Buddhist murals inside Potala Palace" loading="lazy" decoding="async" width="600" height="400" />
-</div>
-<div class="why-card-body">
-<h3 class="why-card-title">
-A Living Museum of Tibetan Buddhism</h3>
-<p>
-200,000 Buddhist statues, priceless thangkas, sutras handwritten in gold ink, gilded stupa tombs of eight Dalai Lamas. Monks still chant here. Butter lamps still burn. Incense hangs in corridors walked for 13 centuries.</p>
-</div>
-</div>
-</div>
-</div>
 </section>
-{/* 6. PHOTO GALLERY */}  <PhotoGallery photos={[    { src: "/images/gallery-potala-golden-roofs.webp", alt: "Potala Palace golden roofs at sunset", caption: "Golden roofs glowing at sunset" },    { src: "/images/gallery-potala-chakpori-hill.webp", alt: "Potala Palace panoramic view from Chakpori Hill", caption: "Classic panorama from Chakpori Hill" },    { src: "/images/gallery-potala-water-reflection.webp", alt: "Potala Palace reflected in the water", caption: "Mirror reflection at Dragon King Pond" },    { src: "/images/gallery-potala-night.webp", alt: "Potala Palace illuminated at night", caption: "Palace lights after dark" },    { src: "/images/gallery-potala-murals.webp", alt: "Ancient Buddhist murals inside Potala Palace", caption: "Ancient murals inside the halls" },    { src: "/images/gallery-prayer-flags.webp", alt: "Prayer flags blowing in the Lhasa wind", caption: "Prayer flags in high-altitude wind" },  ]} />
-  {/* VISIT DAY PREVIEW */}
-  <div class="max-w-5xl mx-auto px-6 mt-6">
-    <div class="visit-preview-card">
-      <div class="visit-preview-badge">Don't Miss</div>
-      <h3 class="visit-preview-title">What to Expect on Visit Day</h3>
-      <p class="visit-preview-text">The east gate opens at 9:30 AM. The climb to the entrance takes 20-30 minutes uphill. The route is one-way through the White Palace into the Red Palace. Golden roofs at the top. Exit on the west side. Most visitors spend 2-3 hours inside. <a href="/visit" class="font-medium" style="color:white;text-decoration:underline;text-underline-offset:2px">Read the complete step-by-step guide</a>.</p>
+
+<!-- PLANNING TIMELINE -->
+<section class="section">
+  <div class="max-w-6xl mx-auto">
+    <div class="section-header">
+      <span class="section-tag">Planning Timeline</span>
+      <h2 class="section-title">When to do what —<br/>8 weeks to departure</h2>
     </div>
-  </div>
-
-
-{/* 7. NAVIGATION GUIDES — Categorized */}  <section class="bg-[var(--color-surface-alt)] section">
-<div class="max-w-7xl mx-auto">
-<div class="section-header">
-<span class="section-tag">
-Plan Your Trip</span>
-<h2 class="section-title">
-Everything you need, organized</h2>
-<p class="text-[var(--color-text-muted)] mt-3 max-w-2xl">
-Planning Tibet involves more logistics than most destinations. Permits, altitude, tickets, food, hotels -- we have organized every topic into focused guides.</p>
-</div>
-<!-- Before You Go -->
-<div class="guide-category">
-<h3 class="guide-cat-title">
-Before You Go</h3>
-<div class="nav-cards">
-<a href="/permits" class="nav-card">
-<div class="nav-card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-</svg>
-</div>
-<div>
-<div class="nav-card-title">
-Travel Permits</div>
-<div class="nav-card-desc">
-Tibet Travel Permit, documents, common mistakes -- everything before you book.</div>
-</div>
-</a>
-<a href="/travel-tips" class="nav-card">
-<div class="nav-card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-</svg>
-</div>
-<div>
-<div class="nav-card-title">
-Altitude &amp; Packing</div>
-<div class="nav-card-desc">
-Handle 3,700m. Medications, packing list, acclimatization strategy, insurance.</div>
-</div>
-</a>
-<a href="/best-time" class="nav-card">
-<div class="nav-card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="12" cy="12" r="4"/>
-<path d="M12 2v2"/>
-<path d="M12 20v2"/>
-<path d="m4.93 4.93 1.41 1.41"/>
-<path d="m17.66 17.66 1.41 1.41"/>
-<path d="M2 12h2"/>
-<path d="M20 12h2"/>
-<path d="m6.34 17.66-1.41 1.41"/>
-<path d="m19.07 4.93-1.41 1.41"/>
-</svg>
-</div>
-<div>
-<div class="nav-card-title">
-Best Time to Visit</div>
-<div class="nav-card-desc">
-Month-by-month weather, crowds, seasonal highlights. When to go, when to avoid.</div>
-</div>
-</a>
-</div>
-</div>
-<!-- The Palace Experience -->
-<div class="guide-category">
-<h3 class="guide-cat-title">
-The Palace Experience</h3>
-<div class="nav-cards">
-<a href="/visit" class="nav-card">
-<div class="nav-card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="12" cy="12" r="10"/>
-<polyline points="12 6 12 12 16 14"/>
-</svg>
-</div>
-<div>
-<div class="nav-card-title">
-Visit Guide</div>
-<div class="nav-card-desc">
-Tickets, hours, routes, interior room guide. Every practical detail for your visit.</div>
-</div>
-</a>
-<a href="/photography" class="nav-card">
-<div class="nav-card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2Z"/>
-<circle cx="12" cy="13" r="4"/>
-</svg>
-</div>
-<div>
-<div class="nav-card-title">
-Photography Guide</div>
-<div class="nav-card-desc">
-12 best photo spots, sunrise &amp; sunset timing, camera settings, drone rules.</div>
-</div>
-</a>
-<a href="/history" class="nav-card">
-<div class="nav-card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
-</svg>
-</div>
-<div>
-<div class="nav-card-title">
-History &amp; Architecture</div>
-<div class="nav-card-desc">
-1,300 years from Songtsen Gampo to UNESCO. Red Palace, White Palace explained.</div>
-</div>
-</a>
-</div>
-</div>
-<!-- Your Lhasa Stay -->
-<div class="guide-category">
-<h3 class="guide-cat-title">
-Your Lhasa Stay</h3>
-<div class="nav-cards">
-<a href="/lhasa-food" class="nav-card">
-<div class="nav-card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
-<path d="M7 2v20"/>
-<path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
-</svg>
-</div>
-<div>
-<div class="nav-card-title">
-Lhasa Food Guide</div>
-<div class="nav-card-desc">
-Must-try Tibetan dishes, restaurants near Potala, vegetarian &amp; halal options.</div>
-</div>
-</a>
-<a href="/hotels-potala-view" class="nav-card">
-<div class="nav-card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
-<path d="M9 22v-4h6v4"/>
-<line x1="8" y1="6" x2="10" y2="6"/>
-<line x1="14" y1="6" x2="16" y2="6"/>
-<line x1="8" y1="10" x2="10" y2="10"/>
-<line x1="14" y1="10" x2="16" y2="10"/>
-<line x1="8" y1="14" x2="10" y2="14"/>
-<line x1="14" y1="14" x2="16" y2="14"/>
-</svg>
-</div>
-<div>
-<div class="nav-card-title">
-Potala View Hotels</div>
-<div class="nav-card-desc">
-Luxury, mid-range &amp; budget hotels with real palace views. Foreigner-friendly.</div>
-</div>
-</a>
-<a href="/lhasa-transport" class="nav-card">
-<div class="nav-card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4Z"/>
-<path d="M8 2v16"/>
-<path d="M16 6v16"/>
-</svg>
-</div>
-<div>
-<div class="nav-card-title">
-Getting to Lhasa</div>
-<div class="nav-card-desc">
-Flights, Qinghai-Tibet Railway, airport transfers, city transport, palace gates.</div>
-</div>
-</a>
-<a href="/lhasa-attractions" class="nav-card">
-<div class="nav-card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="12" cy="12" r="10"/>
-<polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
-</svg>
-</div>
-<div>
-<div class="nav-card-title">
-Beyond Potala</div>
-<div class="nav-card-desc">
-Jokhang Temple, Barkhor Street, Sera Monastery, day trips to Yamdrok Lake.</div>
-</div>
-</a>
-</div>
-</div>
-</div>
-</section>
-{/* 8. NEARBY QUICK LOOK — Food / Stay / Go */}  <section class="section">
-<div class="max-w-7xl mx-auto">
-<div class="section-header text-center">
-<span class="section-tag">
-Around the Palace</span>
-<h2 class="section-title">
-Eat, sleep, and explore near Potala</h2>
-<p class="text-[var(--color-text-muted)] mt-3 max-w-xl mx-auto">
-Once you have seen the palace, here is everything else you need for a complete Lhasa experience.</p>
-</div>
-<div class="nearby-grid">
-<a href="/lhasa-food" class="nearby-card">
-<div class="nearby-card-icon" style="background:rgba(196,91,62,0.1)">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
-<path d="M7 2v20"/>
-<path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
-</svg>
-</div>
-<div class="nearby-card-content">
-<span class="nearby-card-badge">
-Food</span>
-<h4 class="nearby-card-title">
-Where to Eat</h4>
-<p class="nearby-card-desc">
-Tibetan momos, yak butter tea, hidden tea houses, vegetarian &amp; halal picks -- all within walking distance of the palace.</p>
-</div>
-</a>
-<a href="/hotels-potala-view" class="nearby-card">
-<div class="nearby-card-icon" style="background:rgba(59,130,246,0.1)">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
-<path d="M9 22v-4h6v4"/>
-<line x1="8" y1="6" x2="10" y2="6"/>
-<line x1="14" y1="6" x2="16" y2="6"/>
-<line x1="8" y1="10" x2="10" y2="10"/>
-<line x1="14" y1="10" x2="16" y2="10"/>
-<line x1="8" y1="14" x2="10" y2="14"/>
-<line x1="14" y1="14" x2="16" y2="14"/>
-</svg>
-</div>
-<div class="nearby-card-content">
-<span class="nearby-card-badge">
-Stay</span>
-<h4 class="nearby-card-title">
-Where to Sleep</h4>
-<p class="nearby-card-desc">
-Wake up to Potala Palace through your window. Luxury suites, boutique hotels, and budget hostels with real views.</p>
-</div>
-</a>
-<a href="/lhasa-transport" class="nearby-card">
-<div class="nearby-card-icon" style="background:rgba(16,185,129,0.1)">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4Z"/>
-<path d="M8 2v16"/>
-<path d="M16 6v16"/>
-</svg>
-</div>
-<div class="nearby-card-content">
-<span class="nearby-card-badge">
-Go</span>
-<h4 class="nearby-card-title">
-How to Get There</h4>
-<p class="nearby-card-desc">
-Qinghai-Tibet Railway, direct flights, airport transfers, Lhasa taxis, and walking routes to the palace gates.</p>
-</div>
-</a>
-</div>
-</div>
-</section>
-{/* 9. WHAT TO EXPECT — Timeline + Video + Updates */}  <section class="bg-[var(--color-surface-alt)] section">
-<div class="max-w-5xl mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
-<div class="lg:col-span-3">
-<span class="section-tag">
-What to Expect</span>
-<h2 class="text-2xl font-bold tracking-tight text-[var(--color-text)] mb-5">
-Your Visit, Step by Step</h2>
-<div class="prose">
-<p>
-You arrive in Lhasa, ideally a day or two before your Potala reservation. The thin air hits immediately. Check into your hotel, drink more water than you thought possible, and resist the urge to explore aggressively on day one.</p>
-<p>
-On the morning of your visit, you walk or taxi to the base of the Red Hill. The palace towers above you -- genuinely, almost absurdly massive up close. Pilgrims pass you, some prostrating, others spinning prayer wheels as you climb the stone steps.</p>
-<p>
-Inside: the White Palace (living quarters, ceremonial halls, silk thangkas), then the Red Palace (golden stupa tombs of the Dalai Lamas, ancient murals, the 7th-century Dharma Cave). You exit two to three hours later, blinking in the sunlight, processing what you just saw.</p>
-<div class="aspect-video w-full rounded-xl overflow-hidden border border-[var(--color-border)] mt-6">
-<iframe class="w-full h-full" src="https://www.youtube.com/embed/jNMm1hSqsss" title="Potala Palace Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" decoding="async">
-</iframe>
-</div>
-<p class="text-xs text-[var(--color-text-subtle)] mt-2">
-Watch a real visitor walkthrough -- the climb, the crowds, the views.</p>
-</div>
-</div>
-<div class="lg:col-span-2">
-<div class="updates-box">
-<h3 class="updates-box-title">
-2026 Updates</h3>
-<ul class="updates-list">
-<li class="updates-item">
-<span class="updates-dot">
-</span>
-<span class="updates-text">
-<strong>
-Online reservation mandatory.</strong>
-Walk-up tickets no longer available. Reserve at least 3 days ahead.</span>
-</li>
-<li class="updates-item">
-<span class="updates-dot">
-</span>
-<span class="updates-text">
-<strong>
-Daily cap: 2,300 visitors.</strong>
-Peak season tickets sell out 5-7 days in advance.</span>
-</li>
-<li class="updates-item">
-<span class="updates-dot">
-</span>
-<span class="updates-text">
-<strong>
-Tibet Travel Permit:</strong>
-7-10 business days. Apply through your agency 3-4 weeks before arrival.</span>
-</li>
-<li class="updates-item">
-<span class="updates-dot">
-</span>
-<span class="updates-text">
-<strong>
-Foreign visitors:</strong>
-Must join an organized tour with a licensed guide.</span>
-</li>
-<li class="updates-item">
-<span class="updates-dot">
-</span>
-<span class="updates-text">
-<strong>
-New for 2026:</strong>
-Expanded English audio guides now in 8 languages.</span>
-</li>
-</ul>
-<a href="/visit" class="updates-cta">
-Full visit guide &rarr;</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-{/* 10. ALTITUDE TOOL */}  <section class="section">
-<div class="max-w-5xl mx-auto">
-<div class="altitude-tool">
-<div class="altitude-tool-header">
-<span class="section-tag">
-Interactive Tool</span>
-<h2 class="text-2xl font-bold tracking-tight text-[var(--color-text)]">
-Altitude Readiness Check</h2>
-<p class="text-[var(--color-text-muted)] mt-1">
-Answer 3 quick questions and get personalized advice for handling Potala's 3,700m.</p>
-</div>
-<div class="altitude-steps" id="altitude-check">
-<div class="alt-step" id="step-1">
-<p class="alt-step-q">
-What is your home elevation?</p>
-<div class="alt-step-opts">
-<button class="alt-btn" data-value="sea" onclick="selectAlt(this,1)">
-Near sea level (0-500m)</button>
-<button class="alt-btn" data-value="mid" onclick="selectAlt(this,1)">
-Moderate (500-2,000m)</button>
-<button class="alt-btn" data-value="high" onclick="selectAlt(this,1)">
-High (2,000m+)</button>
-</div>
-</div>
-<div class="alt-step" id="step-2" style="display:none">
-<p class="alt-step-q">
-How soon do you depart?</p>
-<div class="alt-step-opts">
-<button class="alt-btn" data-value="soon" onclick="selectAlt(this,2)">
-Within 2 weeks</button>
-<button class="alt-btn" data-value="month" onclick="selectAlt(this,2)">
-2-4 weeks</button>
-<button class="alt-btn" data-value="later" onclick="selectAlt(this,2)">
-1+ month</button>
-</div>
-</div>
-<div class="alt-step" id="step-3" style="display:none">
-<p class="alt-step-q">
-Any health concerns?</p>
-<div class="alt-step-opts">
-<button class="alt-btn" data-value="none" onclick="selectAlt(this,3)">
-No, I am healthy</button>
-<button class="alt-btn" data-value="mild" onclick="selectAlt(this,3)">
-Mild concerns (asthma, etc.)</button>
-<button class="alt-btn" data-value="serious" onclick="selectAlt(this,3)">
-Serious heart/lung conditions</button>
-</div>
-</div>
-<div class="alt-result" id="alt-result" style="display:none">
-</div>
-</div>
-</div>
-</div>
-</section>
-  {/* BY THE NUMBERS */}
-  <div class="max-w-5xl mx-auto mt-6 px-6">
-    <div class="numbers-strip">
-      <div class="num-item">
-        <span class="num-value">1,300+</span>
-        <span class="num-label">Years of History</span>
+    <div class="timeline-layout">
+      <div class="timeline-image-col">
+        <img src="/images/travel-planning.webp" alt="Travel planning" loading="lazy" decoding="async" />
+        <img src="/images/passport-visa.webp" alt="Passport and visa" loading="lazy" decoding="async" class="timeline-img-2" />
       </div>
-      <div class="num-item">
-        <span class="num-value">3,700m</span>
-        <span class="num-label">Above Sea Level</span>
+      <div class="timeline-col">
+        <div class="timeline-box">
+          <div class="timeline-steps">
+            <div class="t-step"><div class="t-step-marker"><span>8</span></div><div class="t-step-body"><strong>8 weeks before</strong><p>Start Tibet Travel Permit application through a registered agency. Book international flights to China.</p></div></div>
+            <div class="t-step"><div class="t-step-marker"><span>6</span></div><div class="t-step-body"><strong>6 weeks before</strong><p>Apply for Chinese tourist visa (L visa). Book Lhasa hotel with oxygen system for first 2 nights.</p></div></div>
+        <div class="t-step"><div class="t-step-marker"><span>4</span></div><div class="t-step-body"><strong>4 weeks before</strong><p>Reserve Potala Palace tickets through your tour operator. Book flights or train to Lhasa. Consult doctor about altitude medication.</p></div></div>
+        <div class="t-step"><div class="t-step-marker"><span>2</span></div><div class="t-step-body"><strong>2 weeks before</strong><p>Confirm all bookings. Pack using our checklist. Download offline maps and translation apps. Print all permits and tickets.</p></div></div>
+        <div class="t-step"><div class="t-step-marker"><span>0</span></div><div class="t-step-body"><strong>Arrival day</strong><p>Rest and hydrate. No strenuous activity. Gentle walk on Barkhor Street. <a href="/visit" style="color:var(--color-accent); text-decoration:underline; text-underline-offset:2px;">Read the full visit guide</a>.</p></div></div>
       </div>
-      <div class="num-item">
-        <span class="num-value">1,000+</span>
-        <span class="num-label">Rooms & Halls</span>
-      </div>
-      <div class="num-item">
-        <span class="num-value">200,000</span>
-        <span class="num-label">Artifacts & Statues</span>
-      </div>
-      <div class="num-item">
-        <span class="num-value">2,300</span>
-        <span class="num-label">Daily Visitor Cap</span>
+    </div>
       </div>
     </div>
   </div>
-
-
-{/* 11. VISITOR TESTIMONIALS */}  <section class="bg-[var(--color-surface-alt)] section">
-<div class="max-w-5xl mx-auto">
-<div class="section-header text-center">
-<span class="section-tag">
-What Travelers Say</span>
-<h2 class="section-title">
-Potala leaves a mark on everyone</h2>
-</div>
-<div class="testimonial-grid">
-<div class="testimonial-card">
-<div class="testimonial-stars">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-</div>
-<p class="testimonial-quote">
-"Pictures do not prepare you. The sheer scale -- thirteen stories rising straight up from the hill -- is overwhelming. The walk up leaves you breathless, both from the altitude and the beauty."</p>
-<p class="testimonial-author">
-Sarah M. <span class="testimonial-meta">
-. Visited April 2025</span>
-</p>
-</div>
-<div class="testimonial-card">
-<div class="testimonial-stars">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-</div>
-<p class="testimonial-quote">
-"The golden roofs at sunset were the most beautiful thing I have ever seen. The altitude was tough -- this guide's tips saved me. Spend two days acclimatizing. It makes all the difference."</p>
-<p class="testimonial-author">
-James T. <span class="testimonial-meta">
-. Visited September 2025</span>
-</p>
-</div>
-<div class="testimonial-card">
-<div class="testimonial-stars">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-<svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none">
-<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-</svg>
-</div>
-<p class="testimonial-quote">
-"I am a photographer and this guide's photo spot recommendations were spot-on. Chakpori Hill at sunrise, Dragon King Pond for reflections -- perfect. The drone regulation info saved me from a costly mistake."</p>
-<p class="testimonial-author">
-Marco R. <span class="testimonial-meta">
-. Visited June 2025</span>
-</p>
-</div>
-</div>
-</div>
 </section>
-{/* 12. ENHANCED FAQ */}  <section class="section">
-<div class="max-w-3xl mx-auto">
-<div class="section-header text-center">
-<span class="section-tag">
-Common Questions</span>
-<h2 class="section-title">
-Everything you are probably wondering</h2>
-</div>
-<FaqAccordion faqs={faqs} />
-<div class="text-center mt-6">
-<a href="/travel-tips" class="btn-outline text-sm">
-Read full travel tips &rarr;</a>
-</div>
-</div>
+
+<!-- NAVIGATION GUIDES -->
+<section class="section" style="background:var(--color-surface-alt);">
+  <div class="max-w-6xl mx-auto">
+    <div class="section-header">
+      <span class="section-tag">Plan Your Trip</span>
+      <h2 class="section-title">Everything you need,<br/>organized</h2>
+      <p style="color:var(--color-text-muted); margin-top:1rem; max-width:36rem;">Planning Tibet involves more logistics than most destinations. Permits, altitude, tickets, food, hotels — we have organized every topic into focused guides.</p>
+    </div>
+
+    <div class="guides-image-strip">
+      <div class="guides-image">
+        <img src="/images/tibetan-pilgrims.webp" alt="Tibetan pilgrims in Lhasa" loading="lazy" decoding="async" />
+        <span class="guides-image-label">Before You Go</span>
+      </div>
+      <div class="guides-image">
+        <img src="/images/tibetan-architecture.webp" alt="Palace experience" loading="lazy" decoding="async" />
+        <span class="guides-image-label">The Palace</span>
+      </div>
+      <div class="guides-image">
+        <img src="/images/lhasa-hotel.webp" alt="Your Lhasa stay" loading="lazy" decoding="async" />
+        <span class="guides-image-label">Your Stay</span>
+      </div>
+    </div>
+
+    <div class="guide-category">
+      <h3 class="guide-cat-title">Before You Go</h3>
+      <div class="nav-cards">
+        <a href="/permits" class="nav-card">
+          <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><div class="nav-card-title">Travel Permits</div><div class="nav-card-desc">Tibet Travel Permit, documents, common mistakes — everything before you book.</div></div>
+        </a>
+        <a href="/travel-tips" class="nav-card">
+          <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
+          <div><div class="nav-card-title">Altitude &amp; Packing</div><div class="nav-card-desc">Handle 3,700m. Medications, packing list, acclimatization strategy, insurance.</div></div>
+        </a>
+        <a href="/best-time" class="nav-card">
+          <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></div>
+          <div><div class="nav-card-title">Best Time to Visit</div><div class="nav-card-desc">Month-by-month weather, crowds, seasonal highlights. When to go, when to avoid.</div></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="guide-category">
+      <h3 class="guide-cat-title">The Palace Experience</h3>
+      <div class="nav-cards">
+        <a href="/visit" class="nav-card">
+          <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="nav-card-title">Visit Guide</div><div class="nav-card-desc">Tickets, hours, routes, interior room guide. Every practical detail for your visit.</div></div>
+        </a>
+        <a href="/photography" class="nav-card">
+          <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2Z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div><div class="nav-card-title">Photography Guide</div><div class="nav-card-desc">12 best photo spots, sunrise &amp; sunset timing, camera settings, drone rules.</div></div>
+        </a>
+        <a href="/history" class="nav-card">
+          <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></div>
+          <div><div class="nav-card-title">History &amp; Architecture</div><div class="nav-card-desc">1,300 years from Songtsen Gampo to UNESCO. Red Palace, White Palace explained.</div></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="guide-category">
+      <h3 class="guide-cat-title">Your Lhasa Stay</h3>
+      <div class="nav-cards nav-cards-four">
+        <a href="/lhasa-food" class="nav-card">
+          <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></div>
+          <div><div class="nav-card-title">Lhasa Food Guide</div><div class="nav-card-desc">Must-try Tibetan dishes, restaurants near Potala, vegetarian &amp; halal options.</div></div>
+        </a>
+        <a href="/hotels-potala-view" class="nav-card">
+          <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><line x1="8" y1="6" x2="10" y2="6"/><line x1="14" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/></svg></div>
+          <div><div class="nav-card-title">Potala View Hotels</div><div class="nav-card-desc">Luxury, mid-range &amp; budget hotels with real palace views. Foreigner-friendly.</div></div>
+        </a>
+        <a href="/lhasa-transport" class="nav-card">
+          <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4Z"/><path d="M8 2v16"/><path d="M16 6v16"/></svg></div>
+          <div><div class="nav-card-title">Getting to Lhasa</div><div class="nav-card-desc">Flights, Qinghai-Tibet Railway, airport transfers, city transport, palace gates.</div></div>
+        </a>
+        <a href="/lhasa-attractions" class="nav-card">
+          <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
+          <div><div class="nav-card-title">Beyond Potala</div><div class="nav-card-desc">Jokhang Temple, Barkhor Street, Sera Monastery, day trips to Yamdrok Lake.</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
-{/* 13. BOTTOM CTA */}  <section class="cta-section">
-<div class="cta-inner">
-<h2 class="cta-heading">
-Ready to stand on the Red Hill?</h2>
-<p class="cta-sub">
-Start with the complete Visit Guide -- tickets, permits, routes, and everything you need to walk through those gates.</p>
-<div class="cta-actions">
-<a href="/visit" class="btn-primary text-base">
-Plan Your Visit</a>
-<a href="/travel-tips" class="cta-secondary">
-Read altitude &amp; packing guide &rarr;</a>
-</div>
-</div>
+
+<!-- NEARBY -->
+<section class="section">
+  <div class="max-w-6xl mx-auto">
+    <div class="section-header">
+      <span class="section-tag">Around the Palace</span>
+      <h2 class="section-title">Eat, sleep, and explore<br/>near Potala</h2>
+      <p style="color:var(--color-text-muted); margin-top:1rem; max-width:36rem;">Once you have seen the palace, here is everything else you need for a complete Lhasa experience.</p>
+    </div>
+    <div class="nearby-grid">
+      <a href="/lhasa-food" class="nearby-card">
+        <div class="nearby-card-img">
+          <img src="/images/tibetan-cuisine.webp" alt="Tibetan cuisine" loading="lazy" decoding="async" />
+        </div>
+        <div class="nearby-card-content">
+          <span class="nearby-card-badge">Food</span>
+          <h4 class="nearby-card-title">Where to Eat</h4>
+          <p class="nearby-card-desc">Tibetan momos, yak butter tea, hidden tea houses, vegetarian &amp; halal picks — all within walking distance of the palace.</p>
+        </div>
+      </a>
+      <a href="/hotels-potala-view" class="nearby-card">
+        <div class="nearby-card-img">
+          <img src="/images/lhasa-hotel.webp" alt="Lhasa hotel" loading="lazy" decoding="async" />
+        </div>
+        <div class="nearby-card-content">
+          <span class="nearby-card-badge">Stay</span>
+          <h4 class="nearby-card-title">Where to Sleep</h4>
+          <p class="nearby-card-desc">Wake up to Potala Palace through your window. Luxury suites, boutique hotels, and budget hostels with real views.</p>
+        </div>
+      </a>
+      <a href="/lhasa-transport" class="nearby-card">
+        <div class="nearby-card-img">
+          <img src="/images/tibet-train.webp" alt="Qinghai-Tibet Railway" loading="lazy" decoding="async" />
+        </div>
+        <div class="nearby-card-content">
+          <span class="nearby-card-badge">Go</span>
+          <h4 class="nearby-card-title">How to Get There</h4>
+          <p class="nearby-card-desc">Qinghai-Tibet Railway, direct flights, airport transfers, Lhasa taxis, and walking routes to the palace gates.</p>
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
-{/* STYLES */}  <style>
-/* Hero enhancements */    .hero-wrap { position: relative; }    .hero-badge {      position: absolute;      bottom: 70px;      left: 50%;      transform: translateX(-50%);      display: flex;      align-items: center;      gap: 8px;      background: rgba(0,0,0,0.45);      backdrop-filter: blur(10px);      border: 1px solid rgba(255,255,255,0.15);      border-radius: 9999px;      padding: 6px 18px;      font-size: 0.75rem;      font-weight: 500;      color: rgba(255,255,255,0.9);      white-space: nowrap;      z-index: 5;    }    .hero-badge-dot {      width: 7px; height: 7px;      border-radius: 50%;      background: #4ade80;      flex-shrink: 0;    }    .hero-badge-sep { color: rgba(255,255,255,0.3); }    .scroll-indicator {      position: absolute;      bottom: 28px;      left: 50%;      transform: translateX(-50%);      display: flex;      flex-direction: column;      align-items: center;      gap: 4px;      color: rgba(255,255,255,0.5);      z-index: 5;      animation: scrollBounce 2s ease-in-out infinite;    }    .scroll-text { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.08em; }    @keyframes scrollBounce {      0%, 100% { transform: translateX(-50%) translateY(0); }      50% { transform: translateX(-50%) translateY(6px); }    }    /* Trust Bar */    .trust-bar {      border-bottom: 1px solid var(--color-border);      background: var(--color-surface);    }    .trust-bar-inner {      max-width: 64rem;      margin: 0 auto;      display: flex;      flex-wrap: wrap;      justify-content: center;      gap: 0;      padding: 10px 16px;    }    .trust-item {      display: flex;      align-items: center;      gap: 6px;      padding: 6px 16px;      font-size: 0.75rem;      color: var(--color-text-muted);      white-space: nowrap;    }    .trust-item svg { flex-shrink: 0; color: var(--color-accent); }    @media (max-width: 640px) {      .trust-bar-inner { gap: 2px; padding: 8px 8px; }      .trust-item { padding: 4px 10px; }    }
 
-    /* Planning Timeline */
-    .timeline-box {
-      background: white;
-      border: 1px solid var(--color-border);
-      border-radius: 14px;
-      padding: 28px 32px;
-    }
-    .timeline-steps { display: flex; flex-direction: column; gap: 0; margin-top: 12px; }
-    .t-step {
-      display: flex;
-      gap: 18px;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--color-border);
-    }
-    .t-step:last-child { border-bottom: none; }
-    .t-step-marker {
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      background: var(--color-accent);
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .t-step-marker span {
-      color: white;
-      font-weight: 700;
-      font-size: 0.9375rem;
-      line-height: 1;
-    }
-    .t-step-body strong { font-size: 0.875rem; }
-    .t-step-body p {
-      font-size: 0.8125rem;
-      color: var(--color-text-muted);
-      margin: 2px 0 0;
-      line-height: 1.55;
-    }
+<!-- WHAT TO EXPECT -->
+<section class="section" style="background:var(--color-surface-alt);">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+      <div class="lg:col-span-3">
+        <span class="section-tag">What to Expect</span>
+        <h2 class="text-2xl font-[var(--font-display)] tracking-[-0.01em] mb-6">Your Visit, Step by Step</h2>
+        <div class="prose">
+          <p>You arrive in Lhasa, ideally a day or two before your Potala reservation. The thin air hits immediately. Check into your hotel, drink more water than you thought possible, and resist the urge to explore aggressively on day one.</p>
+          <p>On the morning of your visit, you walk or taxi to the base of the Red Hill. The palace towers above you — genuinely, almost absurdly massive up close. Pilgrims pass you, some prostrating, others spinning prayer wheels as you climb the stone steps.</p>
+          <p>Inside: the White Palace (living quarters, ceremonial halls, silk thangkas), then the Red Palace (golden stupa tombs of the Dalai Lamas, ancient murals, the 7th-century Dharma Cave). You exit two to three hours later, blinking in the sunlight, processing what you just saw.</p>
+          <div class="aspect-video w-full overflow-hidden mt-6 border border-[var(--color-border)]">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/jNMm1hSqsss" title="Potala Palace Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" decoding="async"></iframe>
+          </div>
+          <p style="font-size:0.75rem;color:var(--color-text-subtle);margin-top:0.5rem;">Watch a real visitor walkthrough — the climb, the crowds, the views.</p>
+        </div>
+      </div>
+      <div class="lg:col-span-2">
+        <div class="updates-box">
+          <h3 class="updates-box-title">2026 Updates</h3>
+          <ul class="updates-list">
+            <li class="updates-item"><span class="updates-dot"></span><span class="updates-text"><strong>Online reservation mandatory.</strong> Walk-up tickets no longer available. Reserve at least 3 days ahead.</span></li>
+            <li class="updates-item"><span class="updates-dot"></span><span class="updates-text"><strong>Daily cap: 2,300 visitors.</strong> Peak season tickets sell out 5–7 days in advance.</span></li>
+            <li class="updates-item"><span class="updates-dot"></span><span class="updates-text"><strong>Tibet Travel Permit:</strong> 7–10 business days. Apply through your agency 3–4 weeks before arrival.</span></li>
+            <li class="updates-item"><span class="updates-dot"></span><span class="updates-text"><strong>Foreign visitors:</strong> Must join an organized tour with a licensed guide.</span></li>
+            <li class="updates-item"><span class="updates-dot"></span><span class="updates-text"><strong>New for 2026:</strong> Expanded English audio guides now in 8 languages.</span></li>
+          </ul>
+          <a href="/visit" class="updates-cta">Full visit guide &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    /* By the Numbers */
-    .numbers-strip {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0;
-      background: white;
-      border: 1px solid var(--color-border);
-      border-radius: 14px;
-    }
-    .num-item {
-      flex: 1;
-      min-width: 140px;
-      text-align: center;
-      padding: 24px 16px;
-      border-right: 1px solid var(--color-border);
-    }
-    .num-item:last-child { border-right: none; }
-    .num-value {
-      display: block;
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: var(--color-accent);
-      letter-spacing: -0.03em;
-      line-height: 1;
-    }
-    .num-label {
-      display: block;
-      font-size: 0.75rem;
-      color: var(--color-text-muted);
-      margin-top: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
+<!-- ALTITUDE TOOL -->
+<section class="section" style="position:relative;overflow:hidden;">
+  <img src="/images/mountain-landscape.webp" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.06;" loading="lazy" decoding="async" />
+  <div class="max-w-5xl mx-auto" style="position:relative;z-index:1;">
+    <div class="altitude-tool">
+      <div class="altitude-tool-header">
+        <span class="section-tag">Interactive Tool</span>
+        <h2 class="text-2xl font-[var(--font-display)] tracking-[-0.01em]">Altitude Readiness Check</h2>
+        <p style="color:var(--color-text-muted); margin-top:0.5rem;">Answer 3 quick questions and get personalized advice for handling Potala's 3,700m.</p>
+      </div>
+      <div class="altitude-steps" id="altitude-check">
+        <div class="alt-step" id="step-1">
+          <p class="alt-step-q">What is your home elevation?</p>
+          <div class="alt-step-opts">
+            <button class="alt-btn" data-value="sea" onclick="selectAlt(this,1)">Near sea level (0–500m)</button>
+            <button class="alt-btn" data-value="mid" onclick="selectAlt(this,1)">Moderate (500–2,000m)</button>
+            <button class="alt-btn" data-value="high" onclick="selectAlt(this,1)">High (2,000m+)</button>
+          </div>
+        </div>
+        <div class="alt-step" id="step-2" style="display:none">
+          <p class="alt-step-q">How soon do you depart?</p>
+          <div class="alt-step-opts">
+            <button class="alt-btn" data-value="soon" onclick="selectAlt(this,2)">Within 2 weeks</button>
+            <button class="alt-btn" data-value="month" onclick="selectAlt(this,2)">2–4 weeks</button>
+            <button class="alt-btn" data-value="later" onclick="selectAlt(this,2)">1+ month</button>
+          </div>
+        </div>
+        <div class="alt-step" id="step-3" style="display:none">
+          <p class="alt-step-q">Any health concerns?</p>
+          <div class="alt-step-opts">
+            <button class="alt-btn" data-value="none" onclick="selectAlt(this,3)">No, I am healthy</button>
+            <button class="alt-btn" data-value="mild" onclick="selectAlt(this,3)">Mild concerns (asthma, etc.)</button>
+            <button class="alt-btn" data-value="serious" onclick="selectAlt(this,3)">Serious heart/lung conditions</button>
+          </div>
+        </div>
+        <div class="alt-result" id="alt-result" style="display:none"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    /* Visit Day Preview */
-    .visit-preview-card {
-      background: linear-gradient(135deg, var(--color-accent-dark), var(--color-accent));
-      border-radius: 14px;
-      padding: 32px;
-      color: white;
-    }
-    .visit-preview-badge {
-      display: inline-block;
-      font-size: 0.6875rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      background: rgba(255,255,255,0.2);
-      padding: 4px 10px;
-      border-radius: 9999px;
-      margin-bottom: 12px;
-    }
-    .visit-preview-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-      letter-spacing: -0.02em;
-    }
-    .visit-preview-text {
-      font-size: 0.9375rem;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.7;
-      max-width: 48rem;
-    }
+<!-- CULTURE IMAGE BREAK -->
+<div class="culture-image-strip">
+  <div class="culture-image-item">
+    <img src="/images/tibetan-monks.webp" alt="Tibetan monks" loading="lazy" decoding="async" />
+  </div>
+  <div class="culture-image-item">
+    <img src="/images/prayer-wheels.webp" alt="Prayer wheels spinning" loading="lazy" decoding="async" />
+  </div>
+  <div class="culture-image-item">
+    <img src="/images/lhasa-street.webp" alt="Lhasa street life" loading="lazy" decoding="async" />
+  </div>
+</div>
 
-    @media (max-width: 640px) {
-      .timeline-box { padding: 20px; }
-      .numbers-strip { flex-direction: column; }
-      .num-item { border-right: none; border-bottom: 1px solid var(--color-border); padding: 16px; }
-      .num-item:last-child { border-bottom: none; }
-      .visit-preview-card { padding: 24px; }
-    }
+<!-- TESTIMONIALS -->
+<section class="section" style="background:var(--color-surface-alt);">
+  <div class="max-w-6xl mx-auto">
+    <div class="section-header">
+      <span class="section-tag">What Travelers Say</span>
+      <h2 class="section-title">Potala leaves a mark<br/>on everyone</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-quote">"Pictures do not prepare you. The sheer scale — thirteen stories rising straight up from the hill — is overwhelming. The walk up leaves you breathless, both from the altitude and the beauty."</p>
+        <p class="testimonial-author">Sarah M. <span class="testimonial-meta">. Visited April 2025</span></p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-quote">"The golden roofs at sunset were the most beautiful thing I have ever seen. The altitude was tough — this guide's tips saved me. Spend two days acclimatizing. It makes all the difference."</p>
+        <p class="testimonial-author">James T. <span class="testimonial-meta">. Visited September 2025</span></p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-quote">"I am a photographer and this guide's photo spot recommendations were spot-on. Chakpori Hill at sunrise, Dragon King Pond for reflections — perfect. The drone regulation info saved me from a costly mistake."</p>
+        <p class="testimonial-author">Marco R. <span class="testimonial-meta">. Visited June 2025</span></p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    /* Cost Calculator Card */
-    .cost-calc-card {
-      background: white;
-      border: 1px solid var(--color-border);
-      border-radius: 16px;
-      padding: 32px;
-    }
-    .cost-calc-header { margin-bottom: 24px; }
-    .cost-step { margin-top: 20px; }
-    .cost-step:first-child { margin-top: 0; }
-    .cost-step-label {
-      font-size: 0.875rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--color-text-subtle);
-      margin-bottom: 12px;
-    }
+<!-- FAQ -->
+<section class="section">
+  <div class="max-w-3xl mx-auto">
+    <div class="section-header">
+      <span class="section-tag">Common Questions</span>
+      <h2 class="section-title">Everything you are<br/>probably wondering</h2>
+    </div>
+    <FaqAccordion faqs={faqs} />
+    <div class="mt-8" style="text-align:center;">
+      <a href="/travel-tips" class="btn-outline">Read full travel tips &rarr;</a>
+    </div>
+  </div>
+</section>
 
-    /* Quantity / Season Selection Buttons */
-    .cost-btn-group { display: flex; gap: 10px; }
-    .cost-btn {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2px;
-      padding: 14px 8px;
-      border: 1.5px solid var(--color-border);
-      border-radius: 12px;
-      background: white;
-      cursor: pointer;
-      transition: all 0.15s;
-      font-family: inherit;
-      text-align: center;
-      min-width: 0;
-    }
-    .cost-btn:hover {
-      border-color: var(--color-accent-light);
-      background: rgba(196,91,62,0.03);
-    }
-    .cost-btn.selected {
-      border-color: var(--color-accent);
-      background: rgba(196,91,62,0.08);
-    }
-    .cost-btn-num {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--color-text);
-      line-height: 1;
-    }
-    .cost-btn-text {
-      font-size: 0.75rem;
-      color: var(--color-text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
+<!-- BOTTOM CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2 class="cta-heading">Ready to stand on the Red Hill?</h2>
+    <p class="cta-sub">Start with the complete Visit Guide — tickets, permits, routes, and everything you need to walk through those gates.</p>
+    <div class="cta-actions">
+      <a href="/visit" class="btn-primary" style="font-size:0.875rem;">Plan Your Visit</a>
+      <a href="/travel-tips" class="cta-secondary">Read altitude &amp; packing guide &rarr;</a>
+    </div>
+  </div>
+</section>
 
-    /* Checkbox Extras */
-    .cost-extras { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
-    .cost-check {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 12px 16px;
-      border: 1.5px solid var(--color-border);
-      border-radius: 12px;
-      cursor: pointer;
-      transition: border-color 0.15s;
-    }
-    .cost-check:hover { border-color: var(--color-accent-light); }
-    .cost-check input[type="checkbox"] {
-      width: 18px; height: 18px;
-      accent-color: var(--color-accent);
-      flex-shrink: 0;
-    }
-    .cost-check-body {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-      font-size: 0.875rem;
-    }
-    .cost-check-body strong { color: var(--color-text); font-weight: 500; }
-    .cost-check-body em {
-      font-size: 0.75rem;
-      color: var(--color-text-subtle);
-      font-style: normal;
-    }
+<!-- STYLES -->
+<style>
+  .hero-wrap { position: relative; }
+  .hero-badge {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 9999px;
+    padding: 7px 20px;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.85);
+    white-space: nowrap;
+    z-index: 5;
+  }
+  .hero-badge-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+    flex-shrink: 0;
+  }
+  .hero-badge-sep { color: rgba(255,255,255,0.25); }
 
-    /* Calculate Button */
-    .cost-calc-btn {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 12px;
-      background: var(--color-accent);
-      color: white;
-      font-size: 0.9375rem;
-      font-weight: 600;
-      font-family: inherit;
-      cursor: pointer;
-      transition: background 0.15s, transform 0.1s;
-    }
-    .cost-calc-btn:hover { background: var(--color-accent-dark); }
-    .cost-calc-btn:active { transform: scale(0.98); }
+  /* Hero Info Panel */
+  .hero-info-panel {
+    background: white;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .hero-info-trust {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+  .hi-trust {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.6875rem;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    border-right: 1px solid var(--color-border);
+  }
+  .hi-trust:last-child { border-right: none; }
+  .hi-trust svg { flex-shrink: 0; color: var(--color-accent); opacity: 0.6; }
+  @media (max-width: 640px) {
+    .hero-info-trust { flex-wrap: wrap; }
+    .hi-trust { padding: 0.5rem 0.75rem; font-size: 0.625rem; border-right: none; }
+  }
 
-    @media (max-width: 640px) {
-      .cost-calc-card { padding: 20px; }
-    }
-    /* Cost Result Box */
-    .cost-result-box { padding: 36px;
-      background: linear-gradient(135deg, rgba(196,91,62,0.04), rgba(196,91,62,0.01));
-      border: 1px solid rgba(196,91,62,0.15);
-      border-radius: 14px;
-      padding: 28px;
-      margin-top: 24px;
-    }
-    .cost-result-total { padding: 28px 0 24px; 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--color-border);
-      margin-bottom: 18px;
-    }
-    .cost-result-label { font-size: 0.75rem; font-weight: 500; color: var(--color-text-subtle); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; display: block; text-align: center; 
-      font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--color-text-subtle);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .cost-result-amount { font-size: 3.25rem; font-weight: 800; color: var(--color-accent); letter-spacing: -0.04em; line-height: 1; 
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--color-accent);
-      letter-spacing: -0.03em;
-      line-height: 1;
-    }
-    .cost-result-breakdown {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .cost-result-breakdown p { display: flex; justify-content: space-between; align-items: center; font-size: 1rem; color: var(--color-text-muted); padding: 10px 0; margin: 0; 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.875rem;
-      color: var(--color-text-muted);
-      padding: 6px 0;
-      margin: 0;
-    }
-    .cost-result-note {
-      font-size: 0.75rem; color: var(--color-text-subtle); margin-top: 22px; padding-top: 16px;
-      color: var(--color-text-subtle);
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px solid var(--color-border);
-      text-align: center;
-    }
-    .cost-result-actions { display: flex; gap: 8px; justify-content: center; margin-top: 24px; } .cost-result-actions .btn-outline, .cost-result-actions .btn-primary { font-size: 0.8125rem; padding: 0.4rem 1rem; font-weight: 400; 
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    @media (max-width: 640px) {
-      .cost-result-box { padding: 36px; padding: 20px; }
-      .cost-result-amount { font-size: 3.25rem; font-weight: 800; color: var(--color-accent); letter-spacing: -0.04em; line-height: 1;  font-size: 2rem; }
-      .cost-result-actions { display: flex; gap: 8px; justify-content: center; margin-top: 24px; } .cost-result-actions .btn-outline, .cost-result-actions .btn-primary { font-size: 0.8125rem; padding: 0.4rem 1rem; font-weight: 400;  flex-direction: column; align-items: stretch; }
-      .cost-result-actions .btn-outline,
-      .cost-result-actions .btn-primary { text-align: center; justify-content: center; }
-    }
+  /* Planning Timeline */
+  .timeline-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: start; }
+  .timeline-image-col { display: flex; flex-direction: column; gap: 1.25rem; }
+  .timeline-image-col img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; border: 1px solid var(--color-border); }
+  .timeline-img-2 { aspect-ratio: 3/2 !important; }
+  .timeline-col { min-width: 0; }
+  .timeline-box {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 32px 36px;
+  }
+  .timeline-steps { display: flex; flex-direction: column; gap: 0; margin-top: 16px; }
+  .t-step {
+    display: flex;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .t-step:last-child { border-bottom: none; }
+  .t-step-marker {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--color-text);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .t-step-marker span {
+    color: white;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: 1;
+    font-family: var(--font-sans);
+  }
+  .t-step-body strong { font-size: 0.875rem; font-weight: 600; }
+  .t-step-body p {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    margin: 3px 0 0;
+    line-height: 1.6;
+  }
 
+  /* Cost Calculator Stats */
+  .calc-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--color-border);
+    border: 1px solid var(--color-border);
+    margin-bottom: 2.5rem;
+  }
+  .calc-stat {
+    background: var(--color-surface);
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    transition: background 0.3s;
+  }
+  .calc-stat:hover { background: #F9F8F6; }
+  .calc-stat-icon { display: block; font-size: 1.75rem; margin-bottom: 0.6rem; line-height: 1; }
+  .calc-stat-num { display: block; font-size: 1.625rem; font-weight: 500; font-family: var(--font-display); color: var(--color-text); line-height: 1.2; margin-bottom: 0.3rem; }
+  .calc-stat-label { display: block; font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-subtle); font-weight: 500; }
+  .calc-stat-label em { display: block; font-size: 0.625rem; text-transform: none; letter-spacing: 0.03em; color: var(--color-text-muted); font-style: normal; margin-top: 0.15rem; }
+  @media (max-width: 640px) { .calc-stats { grid-template-columns: repeat(2, 1fr); } }
 
+  /* Cost Calculator */
+  .cost-calc-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 36px 40px;
+  }
+  .cost-calc-header { margin-bottom: 28px; }
+  .cost-step { margin-top: 24px; }
+  .cost-step:first-child { margin-top: 0; }
+  .cost-step-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-subtle);
+    margin-bottom: 14px;
+  }
+  .cost-btn-group { display: flex; gap: 12px; }
+  .cost-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 10px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    text-align: center;
+    min-width: 0;
+  }
+  .cost-btn:hover { border-color: var(--color-text); }
+  .cost-btn.selected {
+    border-color: var(--color-text);
+    background: var(--color-text);
+  }
+  .cost-btn.selected .cost-btn-num,
+  .cost-btn.selected .cost-btn-text { color: white; }
+  .cost-btn-num {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1;
+    font-family: var(--font-display);
+  }
+  .cost-btn-text {
+    font-size: 0.6875rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .cost-extras { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+  .cost-check {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .cost-check:hover { border-color: var(--color-text-muted); }
+  .cost-check input[type="checkbox"] {
+    width: 18px; height: 18px;
+    accent-color: var(--color-text);
+    flex-shrink: 0;
+  }
+  .cost-check-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.875rem;
+  }
+  .cost-check-body strong { color: var(--color-text); font-weight: 500; }
+  .cost-check-body em {
+    font-size: 0.75rem;
+    color: var(--color-text-subtle);
+    font-style: normal;
+  }
+  .cost-calc-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    background: var(--color-text);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: inherit;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .cost-calc-btn:hover { background: var(--color-accent-dark); }
+  .cost-calc-btn:active { transform: scale(0.98); }
 
-    /* Key Facts Box — featured snippet target */    .key-facts-box {      background: white;      border: 1px solid var(--color-border);      border-radius: 14px;      padding: 24px;    }    .key-facts-list {      column-count: 2;      column-gap: 32px;      list-style: none;      padding: 0;      margin: 12px 0 0;    }    .key-facts-list li {      font-size: 0.875rem;      color: var(--color-text-muted);      line-height: 1.65;      padding: 5px 0 5px 20px;      position: relative;      break-inside: avoid;    }    .key-facts-list li::before {      content: '';      position: absolute;      left: 0;      top: 12px;      width: 6px;      height: 6px;      border-radius: 50%;      background: var(--color-accent);    }    .key-facts-list li strong { color: var(--color-text); font-weight: 600; }    @media (max-width: 640px) {      .key-facts-list { column-count: 1; }    }    /* Urgency Box */    .urgency-box {      display: flex;      align-items: flex-start;      gap: 14px;      background: linear-gradient(135deg, rgba(196,91,62,0.08), rgba(196,91,62,0.03));      border: 1px solid rgba(196,91,62,0.2);      border-radius: 14px;      padding: 18px 22px;    }    .urgency-icon {      width: 40px; height: 40px;      border-radius: 50%;      background: var(--color-accent);      display: flex;      align-items: center;      justify-content: center;      flex-shrink: 0;    }    .urgency-title {      font-size: 0.9375rem;      font-weight: 600;      color: var(--color-text);      margin-bottom: 2px;    }    .urgency-desc {      font-size: 0.8125rem;      color: var(--color-text-muted);      line-height: 1.55;    }    .urgency-link {      color: var(--color-accent);      font-weight: 500;      text-decoration: underline;      text-underline-offset: 2px;      white-space: nowrap;    }    /* Why Visit Cards */    .why-grid {      display: grid;      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));      gap: 24px;      margin-top: 32px;    }    .why-card {      background: white;      border: 1px solid var(--color-border);      border-radius: 14px;      overflow: hidden;      transition: box-shadow 0.25s, border-color 0.25s;    }    .why-card:hover {      box-shadow: 0 8px 30px rgba(0,0,0,0.08);      border-color: var(--color-accent-light);    }    .why-card-media { overflow: hidden; }    .why-card-media img {      width: 100%;      aspect-ratio: 3/2;      object-fit: cover;      display: block;    }    .why-card-body { padding: 20px 22px; }    .why-card-title {      font-size: 1.125rem;      font-weight: 600;      color: var(--color-text);      margin-bottom: 8px;      letter-spacing: -0.02em;    }    .why-card-body p {      font-size: 0.9rem;      color: var(--color-text-muted);      line-height: 1.65;    }    /* Guide Categories */    .guide-category { margin-top: 28px; }    .guide-category:first-child { margin-top: 16px; }    .guide-cat-title {      font-size: 0.8125rem;      font-weight: 600;      text-transform: uppercase;      letter-spacing: 0.06em;      color: var(--color-text-subtle);      margin-bottom: 12px;      padding-left: 4px;    }    /* Nearby Cards */    .nearby-grid {      display: grid;      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));      gap: 20px;      margin-top: 28px;    }    .nearby-card {      display: flex;      gap: 16px;      padding: 22px;      border: 1px solid var(--color-border);      border-radius: 14px;      background: white;      text-decoration: none;      color: inherit;      transition: border-color 0.2s, box-shadow 0.2s;    }    .nearby-card:hover {      border-color: var(--color-accent-light);      box-shadow: 0 6px 20px rgba(0,0,0,0.06);    }    .nearby-card-icon {      width: 48px; height: 48px;      border-radius: 12px;      display: flex;      align-items: center;      justify-content: center;      flex-shrink: 0;    }    .nearby-card-badge {      display: inline-block;      font-size: 0.6875rem;      font-weight: 600;      text-transform: uppercase;      letter-spacing: 0.05em;      color: var(--color-accent);      margin-bottom: 4px;    }    .nearby-card-title {      font-size: 1rem;      font-weight: 600;      color: var(--color-text);      margin-bottom: 4px;    }    .nearby-card-desc {      font-size: 0.8125rem;      color: var(--color-text-muted);      line-height: 1.55;    }    /* Updates Box */    .updates-box {      background: white;      border: 1px solid var(--color-border);      border-radius: 14px;      padding: 22px;      position: sticky;      top: 88px;    }    .updates-box-title {      font-size: 0.9375rem;      font-weight: 600;      color: var(--color-text);      margin-bottom: 14px;    }    .updates-list {      list-style: none;      padding: 0;      margin: 0;      display: flex;      flex-direction: column;      gap: 12px;    }    .updates-item {      display: flex;      gap: 10px;      align-items: flex-start;    }    .updates-dot {      width: 6px; height: 6px;      border-radius: 50%;      background: var(--color-accent);      flex-shrink: 0;      margin-top: 6px;    }    .updates-text {      font-size: 0.8125rem;      color: var(--color-text-muted);      line-height: 1.55;    }    .updates-text strong { color: var(--color-text); }    .updates-cta {      display: inline-block;      margin-top: 16px;      font-size: 0.8125rem;      font-weight: 500;      color: var(--color-accent);      text-decoration: none;    }    .updates-cta:hover { text-decoration: underline; }    /* Altitude Tool */    .altitude-tool {      background: white;      border: 1px solid var(--color-border);      border-radius: 16px;      padding: 32px;    }    .altitude-tool-header { margin-bottom: 24px; }    .alt-step { margin-top: 20px; }    .alt-step:first-child { margin-top: 0; }    .alt-step-q {      font-size: 0.9375rem;      font-weight: 500;      color: var(--color-text);      margin-bottom: 12px;    }    .alt-step-opts {      display: flex;      flex-wrap: wrap;      gap: 8px;    }    .alt-btn {      display: block;      width: 100%;      text-align: left;      padding: 12px 16px;      border: 1.5px solid var(--color-border);      border-radius: 10px;      background: white;      font-size: 0.875rem;      color: var(--color-text);      cursor: pointer;      transition: all 0.15s;      font-family: inherit;    }    .alt-btn:hover {      border-color: var(--color-accent-light);      background: rgba(196,91,62,0.04);    }    .alt-btn.selected {      border-color: var(--color-accent);      background: rgba(196,91,62,0.08);      font-weight: 500;    }    .alt-result-box {      background: rgba(196,91,62,0.06);      border: 1px solid rgba(196,91,62,0.15);      border-radius: 12px;      padding: 24px;      border-left-width: 3px;    }    .alt-result-box h3 {      font-size: 1.1rem;      font-weight: 600;      margin-bottom: 8px;    }    .alt-result-box p {      font-size: 0.9rem;      line-height: 1.65;      color: var(--color-text-muted);      margin-bottom: 12px;    }    /* Testimonials */    .testimonial-grid {      display: grid;      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));      gap: 24px;      margin-top: 28px;    }    .testimonial-card {      background: white;      border: 1px solid var(--color-border);      border-radius: 14px;      padding: 24px;    }    .testimonial-stars {      display: flex;      gap: 3px;      margin-bottom: 14px;    }    .testimonial-quote {      font-size: 0.9rem;      color: var(--color-text-muted);      line-height: 1.7;      font-style: italic;      margin-bottom: 14px;    }    .testimonial-author {      font-size: 0.8125rem;      font-weight: 600;      color: var(--color-text);    }    .testimonial-meta {      font-weight: 400;      color: var(--color-text-subtle);    }    /* Bottom CTA */    .cta-section {      padding: 64px 24px;      text-align: center;      background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-surface-alt) 100%);      border-top: 1px solid var(--color-border);    }    .cta-inner { max-width: 42rem; margin: 0 auto; }    .cta-heading {      font-size: clamp(1.5rem, 3vw, 2.25rem);      font-weight: 700;      color: var(--color-text);      letter-spacing: -0.03em;      margin-bottom: 12px;    }    .cta-sub {      font-size: 1rem;      color: var(--color-text-muted);      max-width: 32rem;      margin: 0 auto 28px;      line-height: 1.6;    }    .cta-actions {      display: flex;      flex-wrap: wrap;      gap: 16px;      justify-content: center;      align-items: center;    }    .cta-secondary {      font-size: 0.875rem;      color: var(--color-accent);      font-weight: 500;      text-decoration: none;    }    .cta-secondary:hover { text-decoration: underline; }    /* Responsive */    @media (max-width: 640px) {      .hero-badge { bottom: 60px; font-size: 0.6875rem; padding: 5px 12px; }      .why-grid { grid-template-columns: 1fr; }      .nearby-grid { grid-template-columns: 1fr; }      .testimonial-grid { grid-template-columns: 1fr; }      .altitude-tool { padding: 20px; }    }  </style>
-<script is:inline> const answers = {}; function selectAlt(el, step) {
-  const stepDiv = document.getElementById('step-' + step); stepDiv.querySelectorAll('.alt-btn').forEach(b => b.classList.remove('selected')); el.classList.add('selected'); answers[step] = el.dataset.value; setTimeout(() => {
-  stepDiv.style.display = 'none'; if (step < 3) {
-  document.getElementById('step-' + (step + 1)).style.display = 'block';
-} else {
-  showResult();
-}
-}, 200);
-} function showResult() {
-  const result = document.getElementById('alt-result'); let title, body, level; if (answers[3] === 'serious') {
-  title = 'Consult your doctor first'; body = 'At 3,700m, Potala Palace is higher than most ski resorts. With your health concerns, altitude sickness is a real risk. Talk to your doctor at least a month before travel. They can prescribe Diamox and advise whether this trip is safe for you. If you do go, fly into Lhasa and spend 3+ days acclimatizing before attempting the palace.'; level = 'caution';
-} else if (answers[1] === 'sea' && answers[2] === 'soon') {
-  title = 'Tight timeline -- but doable with planning'; body = 'Coming from sea level with only 2 weeks to prepare means altitude will hit you hard. Book a hotel in Lhasa for at least 2 nights before your palace visit. Fly in rather than taking the train. Consider asking your doctor about Diamox. Do NOT schedule Potala for your first day.'; level = 'plan';
-} else if (answers[1] === 'high') {
-  title = 'You are well positioned'; body = 'Living at or traveling from high altitude gives you a real advantage. You will still feel the 3,700m climb but noticeably less than sea-level visitors. Budget 1 acclimatization day in Lhasa. Focus on permits, tickets, timing.'; level = 'good';
-} else {
-  title = 'You will be fine -- with preparation'; body = 'Your starting elevation and timeline give you room to acclimatize. Arrive 1-2 days before your palace visit. Drink 3-4 liters of water per day. Walk slowly on the stairs. Pack ibuprofen for altitude headaches. Enjoy the experience.'; level = 'good';
-} const borderColor = level === 'caution' ? 'caution' : level === 'plan' ? 'plan' : 'good'; const altIcon = borderColor === 'caution' ? '⚠️' : borderColor === 'plan' ? '✈️' : '✅'; result.innerHTML = '<div class="alt-result-new alt-result-' + borderColor + '"><div class="alt-result-header"><span class="alt-result-icon">' + altIcon + '</span><h3>' + title + '</h3></div><p class="alt-result-body">' + body + '</p><div class="alt-result-actions"><button onclick="resetCheck()" class="btn-outline text-sm">Start over</button><a href="/travel-tips" class="btn-primary text-sm">Read altitude guide</a></div></div>'; result.style.display = 'block';
-}
-const costAnswers = {};
-function selectCostBtn(el, step) {
-  const stepDiv = document.getElementById('cost-step-' + step);
-  stepDiv.querySelectorAll('.cost-btn').forEach(b => b.classList.remove('selected'));
-  el.classList.add('selected');
-  costAnswers[step] = el.dataset.value;
-  setTimeout(() => {
-    stepDiv.style.display = 'none';
-    if (step < 2) {
-      document.getElementById('cost-step-' + (step + 1)).style.display = 'block';
-    } else if (step === 2) {
-      document.getElementById('cost-step-3').style.display = 'block';
+  /* Cost Result */
+  .cost-result-box {
+    padding: 32px;
+    background: #F9F8F6;
+    border: 1px solid var(--color-border);
+    margin-top: 28px;
+  }
+  .cost-result-total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 22px;
+  }
+  .cost-result-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--color-text-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+  .cost-result-amount {
+    font-size: 2.75rem;
+    font-weight: 500;
+    color: var(--color-text);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    font-family: var(--font-display);
+  }
+  .cost-result-breakdown { display: flex; flex-direction: column; gap: 10px; }
+  .cost-result-breakdown p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    padding: 6px 0;
+    margin: 0;
+  }
+  .cost-result-note {
+    font-size: 0.75rem;
+    color: var(--color-text-subtle);
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+  }
+  .cost-result-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  /* Why Visit Cards */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+  }
+  .why-card { background: var(--color-surface); border: 1px solid var(--color-border); overflow: hidden; }
+  .why-card-media { overflow: hidden; }
+  .why-card-media img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; transition: transform 0.5s; }
+  .why-card:hover .why-card-media img { transform: scale(1.04); }
+  .why-card-body { padding: 28px 32px; }
+  .why-card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  .why-card-body p { font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.7; }
+
+  /* Guide Categories */
+  .guide-category { margin-bottom: 40px; }
+  .guide-category:last-child { margin-bottom: 0; }
+  .guide-cat-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-subtle);
+    margin-bottom: 16px;
+    padding-left: 2px;
+  }
+
+  /* Nearby Cards */
+  .nearby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1px;
+    background: var(--color-border);
+    border: 1px solid var(--color-border);
+    margin-top: 32px;
+  }
+  .nearby-card {
+    background: var(--color-surface);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.3s;
+    overflow: hidden;
+  }
+  .nearby-card:hover { background: #F9F8F6; }
+  .nearby-card-img { overflow: hidden; }
+  .nearby-card-img img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+  }
+  .nearby-card:hover .nearby-card-img img { transform: scale(1.04); }
+  .nearby-card-content { flex: 1; padding: 28px; }
+  .nearby-card-badge {
+    display: inline-block;
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    margin-bottom: 10px;
+  }
+  .nearby-card-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-family: var(--font-display);
+    color: var(--color-text);
+  }
+  .nearby-card-desc {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  /* Updates Box */
+  .updates-box {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 32px;
+    position: sticky;
+    top: 100px;
+  }
+  .updates-box-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-family: var(--font-display);
+  }
+  .updates-list { list-style: none; padding: 0; margin: 0; }
+  .updates-item { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--color-border); }
+  .updates-item:last-child { border-bottom: none; }
+  .updates-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+  .updates-text { font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.6; }
+  .updates-text strong { color: var(--color-text); font-weight: 600; }
+  .updates-cta {
+    display: inline-block;
+    margin-top: 22px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* Altitude Tool */
+  .altitude-tool { background: var(--color-surface); border: 1px solid var(--color-border); padding: 36px 40px; }
+  .altitude-tool-header { margin-bottom: 28px; }
+  .altitude-steps { margin-top: 8px; }
+  .alt-step { margin-top: 24px; }
+  .alt-step:first-child { margin-top: 0; }
+  .alt-step-q {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-subtle);
+    margin-bottom: 14px;
+  }
+  .alt-step-opts { display: flex; gap: 12px; flex-wrap: wrap; }
+  .alt-btn {
+    flex: 1;
+    min-width: 160px;
+    padding: 14px 18px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    cursor: pointer;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    font-family: inherit;
+    color: var(--color-text);
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .alt-btn:hover { border-color: var(--color-text); }
+  .alt-btn.selected { border-color: var(--color-text); background: var(--color-text); color: white; }
+
+  /* Altitude Result */
+  .alt-result-new { padding: 32px; margin-top: 28px; border: 1px solid var(--color-border); }
+  .alt-result-good { background: #F6FAF6; border-color: #C8DBC8; }
+  .alt-result-plan { background: #FDF7F0; border-color: #E8D5B0; }
+  .alt-result-caution { background: #FDF5F5; border-color: #E8C8C8; }
+  .alt-result-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .alt-result-icon { font-size: 1.5rem; }
+  .alt-result-header h3 { font-size: 1.125rem; font-weight: 500; font-family: var(--font-display); margin: 0; }
+  .alt-result-body { font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.7; }
+  .alt-result-actions { display: flex; gap: 12px; margin-top: 22px; }
+
+  /* Testimonials */
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 32px;
+  }
+  .testimonial-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 32px;
+  }
+  .testimonial-stars { display: flex; gap: 3px; margin-bottom: 16px; }
+  .testimonial-quote {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 18px;
+  }
+  .testimonial-author { font-size: 0.8125rem; font-weight: 600; color: var(--color-text); }
+  .testimonial-meta { font-weight: 400; color: var(--color-text-subtle); }
+
+  /* CTA Section */
+  .cta-section {
+    background: var(--color-text);
+    padding: 80px 24px;
+    text-align: center;
+    color: white;
+  }
+  .cta-inner { max-width: 36rem; margin: 0 auto; }
+  .cta-heading {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+    color: white;
+    font-family: var(--font-display);
+  }
+  .cta-sub {
+    font-size: 0.9375rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+  .cta-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .cta-actions .btn-primary {
+    background: white;
+    color: var(--color-text);
+  }
+  .cta-actions .btn-primary:hover { background: rgba(255,255,255,0.85); }
+  .cta-secondary {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.8125rem;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+  }
+  .cta-secondary:hover { color: white; border-color: rgba(255,255,255,0.5); }
+
+  /* Culture Image Strip */
+  .culture-image-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    max-width: 100%;
+    margin: 0;
+  }
+  .culture-image-item {
+    overflow: hidden;
+  }
+  .culture-image-item img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s;
+  }
+  .culture-image-item:hover img { transform: scale(1.05); }
+
+  /* Guides Image Strip */
+  .guides-image-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-bottom: 40px;
+  }
+  .guides-image {
+    position: relative;
+    overflow: hidden;
+  }
+  .guides-image img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+  }
+  .guides-image:hover img { transform: scale(1.04); }
+  .guides-image-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: white;
+    font-family: var(--font-sans);
+  }
+
+  /* Hero CTA hover */
+  .hero-cta:hover {
+    border-color: rgba(255,255,255,0.8) !important;
+    background: rgba(255,255,255,0.1);
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .hero-badge { bottom: 60px; font-size: 0.625rem; padding: 5px 14px; }
+    .timeline-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+    .timeline-image-col { flex-direction: row; }
+    .timeline-image-col img { width: 48%; aspect-ratio: 1/1 !important; }
+    .timeline-box { padding: 24px 20px; }
+    .calc-stats { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: 1fr; gap: 24px; }
+    .why-card-body { padding: 24px; }
+    .cost-calc-card { padding: 24px 20px; }
+    .altitude-tool { padding: 24px 20px; }
+    .alt-step-opts { flex-direction: column; }
+    .alt-btn { min-width: 0; }
+    .testimonial-grid { grid-template-columns: 1fr; gap: 20px; }
+    .testimonial-card { padding: 24px; }
+    .nearby-grid { grid-template-columns: 1fr; }
+    .nearby-card { padding: 24px; }
+    .updates-box { padding: 24px; }
+    .cta-actions { flex-direction: column; }
+    .cost-result-actions { flex-direction: column; align-items: stretch; }
+    .cost-result-amount { font-size: 2rem; }
+    .guides-image-strip { grid-template-columns: 1fr; }
+    .guides-image img { aspect-ratio: 16/7; }
+    .culture-image-strip { grid-template-columns: 1fr; }
+    .culture-image-item img { aspect-ratio: 16/9; }
+  }
+  @media (max-width: 480px) {
+    .t-step { gap: 14px; padding: 14px 0; }
+    .t-step-marker { width: 36px; height: 36px; }
+  }
+</style>
+
+<script is:inline>
+  const answers = {};
+  function selectAlt(el, step) {
+    const stepDiv = document.getElementById('step-' + step);
+    stepDiv.querySelectorAll('.alt-btn').forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+    answers[step] = el.dataset.value;
+    setTimeout(() => {
+      stepDiv.style.display = 'none';
+      if (step < 3) {
+        document.getElementById('step-' + (step + 1)).style.display = 'block';
+      } else {
+        showResult();
+      }
+    }, 200);
+  }
+  function showResult() {
+    const result = document.getElementById('alt-result');
+    let title, body, level;
+    if (answers[3] === 'serious') {
+      title = 'Consult your doctor first';
+      body = 'At 3,700m, Potala Palace is higher than most ski resorts. With your health concerns, altitude sickness is a real risk. Talk to your doctor at least a month before travel. They can prescribe Diamox and advise whether this trip is safe for you. If you do go, fly into Lhasa and spend 3+ days acclimatizing before attempting the palace.';
+      level = 'caution';
+    } else if (answers[1] === 'sea' && answers[2] === 'soon') {
+      title = 'Tight timeline — but doable with planning';
+      body = 'Coming from sea level with only 2 weeks to prepare means altitude will hit you hard. Book a hotel in Lhasa for at least 2 nights before your palace visit. Fly in rather than taking the train. Consider asking your doctor about Diamox. Do NOT schedule Potala for your first day.';
+      level = 'plan';
+    } else if (answers[1] === 'high') {
+      title = 'You are well positioned';
+      body = 'Living at or traveling from high altitude gives you a real advantage. You will still feel the 3,700m climb but noticeably less than sea-level visitors. Budget 1 acclimatization day in Lhasa. Focus on permits, tickets, timing.';
+      level = 'good';
+    } else {
+      title = 'You will be fine — with preparation';
+      body = 'Your starting elevation and timeline give you room to acclimatize. Arrive 1-2 days before your palace visit. Drink 3-4 liters of water per day. Walk slowly on the stairs. Pack ibuprofen for altitude headaches. Enjoy the experience.';
+      level = 'good';
     }
-  }, 200);
-}
-function showCostResult() {
-  const people = parseInt(costAnswers[1]) || 1;
-  const isPeak = costAnswers[2] === 'peak';
-  const ticketPrice = isPeak ? 200 : 100;
-  const tickets = people * ticketPrice;
-  const guide = document.getElementById('cost-guide').checked ? 300 : 0;
-  const audio = document.getElementById('cost-audio').checked ? 30 * people : 0;
-  const photo = document.getElementById('cost-photo').checked ? 150 : 0;
-  const total = tickets + guide + audio + photo;
-  let breakdown = '<p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:4px">' + people + ' x ' + (isPeak ? 'Peak season' : 'Off-peak') + ' ticket: <strong>CNY ' + tickets + '</strong></p>';
-  if (guide) breakdown += '<p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:4px">English guide: <strong>CNY ' + guide + '</strong></p>';
-  if (audio) breakdown += '<p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:4px">Audio guide: <strong>CNY ' + audio + '</strong></p>';
-  if (photo) breakdown += '<p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:4px">Photography pass: <strong>CNY ' + photo + '</strong></p>';
-  const result = document.getElementById('cost-result');
-  result.innerHTML = '<div class="cost-result-box"><div class="cost-result-total"><span class="cost-result-label">Total estimated cost</span><span class="cost-result-amount">CNY ' + total + '</span></div><div class="cost-result-breakdown">' + breakdown + '</div><p class="cost-result-note">This is an estimate. Does not include Tibet Travel Permit fees or accommodation.</p><div class="cost-result-actions"><button onclick="resetCost()" class="btn-outline text-sm">Start over</button><a href="/visit" class="btn-primary text-sm">Full visit guide</a></div></div>';
-  result.style.display = 'block';
-}
-function resetCost() {
-  Object.keys(costAnswers).forEach(k => delete costAnswers[k]);
-  document.querySelectorAll('#cost-calc .cost-btn').forEach(b => b.classList.remove('selected'));
-  document.getElementById('cost-guide').checked = false;
-  document.getElementById('cost-audio').checked = false;
-  document.getElementById('cost-photo').checked = false;
-  document.getElementById('cost-step-1').style.display = 'block';
-  document.getElementById('cost-step-2').style.display = 'none';
-  document.getElementById('cost-step-3').style.display = 'none';
-  document.getElementById('cost-result').style.display = 'none';
-}
-
-function resetCheck() {
-  Object.keys(answers).forEach(k => delete answers[k]); document.querySelectorAll('.alt-btn').forEach(b => b.classList.remove('selected')); document.getElementById('step-1').style.display = 'block'; document.getElementById('step-2').style.display = 'none'; document.getElementById('step-3').style.display = 'none'; document.getElementById('alt-result').style.display = 'none';
-} </script>
+    const borderColor = level === 'caution' ? 'caution' : level === 'plan' ? 'plan' : 'good';
+    const altIcon = borderColor === 'caution' ? '⚠️' : borderColor === 'plan' ? '✈️' : '✅';
+    result.innerHTML = '<div class="alt-result-new alt-result-' + borderColor + '"><div class="alt-result-header"><span class="alt-result-icon">' + altIcon + '</span><h3>' + title + '</h3></div><p class="alt-result-body">' + body + '</p><div class="alt-result-actions"><button onclick="resetCheck()" class="btn-outline text-sm">Start over</button><a href="/travel-tips" class="btn-primary text-sm">Read altitude guide</a></div></div>';
+    result.style.display = 'block';
+  }
+  const costAnswers = {};
+  function selectCostBtn(el, step) {
+    const stepDiv = document.getElementById('cost-step-' + step);
+    stepDiv.querySelectorAll('.cost-btn').forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+    costAnswers[step] = el.dataset.value;
+    setTimeout(() => {
+      stepDiv.style.display = 'none';
+      if (step < 2) {
+        document.getElementById('cost-step-' + (step + 1)).style.display = 'block';
+      } else if (step === 2) {
+        document.getElementById('cost-step-3').style.display = 'block';
+      }
+    }, 200);
+  }
+  function showCostResult() {
+    const people = parseInt(costAnswers[1]) || 1;
+    const isPeak = costAnswers[2] === 'peak';
+    const ticketPrice = isPeak ? 200 : 100;
+    const tickets = people * ticketPrice;
+    const guide = document.getElementById('cost-guide').checked ? 300 : 0;
+    const audio = document.getElementById('cost-audio').checked ? 30 * people : 0;
+    const photo = document.getElementById('cost-photo').checked ? 150 : 0;
+    const total = tickets + guide + audio + photo;
+    let breakdown = '<p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:4px">' + people + ' x ' + (isPeak ? 'Peak season' : 'Off-peak') + ' ticket: <strong>CNY ' + tickets + '</strong></p>';
+    if (guide) breakdown += '<p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:4px">English guide: <strong>CNY ' + guide + '</strong></p>';
+    if (audio) breakdown += '<p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:4px">Audio guide: <strong>CNY ' + audio + '</strong></p>';
+    if (photo) breakdown += '<p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:4px">Photography pass: <strong>CNY ' + photo + '</strong></p>';
+    const result = document.getElementById('cost-result');
+    result.innerHTML = '<div class="cost-result-box"><div class="cost-result-total"><span class="cost-result-label">Total estimated cost</span><span class="cost-result-amount">CNY ' + total + '</span></div><div class="cost-result-breakdown">' + breakdown + '</div><p class="cost-result-note">This is an estimate. Does not include Tibet Travel Permit fees or accommodation.</p><div class="cost-result-actions"><button onclick="resetCost()" class="btn-outline text-sm">Start over</button><a href="/visit" class="btn-primary text-sm">Full visit guide</a></div></div>';
+    result.style.display = 'block';
+  }
+  function resetCost() {
+    Object.keys(costAnswers).forEach(k => delete costAnswers[k]);
+    document.querySelectorAll('#cost-calc .cost-btn').forEach(b => b.classList.remove('selected'));
+    document.getElementById('cost-guide').checked = false;
+    document.getElementById('cost-audio').checked = false;
+    document.getElementById('cost-photo').checked = false;
+    document.getElementById('cost-step-1').style.display = 'block';
+    document.getElementById('cost-step-2').style.display = 'none';
+    document.getElementById('cost-step-3').style.display = 'none';
+    document.getElementById('cost-result').style.display = 'none';
+  }
+  function resetCheck() {
+    Object.keys(answers).forEach(k => delete answers[k]);
+    document.querySelectorAll('.alt-btn').forEach(b => b.classList.remove('selected'));
+    document.getElementById('step-1').style.display = 'block';
+    document.getElementById('step-2').style.display = 'none';
+    document.getElementById('step-3').style.display = 'none';
+    document.getElementById('alt-result').style.display = 'none';
+  }
+</script>
 </BaseLayout>
 <StructuredData type="Organization" data={{   name: "Potala Guide",   description: "The most complete English-language guide to Potala Palace and Lhasa, Tibet. Independently published travel resource covering tickets, permits, altitude tips, photography, food, and hotels.",   url: "/",    sameAs: [      "https://whc.unesco.org/en/list/707",      "https://en.wikipedia.org/wiki/Potala_Palace",    ], }} />

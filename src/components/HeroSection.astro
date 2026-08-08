@@ -3,24 +3,23 @@ const { title, subtitle, cta, imageUrl } = Astro.props;
 const altTitle = title.replace(/<[^>]*>/g, ', ') || title;
 ---
 
-<section class="relative min-h-[90dvh] flex items-center">
+<section class="relative min-h-[95dvh] flex items-end pb-20 md:pb-24">
   <div class="absolute inset-0">
     {imageUrl ? (
       <img src={imageUrl} alt={altTitle} class="w-full h-full object-cover" loading="eager" fetchpriority="high" width="1200" height="800" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px" />
     ) : (
-      <div class="w-full h-full bg-gradient-to-br from-slate-800 via-slate-700 to-[#9e4730]"></div>
+      <div class="w-full h-full bg-gradient-to-b from-[#2A2520] via-[#3A3228] to-[#1A1817]"></div>
     )}
-    <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/10"></div>
   </div>
-  <div class="relative max-w-7xl mx-auto px-6 w-full pt-16">
-    <div class="max-w-2xl">
-      <span class="inline-block text-sm font-semibold text-white/80 mb-4 tracking-wide uppercase">
+  <div class="relative max-w-[1440px] mx-auto px-6 md:px-10 w-full">
+    <div class="max-w-3xl">
+      <span style="display:inline-block;font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:1.25rem;font-family:var(--font-sans);">
         Potala Palace &middot; Lhasa &middot; Tibet
       </span>
-      <h1 class="text-4xl md:text-6xl font-bold text-white leading-[1.05] tracking-tight mb-6" set:html={title} />
-      <p class="text-lg text-white/80 max-w-xl leading-relaxed mb-8">{subtitle}</p>
-      {cta && <a href={cta.href} class="btn-primary text-base">{cta.label}</a>}
+      <h1 style="font-family:var(--font-display);font-size:clamp(2.25rem,6vw,4.5rem);font-weight:500;color:white;line-height:1.05;letter-spacing:-0.02em;margin-bottom:2rem;" set:html={title} />
+      <p style="font-size:1.125rem;color:rgba(255,255,255,0.75);max-width:42rem;line-height:1.7;font-family:var(--font-sans);margin-bottom:2.5rem;">{subtitle}</p>
+      {cta && <a href={cta.href} class="hero-cta" style="color:white; border:1px solid rgba(255,255,255,0.4); padding:0.875rem 2rem; font-size:0.8125rem; letter-spacing:0.06em; text-transform:uppercase; font-weight:500; text-decoration:none; transition:all 0.3s; background:transparent;">{cta.label}</a>}
     </div>
   </div>
 </section>
-
