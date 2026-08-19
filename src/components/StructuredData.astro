@@ -4,7 +4,7 @@ export interface Props {
  data: Record<string, any>;
 }
 const { type, data } = Astro.props;
-const base = "https://tibet-lhasa-potala.com";
+const base = "https://www.tibet-lhasa-potala.com";
 ---
 
 {type === "TouristAttraction" && (
@@ -20,7 +20,7 @@ const base = "https://tibet-lhasa-potala.com";
     touristType: ["Cultural Tourism", "Religious Tourism"],
     image: {
       "@type": "ImageObject",
-      url: "https://tibet-lhasa-potala.com/images/og-potala-palace.webp",
+      url: "https://www.tibet-lhasa-potala.com/images/og-potala-palace.webp",
       width: 1200,
       height: 630,
       caption: "Potala Palace — the world's highest ancient palace, a UNESCO World Heritage site in Lhasa, Tibet",

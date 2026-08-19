@@ -14,7 +14,7 @@ const faqs = [
 ];
 ---
 
-<BaseLayout canonical="https://tibet-lhasa-potala.com/travel-tips" title="Tibet Travel Tips 2026 | Altitude, Packing, Health & Insurance" description="Essential Tibet travel tips: altitude sickness prevention and treatment, complete packing list, health advice, travel insurance guide, and safety tips for Lhasa." ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp" authorName="Sarah Chen" authorUrl="/about/#sarah-chen" datePublished="2026-01-20" dateModified="2026-08-06">`n<StructuredData type="Article" data={{ title: "Tibet Travel Tips", description: "Altitude, packing, health, and safety tips for traveling to Tibet and visiting Potala Palace.", url: "/travel-tips/", datePublished: "2026-01-01", dateModified: "2026-08-06" }} />
+<BaseLayout canonical="https://www.tibet-lhasa-potala.com/travel-tips" title="Tibet Travel Tips 2026 | Altitude, Packing, Health & Insurance" description="Essential Tibet travel tips: altitude sickness prevention and treatment, complete packing list, health advice, travel insurance guide, and safety tips for Lhasa." ogImage="https://www.tibet-lhasa-potala.com/images/og-potala-palace.webp" authorName="Sarah Chen" authorUrl="/about/#sarah-chen" datePublished="2026-01-20" dateModified="2026-08-06">`n<StructuredData type="Article" data={{ title: "Tibet Travel Tips", description: "Altitude, packing, health, and safety tips for traveling to Tibet and visiting Potala Palace.", url: "/travel-tips/", datePublished: "2026-01-01", dateModified: "2026-08-06" }} />
   <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "Travel Tips", url: "/travel-tips/" }] }} />
   <StructuredData type="FAQPage" data={{ faqs }} />
   <StructuredData type="Person" data={{ name: "Sarah Chen", description: "Senior Travel Writer & Tibet Specialist, Wilderness First Responder certified.", url: "/about/#sarah-chen" }} />
@@ -515,7 +515,7 @@ const faqs = [
       items.push('<li>Snacks from home (granola bars, nuts, chocolate)</li>');
       items.push('</ul>');
 
-      result.innerHTML = '<div class="alt-result-box border-l-emerald-500">' + items.join('') + '<button class="alt-btn text-sm inline-block w-auto mr-3 mt-2" onclick="resetPack()">Start over</button><a href="/travel-tips" class="btn-primary text-sm inline-flex">Full travel tips</a></div>';
+      result.innerHTML = '<div class="alt-result-box border-l-emerald-500">' + items.join('') + '<button class="alt-btn text-sm inline-block w-auto mr-3 mt-2" onclick="resetPack()">Start over</button><a href="/travel-tips/" class="btn-primary text-sm inline-flex">Full travel tips</a></div>';
       result.style.display = 'block';
     }
     function resetPack() {
@@ -532,7 +532,7 @@ const faqs = [
     <FaqAccordion faqs={faqs} />
   </section>
 
-  <PageNav prev={{ href: "/photography", label: "Photography" }} next={{ href: "/best-time", label: "Best Time" }} />
+  <PageNav prev={{ href: "/photography/", label: "Photography" }} next={{ href: "/best-time/", label: "Best Time" }} />
 </BaseLayout>
 
 <div class="medical-disclaimer"><strong>Medical Disclaimer:</strong> This altitude information is for general guidance only. It is not medical advice. Consult your doctor before traveling to high altitude, especially with heart, lung, or other health conditions. Altitude sickness can be life-threatening.</div>

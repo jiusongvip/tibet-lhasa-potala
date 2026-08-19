@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "../components/HeroSection.astro";import FaqAccordion from "../components/FaqAccordion.astro";import StructuredData from "../components/StructuredData.astro";import PhotoGallery from "../components/PhotoGallery.astro";const faqs = [  { q: "Do I need a special permit to visit Potala Palace?", a: "Yes. Foreign visitors need a Tibet Travel Permit to enter Tibet, plus a separate ticket reservation for Potala Palace. We cover the full process in our Permits Guide." },  { q: "How much do tickets cost in 2026?", a: "Peak season (May-Oct): CNY 200. Off-peak (Nov-Apr): CNY 100. Students and seniors may qualify for 50% discounts. Online reservation fee is an additional CNY 5." },  { q: "How long should I plan for the visit?", a: "A thorough visit takes 2-3 hours. The palace has 13 stories and over 1,000 rooms. Budget extra time for the climb: altitude makes everything harder than it looks." },  { q: "Can I take photos inside?", a: "Photography is allowed in outdoor areas and courtyards. Inside the chapels and halls, photography is strictly prohibited. Tripods require special permission." },  { q: "What is the best time of day to visit?", a: "Morning (9:30-11:00 AM) for clear mountain views. Afternoon light is beautiful for exterior photography. Avoid midday crowds on weekends." },  { q: "Is Potala Palace wheelchair accessible?", a: "Accessibility is limited due to the historic nature of the building and steep staircases. Some lower levels are accessible; upper floors are not. Contact your tour operator in advance for assistance." },  { q: "How do I deal with the altitude?", a: "Lhasa is at 3,650m and Potala Palace adds 50m of steep stairs. Most visitors need 1-2 days to acclimatize. Do not plan Potala for your first day in Lhasa. Hydrate aggressively, walk slowly, and consider Diamox." },  { q: "How far in advance should I start planning?", a: "Start at least 8 weeks before departure. Tibet Travel Permit takes 7-10 business days. Chinese visa takes 1-2 weeks. Peak season tickets sell out 5-7 days ahead. We break down the full timeline below." },];
 ---
 
-<BaseLayout canonical="https://tibet-lhasa-potala.com" heroImage="/images/hero-potala-palace.webp" ogType="website" authorName="Potala Guide Editorial Team" authorUrl="/about" datePublished="2026-01-01" dateModified="2026-08-06"  title="Potala Palace Guide 2026 | Tickets, Permits & Tips"  description="Plan your Potala Palace visit with confidence: 2026 ticket prices, permit guide, best photo spots, altitude tips, and practical travel advice from Lhasa local experts."  ogImage="https://tibet-lhasa-potala.com/images/og-potala-palace.webp">
+<BaseLayout canonical="https://www.tibet-lhasa-potala.com" heroImage="/images/hero-potala-palace.webp" ogType="website" authorName="Potala Guide Editorial Team" authorUrl="/about" datePublished="2026-01-01" dateModified="2026-08-06"  title="Potala Palace Guide 2026 | Tickets, Permits & Tips"  description="Plan your Potala Palace visit with confidence: 2026 ticket prices, permit guide, best photo spots, altitude tips, and practical travel advice from Lhasa local experts."  ogImage="https://www.tibet-lhasa-potala.com/images/og-potala-palace.webp">
 <StructuredData    type="TouristAttraction"    data={{      description: "The world's highest ancient palace, a UNESCO World Heritage site in Lhasa, Tibet. Complete 2026 visitor guide with ticket prices, permits, altitude tips, and photography spots.",      url: "/",    }}  />
 <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }] }} />
 <StructuredData type="FAQPage" data={{ faqs }} />
@@ -12,7 +12,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "..
   <HeroSection
     title="Potala Palace,<br/>Lhasa"
     subtitle="The world's highest ancient palace, rising 3,700 metres above the Tibetan Plateau. A UNESCO World Heritage site spanning thirteen centuries. The most complete English-language guide — updated August 2026."
-    cta={{ href: "/visit", label: "Plan Your Visit" }}
+    cta={{ href: "/visit/", label: "Plan Your Visit" }}
     imageUrl="/images/hero-potala-palace.webp"
   />
   <div class="hero-badge">
@@ -181,7 +181,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "..
             <div class="t-step"><div class="t-step-marker"><span>6</span></div><div class="t-step-body"><strong>6 weeks before</strong><p>Apply for Chinese tourist visa (L visa). Book Lhasa hotel with oxygen system for first 2 nights.</p></div></div>
         <div class="t-step"><div class="t-step-marker"><span>4</span></div><div class="t-step-body"><strong>4 weeks before</strong><p>Reserve Potala Palace tickets through your tour operator. Book flights or train to Lhasa. Consult doctor about altitude medication.</p></div></div>
         <div class="t-step"><div class="t-step-marker"><span>2</span></div><div class="t-step-body"><strong>2 weeks before</strong><p>Confirm all bookings. Pack using our checklist. Download offline maps and translation apps. Print all permits and tickets.</p></div></div>
-        <div class="t-step"><div class="t-step-marker"><span>0</span></div><div class="t-step-body"><strong>Arrival day</strong><p>Rest and hydrate. No strenuous activity. Gentle walk on Barkhor Street. <a href="/visit" style="color:var(--color-accent); text-decoration:underline; text-underline-offset:2px;">Read the full visit guide</a>.</p></div></div>
+        <div class="t-step"><div class="t-step-marker"><span>0</span></div><div class="t-step-body"><strong>Arrival day</strong><p>Rest and hydrate. No strenuous activity. Gentle walk on Barkhor Street. <a href="/visit/" style="color:var(--color-accent); text-decoration:underline; text-underline-offset:2px;">Read the full visit guide</a>.</p></div></div>
       </div>
     </div>
       </div>
@@ -216,15 +216,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "..
     <div class="guide-category">
       <h3 class="guide-cat-title">Before You Go</h3>
       <div class="nav-cards">
-        <a href="/permits" class="nav-card">
+        <a href="/permits/" class="nav-card">
           <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
           <div><div class="nav-card-title">Travel Permits</div><div class="nav-card-desc">Tibet Travel Permit, documents, common mistakes — everything before you book.</div></div>
         </a>
-        <a href="/travel-tips" class="nav-card">
+        <a href="/travel-tips/" class="nav-card">
           <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
           <div><div class="nav-card-title">Altitude &amp; Packing</div><div class="nav-card-desc">Handle 3,700m. Medications, packing list, acclimatization strategy, insurance.</div></div>
         </a>
-        <a href="/best-time" class="nav-card">
+        <a href="/best-time/" class="nav-card">
           <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></div>
           <div><div class="nav-card-title">Best Time to Visit</div><div class="nav-card-desc">Month-by-month weather, crowds, seasonal highlights. When to go, when to avoid.</div></div>
         </a>
@@ -234,15 +234,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "..
     <div class="guide-category">
       <h3 class="guide-cat-title">The Palace Experience</h3>
       <div class="nav-cards">
-        <a href="/visit" class="nav-card">
+        <a href="/visit/" class="nav-card">
           <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
           <div><div class="nav-card-title">Visit Guide</div><div class="nav-card-desc">Tickets, hours, routes, interior room guide. Every practical detail for your visit.</div></div>
         </a>
-        <a href="/photography" class="nav-card">
+        <a href="/photography/" class="nav-card">
           <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2Z"/><circle cx="12" cy="13" r="4"/></svg></div>
           <div><div class="nav-card-title">Photography Guide</div><div class="nav-card-desc">12 best photo spots, sunrise &amp; sunset timing, camera settings, drone rules.</div></div>
         </a>
-        <a href="/history" class="nav-card">
+        <a href="/history/" class="nav-card">
           <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></div>
           <div><div class="nav-card-title">History &amp; Architecture</div><div class="nav-card-desc">1,300 years from Songtsen Gampo to UNESCO. Red Palace, White Palace explained.</div></div>
         </a>
@@ -252,19 +252,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "..
     <div class="guide-category">
       <h3 class="guide-cat-title">Your Lhasa Stay</h3>
       <div class="nav-cards nav-cards-four">
-        <a href="/lhasa-food" class="nav-card">
+        <a href="/lhasa-food/" class="nav-card">
           <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></div>
           <div><div class="nav-card-title">Lhasa Food Guide</div><div class="nav-card-desc">Must-try Tibetan dishes, restaurants near Potala, vegetarian &amp; halal options.</div></div>
         </a>
-        <a href="/hotels-potala-view" class="nav-card">
+        <a href="/hotels-potala-view/" class="nav-card">
           <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><line x1="8" y1="6" x2="10" y2="6"/><line x1="14" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/></svg></div>
           <div><div class="nav-card-title">Potala View Hotels</div><div class="nav-card-desc">Luxury, mid-range &amp; budget hotels with real palace views. Foreigner-friendly.</div></div>
         </a>
-        <a href="/lhasa-transport" class="nav-card">
+        <a href="/lhasa-transport/" class="nav-card">
           <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4Z"/><path d="M8 2v16"/><path d="M16 6v16"/></svg></div>
           <div><div class="nav-card-title">Getting to Lhasa</div><div class="nav-card-desc">Flights, Qinghai-Tibet Railway, airport transfers, city transport, palace gates.</div></div>
         </a>
-        <a href="/lhasa-attractions" class="nav-card">
+        <a href="/lhasa-attractions/" class="nav-card">
           <div class="nav-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
           <div><div class="nav-card-title">Beyond Potala</div><div class="nav-card-desc">Jokhang Temple, Barkhor Street, Sera Monastery, day trips to Yamdrok Lake.</div></div>
         </a>
@@ -282,7 +282,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "..
       <p style="color:var(--color-text-muted); margin-top:1rem; max-width:36rem;">Once you have seen the palace, here is everything else you need for a complete Lhasa experience.</p>
     </div>
     <div class="nearby-grid">
-      <a href="/lhasa-food" class="nearby-card">
+      <a href="/lhasa-food/" class="nearby-card">
         <div class="nearby-card-img">
           <img src="/images/tibetan-cuisine.webp" alt="Tibetan cuisine" loading="lazy" decoding="async" />
         </div>
@@ -292,7 +292,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "..
           <p class="nearby-card-desc">Tibetan momos, yak butter tea, hidden tea houses, vegetarian &amp; halal picks — all within walking distance of the palace.</p>
         </div>
       </a>
-      <a href="/hotels-potala-view" class="nearby-card">
+      <a href="/hotels-potala-view/" class="nearby-card">
         <div class="nearby-card-img">
           <img src="/images/lhasa-hotel.webp" alt="Lhasa hotel" loading="lazy" decoding="async" />
         </div>
@@ -302,7 +302,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "..
           <p class="nearby-card-desc">Wake up to Potala Palace through your window. Luxury suites, boutique hotels, and budget hostels with real views.</p>
         </div>
       </a>
-      <a href="/lhasa-transport" class="nearby-card">
+      <a href="/lhasa-transport/" class="nearby-card">
         <div class="nearby-card-img">
           <img src="/images/tibet-train.webp" alt="Qinghai-Tibet Railway" loading="lazy" decoding="async" />
         </div>
@@ -343,7 +343,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "..
             <li class="updates-item"><span class="updates-dot"></span><span class="updates-text"><strong>Foreign visitors:</strong> Must join an organized tour with a licensed guide.</span></li>
             <li class="updates-item"><span class="updates-dot"></span><span class="updates-text"><strong>New for 2026:</strong> Expanded English audio guides now in 8 languages.</span></li>
           </ul>
-          <a href="/visit" class="updates-cta">Full visit guide &rarr;</a>
+          <a href="/visit/" class="updates-cta">Full visit guide &rarr;</a>
         </div>
       </div>
     </div>
@@ -458,7 +458,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "..
     </div>
     <FaqAccordion faqs={faqs} />
     <div class="mt-8" style="text-align:center;">
-      <a href="/travel-tips" class="btn-outline">Read full travel tips &rarr;</a>
+      <a href="/travel-tips/" class="btn-outline">Read full travel tips &rarr;</a>
     </div>
   </div>
 </section>
@@ -469,8 +469,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "..
     <h2 class="cta-heading">Ready to stand on the Red Hill?</h2>
     <p class="cta-sub">Start with the complete Visit Guide — tickets, permits, routes, and everything you need to walk through those gates.</p>
     <div class="cta-actions">
-      <a href="/visit" class="btn-primary" style="font-size:0.875rem;">Plan Your Visit</a>
-      <a href="/travel-tips" class="cta-secondary">Read altitude &amp; packing guide &rarr;</a>
+      <a href="/visit/" class="btn-primary" style="font-size:0.875rem;">Plan Your Visit</a>
+      <a href="/travel-tips/" class="cta-secondary">Read altitude &amp; packing guide &rarr;</a>
     </div>
   </div>
 </section>
@@ -1120,7 +1120,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "..
     }
     const borderColor = level === 'caution' ? 'caution' : level === 'plan' ? 'plan' : 'good';
     const altIcon = borderColor === 'caution' ? '⚠️' : borderColor === 'plan' ? '✈️' : '✅';
-    result.innerHTML = '<div class="alt-result-new alt-result-' + borderColor + '"><div class="alt-result-header"><span class="alt-result-icon">' + altIcon + '</span><h3>' + title + '</h3></div><p class="alt-result-body">' + body + '</p><div class="alt-result-actions"><button onclick="resetCheck()" class="btn-outline text-sm">Start over</button><a href="/travel-tips" class="btn-primary text-sm">Read altitude guide</a></div></div>';
+    result.innerHTML = '<div class="alt-result-new alt-result-' + borderColor + '"><div class="alt-result-header"><span class="alt-result-icon">' + altIcon + '</span><h3>' + title + '</h3></div><p class="alt-result-body">' + body + '</p><div class="alt-result-actions"><button onclick="resetCheck()" class="btn-outline text-sm">Start over</button><a href="/travel-tips/" class="btn-primary text-sm">Read altitude guide</a></div></div>';
     result.style.display = 'block';
   }
   const costAnswers = {};
@@ -1152,7 +1152,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";import HeroSection from "..
     if (audio) breakdown += '<p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:4px">Audio guide: <strong>CNY ' + audio + '</strong></p>';
     if (photo) breakdown += '<p style="font-size:0.875rem;color:var(--color-text-muted);margin-bottom:4px">Photography pass: <strong>CNY ' + photo + '</strong></p>';
     const result = document.getElementById('cost-result');
-    result.innerHTML = '<div class="cost-result-box"><div class="cost-result-total"><span class="cost-result-label">Total estimated cost</span><span class="cost-result-amount">CNY ' + total + '</span></div><div class="cost-result-breakdown">' + breakdown + '</div><p class="cost-result-note">This is an estimate. Does not include Tibet Travel Permit fees or accommodation.</p><div class="cost-result-actions"><button onclick="resetCost()" class="btn-outline text-sm">Start over</button><a href="/visit" class="btn-primary text-sm">Full visit guide</a></div></div>';
+    result.innerHTML = '<div class="cost-result-box"><div class="cost-result-total"><span class="cost-result-label">Total estimated cost</span><span class="cost-result-amount">CNY ' + total + '</span></div><div class="cost-result-breakdown">' + breakdown + '</div><p class="cost-result-note">This is an estimate. Does not include Tibet Travel Permit fees or accommodation.</p><div class="cost-result-actions"><button onclick="resetCost()" class="btn-outline text-sm">Start over</button><a href="/visit/" class="btn-primary text-sm">Full visit guide</a></div></div>';
     result.style.display = 'block';
   }
   function resetCost() {

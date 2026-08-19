@@ -7,7 +7,7 @@ import { getAuthorsBySlugs, editorialTeam } from "../data/authors";
 const members = getAuthorsBySlugs(editorialTeam.members);
 ---
 
-<BaseLayout canonical="https://tibet-lhasa-potala.com/about" title="About Potala Guide | Who We Are & Editorial Standards" description="Meet the Potala Guide team: Tenzin Dorje, Sarah Chen, and Michael Rivera. Our editorial standards, research methodology, and corrections history.">
+<BaseLayout canonical="https://www.tibet-lhasa-potala.com/about/" title="About Potala Guide | Who We Are & Editorial Standards" description="Meet the Potala Guide team: Tenzin Dorje, Sarah Chen, and Michael Rivera. Our editorial standards, research methodology, and corrections history.">
   <StructuredData type="Article" data={{ title: "About Potala Guide", description: "Who operates Potala Guide, editorial standards, and content methodology.", url: "/about/", datePublished: "2026-01-01", dateModified: "2026-08-06" }} />
   <StructuredData type="BreadcrumbList" data={{ items: [{ name: "Home", url: "/" }, { name: "About", url: "/about/" }] }} />
   {members.map((author) => (
